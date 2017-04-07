@@ -6,7 +6,7 @@
       
       <title><![CDATA[VPS gengrator 命令导致 hexo 被 killed 解决方案]]></title>
       <url>%2Fpost%2FNote%2FVPS_gengrator.html</url>
-      <content type="text"><![CDATA[undefined|笔记|Hexo|VPS|Linux|]]></content>
+      <content type="text"><![CDATA[undefined|笔记|Hexo|VPS|Linux|问题在 Segmentfault 上提问 Linux(CentOs)下hexo生成文章被killed 有解决方案: 内存不足，创建交互空间即可。见：https://www.qcloud.com/document/product/362/3597]]></content>
     </entry>
 
     

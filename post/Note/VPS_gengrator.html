@@ -106,9 +106,7 @@
 <meta name="description" content="问题在 Segmentfault 上提问 Linux(CentOs)下hexo生成文章被killed  
 有解决方案:
 
-内存不足，创建交互空间即可。见：https://www.qcloud.com/document/product/362/3597  
-
-该网页给出如下方案12345free -m dd if=/dev/zero of=/swap bs=4096 count=1572864mks">
+内存不足，创建交互空间即可。见：https://www.qcloud.com/document/product/362/3597">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VPS gengrator 命令导致 hexo 被 killed 解决方案">
 <meta property="og:url" content="http://www.oyohyee.com/post/Note/VPS_gengrator.html">
@@ -116,18 +114,14 @@
 <meta property="og:description" content="问题在 Segmentfault 上提问 Linux(CentOs)下hexo生成文章被killed  
 有解决方案:
 
-内存不足，创建交互空间即可。见：https://www.qcloud.com/document/product/362/3597  
-
-该网页给出如下方案12345free -m dd if=/dev/zero of=/swap bs=4096 count=1572864mks">
-<meta property="og:updated_time" content="2017-04-07T13:38:14.000Z">
+内存不足，创建交互空间即可。见：https://www.qcloud.com/document/product/362/3597">
+<meta property="og:updated_time" content="2017-04-07T13:56:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VPS gengrator 命令导致 hexo 被 killed 解决方案">
 <meta name="twitter:description" content="问题在 Segmentfault 上提问 Linux(CentOs)下hexo生成文章被killed  
 有解决方案:
 
-内存不足，创建交互空间即可。见：https://www.qcloud.com/document/product/362/3597  
-
-该网页给出如下方案12345free -m dd if=/dev/zero of=/swap bs=4096 count=1572864mks">
+内存不足，创建交互空间即可。见：https://www.qcloud.com/document/product/362/3597">
 
 
 
@@ -443,6 +437,7 @@
 <blockquote>
 <p>内存不足，创建交互空间即可。<br>见：<a href="https://www.qcloud.com/document/product/362/3597" target="_blank" rel="external">https://www.qcloud.com/document/product/362/3597</a>  </p>
 </blockquote>
+<a id="more"></a>
 <p>该网页给出如下方案<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">free -m </div><div class="line">dd <span class="keyword">if</span>=/dev/zero of=/swap bs=4096 count=1572864</div><div class="line">mkswap /swap</div><div class="line">swapon /swap</div><div class="line"><span class="built_in">echo</span> <span class="string">"LABEL=SWAP-sda /swap swap swap defaults 0 0"</span> &gt;&gt; /etc/fstab</div></pre></td></tr></table></figure></p>
 <p>这样会在根目录建立一个 swap 文件,用于虚拟内存<br><strong>使用 <code>dd if=/dev/zero of=/swap bs=4096 count=1572864</code> 命令时,会卡一会,等待即可</strong>  </p>
 <p>然后就可以正常使用 <code>hexo g</code> 命令了  </p>

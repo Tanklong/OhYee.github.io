@@ -428,17 +428,11 @@
 
       
         
-          
-          问题在 Segmentfault 上提问 Linux(CentOs)下hexo生成文章被killed  
-有解决方案:
-
-内存不足，创建交互空间即可。见：https://www.qcloud.com/document/product/362/3597  
-
-该网页给出如下方案12345free -m dd if=/dev/zero of=/swap bs=4096 count=1572864mkswap /swapswapon /swapecho "LABEL=SWAP-sda /swap swap swap defaults 0 0" &gt;&gt; /etc/fstab
-这样会在根目录建立一个 swap 文件,用于虚拟内存使用 dd if=/dev/zero of=/swap bs=4096 count=1572864 命令时,会卡一会,等待即可  
-然后就可以正常使用 hexo g 命令了  
-
-          
+          <p>问题在 Segmentfault 上提问 <a href="https://segmentfault.com/q/1010000007869915">Linux(CentOs)下hexo生成文章被killed</a>  </p>
+<p>有解决方案:</p>
+<blockquote>
+<p>内存不足，创建交互空间即可。<br>见：<a href="https://www.qcloud.com/document/product/362/3597">https://www.qcloud.com/document/product/362/3597</a>  </p>
+</blockquote>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/post/Note/VPS_gengrator.html#more" rel="contents">
