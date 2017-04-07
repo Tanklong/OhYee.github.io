@@ -1,0 +1,1136 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans,zh-CN,zh-tw,en,default">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.proxy.ustclug.org/css?family=Monda:300,300italic,400,400italic,700,700italic|Microsoft Yahei:300,300italic,400,400italic,700,700italic|Microsoft Yahei:300,300italic,400,400italic,700,700italic|Consolas:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+<!-- Keywords -->
+<meta name="keywords" content="遗传算法,TSP,OhYeeOhYee,ACM,OYOhYee,博客,题解,C++" />
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="写了下遗传算法的TSP问题  
+要求如下:
+
+
+N&amp;gt;=8。
+随即生成N个城市间的连接矩阵。
+指定起始城市。
+给出每一代的最优路线和总路线长度。
+以代数T作为结束条件，T&amp;gt;=50。
+
+
+
+
+巡回旅行商问题给定一组n个城市和俩俩之间的直达距离，寻找一条闭合的旅程，使得每个城市刚好经过一次且总的旅行距离最短。TSP问题也称为货郎担问题，是一个古老的问题。最早可以追溯到1759年Euler提出">
+<meta property="og:type" content="article">
+<meta property="og:title" content="遗传算法解决TSP问题">
+<meta property="og:url" content="http://www.oyohyee.com/post/Algorithm/Genetic_Algorithm.html">
+<meta property="og:site_name" content="OhYee's Blog">
+<meta property="og:description" content="写了下遗传算法的TSP问题  
+要求如下:
+
+
+N&amp;gt;=8。
+随即生成N个城市间的连接矩阵。
+指定起始城市。
+给出每一代的最优路线和总路线长度。
+以代数T作为结束条件，T&amp;gt;=50。
+
+
+
+
+巡回旅行商问题给定一组n个城市和俩俩之间的直达距离，寻找一条闭合的旅程，使得每个城市刚好经过一次且总的旅行距离最短。TSP问题也称为货郎担问题，是一个古老的问题。最早可以追溯到1759年Euler提出">
+<meta property="og:updated_time" content="2017-01-13T08:11:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="遗传算法解决TSP问题">
+<meta name="twitter:description" content="写了下遗传算法的TSP问题  
+要求如下:
+
+
+N&amp;gt;=8。
+随即生成N个城市间的连接矩阵。
+指定起始城市。
+给出每一代的最优路线和总路线长度。
+以代数T作为结束条件，T&amp;gt;=50。
+
+
+
+
+巡回旅行商问题给定一组n个城市和俩俩之间的直达距离，寻找一条闭合的旅程，使得每个城市刚好经过一次且总的旅行距离最短。TSP问题也称为货郎担问题，是一个古老的问题。最早可以追溯到1759年Euler提出">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.oyohyee.com/post/Algorithm/Genetic_Algorithm.html"/>
+
+
+
+
+
+  <title> 遗传算法解决TSP问题 | OhYee's Blog  - OhYee在学习算法、编程和生活中的记录 |遗传算法|TSP|</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c3c4a93be88257973d97af02f735ed4e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">OhYee's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <h1 class="site-subtitle" itemprop="description">随手记录一下~</h1>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-templates">
+          <a href="/templates.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-laptop"></i> <br />
+            
+            模板
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+<link href="/css/My.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/My.js"></script>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://www.oyohyee.com/post/Algorithm/Genetic_Algorithm.html">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="OhYee">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/OhYee.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="OhYee's Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="OhYee's Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                遗传算法解决TSP问题
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-25T14:58:37+08:00">
+                2016-12-25 14:58:37
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Algorithm/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>写了下遗传算法的TSP问题  </p>
+<p>要求如下:</p>
+<blockquote>
+<ul>
+<li>N&gt;=8。</li>
+<li>随即生成N个城市间的连接矩阵。</li>
+<li>指定起始城市。</li>
+<li>给出每一代的最优路线和总路线长度。</li>
+<li>以代数T作为结束条件，T&gt;=50。</li>
+</ul>
+</blockquote>
+<p><br></p>
+<blockquote>
+<p>巡回旅行商问题<br>给定一组n个城市和俩俩之间的直达距离，寻找一条闭合的旅程，使得每个城市刚好经过一次且总的旅行距离最短。<br>TSP问题也称为货郎担问题，是一个古老的问题。最早可以追溯到1759年Euler提出的骑士旅行的问题。1948年，由美国兰德公司推动，TSP成为近代组合优化领域的典型难题。</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<h1 id="遗传算法"><a href="#遗传算法" class="headerlink" title="遗传算法"></a>遗传算法</h1><p>遗传算法大概就是用自然进化中的生物来模拟数据,寻找最优解的一种算法.<br>根据生物知识可以知道进化的原因是 <strong>物竞天择,适者生存</strong>  </p>
+<p>生物基因会不停地进行变异,有的变异适合环境被保留下来,有的不适合环境被抛弃掉.<br>这个过程会不断筛选生物个体,最终导致种群里留存的都是最适合环境的个体  </p>
+<p>需要明确的是,遗传算法是完全随机的,很有可能无法找到 <strong>最优解</strong> 但是在运算范围内,能够找到的必然是一个非常好的解<br>因此遗传算法是一个很好兼顾了时间和准确率的算法(运算范围选取合理的情况下,可以认为找到的就是最优解)  </p>
+<p>例如 TSP问题,将解看成每个生物个体.<br>我们的任务就是在题目要求的环境里找到最适宜的生物个体  </p>
+<p>每一个个体都是一个解,例如染色体为 <code>123456</code> 的个体表示按照 “1 - 2 - 3 - 4 - 5 - 6 - 1” 的顺序访问所有城市  </p>
+<p>要判断哪一个更加适宜环境,就需要一个函数进行计算.<br>因此要定义一个适应度函数来计算每一个染色体对于环境的适应度情况.<br>对于TSP问题而言,就是计算当前解的距离和  </p>
+<p>生物的进化需要个体的繁衍、变异<br>将两个生物体的染色体片段(基因)进行交叉互换(交换个别片段)可以得到一个新的生物个体,这个个体可能会优于其父母,也有可能劣于其父母.子代可能会发生变异,产生一个全新的染色体.<br>因此可采用随机数的方法模拟染色体的交叉互换和变异.<br>使用一个函数来判断某个生物体是否会被消灭(随机出不合法的染色体)<br>每代都把最适合环境的个体留下来(包括父代的个体),这样迭代下去,找到的结果会越来越接近最优解  </p>
+<p>要找到最优解,首先要确保能够尽可能广的覆盖到各种基因组合(染色体),然后要让种群数量尽可能大(以防由于最优解的一部分适应度较低直接被舍弃掉),繁衍代数尽可能高  </p>
+<h1 id="实现旅行商问题"><a href="#实现旅行商问题" class="headerlink" title="实现旅行商问题"></a>实现旅行商问题</h1><p>对于 n 个城市的TSP问题,记录城市编号 <code>0</code> ~ <code>n-1</code><br>然后用 n 个连续数字记录访问顺序(数组存储),如 <code>(1)(2)(3)(4)(5)</code> 表示 <code>1 - 2 - 3 - 4 - 5 - 1</code>  </p>
+<p>首先初始化祖宗染色体,交配需要两个个体,因此我们可以分别正序和逆序生成两个祖宗个体.<br>然后循环 T 代,每一代让种群里的个体两两结合交叉互换,插入到种群里.<br>接着对每一个个体进行基因突变(按照一定得突变概率),突变后个体如果能够存活就把它插入到种群里.<br>最后按照种群适应度排序,只留下前面的一部分个体.<br>这样就完成了一代的生物进化.  </p>
+<p>关于各部分的实现,根据 TSP 问题,可以采用以下办法  </p>
+<ul>
+<li>交叉互换<br>取染色体的随机片段,两段片段分别映射并交换,然后对于每个染色体的未交换部分按照映射更改  <blockquote>
+<p>例如，对下面两个父个体的表示，随机地选择两个交叉点“/”<br>  P1：（1 2 3 / 4 5 6 7 / 8 9）  P2：（4 5 2 / 1 8 7 6 / 9 3）<br>首先，两个交叉点之间的中间段交换，得到：<br>  o1：（x x x / 1 8 7 6 / x x）  o2：（x x x / 4 5 6 7 / x x ）<br>其中x表示暂时未定义码，得到中间段的映射关系。，有：<br>  1—-4，8—-5，7—-6，6—-7<br>对子个体1，2中的x部分，分别保留从其父个体中继承未选定城市码，得到<br>  o1：（ x 2 3 / 1 8 7 6 / x 9 ）   o2：（ x x 2 / 4 5 6 7 / 9 3 ）<br>最后，根据中间段的映射关系，对于上面子个体1的第一个x，使用最初父码1，由1—-4<br>交换得到第一个x为4，类似地子个体1的第二个x，使用最初父码8，由8—-5交换得到子个体1的第二个x为5。类似地进行操作，最终得到的子个体为：<br>  o1：（ 4 2 3 / 1 8 7 6 / 5 9 ）  o2：（ 1 8 2 / 4 5 6 7 / 9 3 ）</p>
+</blockquote>
+</li>
+<li>基因突变<br>随机取两个基因,交换他们的值</li>
+<li>适应度<br>计算相邻基因的距离(如果相同则逐位比较大小,确保相同的相邻)  </li>
+<li>适者生存<br>种群排序后,去除掉相同的个体,然后删除掉超出最大种群个数的个体<br>其中,删除重复个体可以采用如下代码  <figure class="highlight cpp"><figcaption><span>删除重复个体</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sort(P.begin(),P.end());</div><div class="line">P.erase(unique(P.begin(),P.end()),P.end());</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h1><figure class="highlight cpp"><figcaption><span>遗传算法解决TSP问题</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div><div class="line">271</div><div class="line">272</div><div class="line">273</div><div class="line">274</div><div class="line">275</div><div class="line">276</div><div class="line">277</div><div class="line">278</div><div class="line">279</div><div class="line">280</div><div class="line">281</div><div class="line">282</div><div class="line">283</div><div class="line">284</div><div class="line">285</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctime&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">100</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">double</span> eps = <span class="number">1e-10</span>; <span class="comment">//浮点误差</span></div><div class="line"></div><div class="line"><span class="comment">/* ================= */</span></div><div class="line"><span class="keyword">int</span> N;                             <span class="comment">//城市数量</span></div><div class="line"><span class="keyword">int</span> M;                             <span class="comment">//开始城市</span></div><div class="line"><span class="keyword">int</span> Distance[maxn][maxn];          <span class="comment">//各城市之间的距离</span></div><div class="line"><span class="keyword">int</span> T = <span class="number">100</span>;                        <span class="comment">//循环代数</span></div><div class="line"><span class="keyword">unsigned</span> <span class="keyword">int</span> P_SIZE = <span class="number">50</span>;          <span class="comment">//种群大小</span></div><div class="line"><span class="keyword">double</span> Mutation_Probability = <span class="number">0.6</span>;   <span class="comment">//变异的概率</span></div><div class="line"></div><div class="line"><span class="comment">//随机</span></div><div class="line"><span class="comment">//生成0~n的随机数</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">Random</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span>(n == <span class="number">0</span>)</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">else</span></div><div class="line">        <span class="keyword">return</span> rand() % (n + <span class="number">1</span>);</div><div class="line">&#125;</div><div class="line"><span class="comment">//生成概率</span></div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">Probability</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">double</span> ans = (<span class="keyword">double</span>)Random(<span class="number">100</span>) / <span class="number">100.0</span>;</div><div class="line">    <span class="comment">//cout &lt;&lt; ans &lt;&lt; endl;</span></div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//适应度</span></div><div class="line"><span class="comment">//计算一条染色体的适应度 距离越短,适应度越高</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">Fitness</span><span class="params">(<span class="keyword">int</span> *gene)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> dis = Distance[gene[N - <span class="number">1</span>]][gene[<span class="number">0</span>]];</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N - <span class="number">1</span>; i++)</div><div class="line">        dis += Distance[gene[i]][gene[i + <span class="number">1</span>]];</div><div class="line">    <span class="keyword">return</span> dis;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//长度为N个基因的染色体</span></div><div class="line"><span class="keyword">struct</span> Chromosome &#123;</div><div class="line">    <span class="keyword">int</span> *Gene;      <span class="comment">//基因序列</span></div><div class="line">    <span class="keyword">int</span> fitness; <span class="comment">//该染色体的适应度</span></div><div class="line"></div><div class="line">    Chromosome(<span class="keyword">int</span> *gene = <span class="literal">NULL</span>) &#123;</div><div class="line">        Gene = <span class="keyword">new</span> <span class="keyword">int</span>[N];</div><div class="line">        <span class="keyword">if</span>(gene != <span class="literal">NULL</span>) &#123;</div><div class="line">            <span class="built_in">memcpy</span>(Gene,gene,<span class="keyword">sizeof</span>(<span class="keyword">int</span>) * N);</div><div class="line">            fitness = Fitness(Gene);</div><div class="line"></div><div class="line">            <span class="comment">//cout &lt;&lt; "New Chromosome ";</span></div><div class="line">            <span class="comment">//p();</span></div><div class="line"></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(<span class="keyword">const</span> Chromosome &amp;rhs) <span class="keyword">const</span> &#123; <span class="comment">//适应度好的保留下来</span></div><div class="line">        <span class="keyword">if</span>(fitness == rhs.fitness)</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; N;i++)</div><div class="line">                <span class="keyword">if</span>(Gene[i] != rhs.Gene[i])</div><div class="line">                    <span class="keyword">return</span> Gene[i]&lt;rhs.Gene[i];</div><div class="line">        <span class="keyword">return</span> fitness &lt; rhs.fitness;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span>==(<span class="keyword">const</span> Chromosome &amp;rhs)<span class="keyword">const</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="built_in">memcmp</span>(Gene,rhs.Gene,<span class="keyword">sizeof</span>(<span class="keyword">int</span>)*N)==<span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//变异 返回变异后的染色体</span></div><div class="line">    <span class="function">Chromosome <span class="title">Mutation</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="comment">//随机交换两个基因</span></div><div class="line">        <span class="keyword">int</span> t1 = Random(N - <span class="number">1</span>);</div><div class="line">        <span class="keyword">int</span> t2 = Random(N - <span class="number">1</span>);</div><div class="line">        <span class="keyword">int</span> *gene = <span class="keyword">new</span> <span class="keyword">int</span>[N];</div><div class="line">        <span class="built_in">memcpy</span>(gene,Gene,<span class="keyword">sizeof</span>(<span class="keyword">int</span>)*N);</div><div class="line">        swap(gene[t1],gene[t2]);</div><div class="line">        Chromosome Chrom = Chromosome(gene);</div><div class="line">        <span class="keyword">delete</span> gene;</div><div class="line">        <span class="comment">//cout &lt;&lt; "Mutation" &lt;&lt; endl;</span></div><div class="line">        <span class="comment">//p();</span></div><div class="line">        <span class="comment">//Chrom.p();</span></div><div class="line">        <span class="keyword">return</span> Chrom;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//交叉 交叉两个染色体</span></div><div class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Crossover</span><span class="params">(Chromosome chrom1,Chromosome chrom2,</div><div class="line">        Chromosome &amp;child1,Chromosome &amp;child2)</span> </span>&#123;</div><div class="line">        <span class="comment">// 选取交叉区间 0 [1-x) [x,y] (y,N-1]</span></div><div class="line">        <span class="keyword">int</span> y = Random(N - <span class="number">1</span>) + <span class="number">1</span>;</div><div class="line">        <span class="keyword">int</span> x = Random(y - <span class="number">1</span>) + <span class="number">1</span>;</div><div class="line">        <span class="comment">//cout &lt;&lt; "[0,0] [1," &lt;&lt; x &lt;&lt; ") [" &lt;&lt; x &lt;&lt; "," &lt;&lt; y &lt;&lt; "] (" &lt;&lt; y &lt;&lt; "," &lt;&lt; N - 1 &lt;&lt; "]" &lt;&lt; endl;</span></div><div class="line">        <span class="keyword">int</span> *gene1 = <span class="keyword">new</span> <span class="keyword">int</span>[N];</div><div class="line">        <span class="keyword">int</span> *gene2 = <span class="keyword">new</span> <span class="keyword">int</span>[N];</div><div class="line">        <span class="built_in">memcpy</span>(gene1,chrom1.Gene,<span class="keyword">sizeof</span>(<span class="keyword">int</span>)*N);</div><div class="line">        <span class="built_in">memcpy</span>(gene2,chrom2.Gene,<span class="keyword">sizeof</span>(<span class="keyword">int</span>)*N);</div><div class="line"></div><div class="line">        <span class="built_in">map</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; m1;</div><div class="line">        <span class="built_in">map</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; m2;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = x; i &lt;= y; i++) &#123;</div><div class="line">            m1.insert(make_pair(gene1[i],gene2[i]));</div><div class="line">            m1.insert(make_pair(gene2[i],gene1[i]));</div><div class="line">            <span class="keyword">int</span> temp = gene1[i];</div><div class="line">            gene1[i] = gene2[i];</div><div class="line">            gene2[i] = temp;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= N - <span class="number">1</span>; i++) &#123;</div><div class="line">            <span class="keyword">if</span>(i &lt; x || i &gt; y) &#123;</div><div class="line">                <span class="keyword">if</span>(m2.count(gene1[i]))</div><div class="line">                    gene1[i] = m2[gene1[i]];</div><div class="line">                <span class="keyword">if</span>(m1.count(gene2[i]))</div><div class="line">                    gene2[i] = m1[gene2[i]];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        child1 = Chromosome(gene1);</div><div class="line">        child2 = Chromosome(gene2);</div><div class="line">        <span class="keyword">delete</span> gene1;</div><div class="line">        <span class="keyword">delete</span> gene2;</div><div class="line"></div><div class="line">        <span class="comment">//cout &lt;&lt; "Crossover:" &lt;&lt; endl;</span></div><div class="line">        <span class="comment">//chrom1.p();</span></div><div class="line">        <span class="comment">//chrom2.p();</span></div><div class="line">        <span class="comment">//child1.p();</span></div><div class="line">        <span class="comment">//child2.p();</span></div><div class="line">        <span class="comment">//cout &lt;&lt; endl;</span></div><div class="line">    &#125;</div><div class="line">    <span class="comment">//该个体是否能存活</span></div><div class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">Alive</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span>(Gene[<span class="number">0</span>] != M)</div><div class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">        <span class="keyword">bool</span> *flag = <span class="keyword">new</span> <span class="keyword">bool</span>[N];</div><div class="line">        <span class="built_in">memset</span>(flag,<span class="literal">false</span>,<span class="keyword">sizeof</span>(<span class="keyword">bool</span>)*N);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++)</div><div class="line">            <span class="keyword">if</span>(flag[Gene[i]])</div><div class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">            <span class="keyword">else</span></div><div class="line">                flag[Gene[i]] = <span class="literal">true</span>;</div><div class="line">        <span class="keyword">delete</span> flag;</div><div class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//输出</span></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">p</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++) &#123;</div><div class="line">            <span class="built_in">cout</span> &lt;&lt; Gene[i] &lt;&lt; <span class="string">" "</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">": "</span> &lt;&lt; <span class="string">" Dis:"</span>&lt;&lt;fitness&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">//初始化</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Init</span><span class="params">()</span> </span>&#123;</div><div class="line">    srand((<span class="keyword">int</span>)time(<span class="literal">NULL</span>));</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function">Chromosome <span class="title">GA</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="comment">//初始化</span></div><div class="line">    Init();</div><div class="line">    <span class="built_in">vector</span>&lt;Chromosome&gt; P; <span class="comment">//种群</span></div><div class="line">    P.clear();</div><div class="line"></div><div class="line">    <span class="comment">//生成初始种群(两个祖宗)</span></div><div class="line">    <span class="keyword">int</span> *gene = <span class="keyword">new</span> <span class="keyword">int</span>[N];</div><div class="line"></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++)</div><div class="line">        gene[i] = i;</div><div class="line">    swap(gene[M],gene[<span class="number">0</span>]);</div><div class="line">    P.push_back(Chromosome(gene));</div><div class="line"></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++)</div><div class="line">        gene[i] = N - i - <span class="number">1</span>;</div><div class="line">    swap(gene[N - M - <span class="number">1</span>],gene[<span class="number">0</span>]);</div><div class="line">    P.push_back(Chromosome(gene));</div><div class="line"></div><div class="line">    sort(P.begin(),P.end());</div><div class="line"></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= T; i++) &#123;</div><div class="line">        <span class="comment">//第i代</span></div><div class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"T:"</span> &lt;&lt; i &lt;&lt; <span class="built_in">endl</span>;</div><div class="line"></div><div class="line">        <span class="comment">//输出该代信息</span></div><div class="line">        <span class="keyword">int</span> size = P.size();</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; size; j++)</div><div class="line">            P[j].p();</div><div class="line"></div><div class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"Output finish"</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line"></div><div class="line">        <span class="keyword">if</span>(i!=T)&#123;</div><div class="line">            <span class="comment">//本代个体交配</span></div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> x = <span class="number">0</span>; x &lt; size; x++)</div><div class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> y = x + <span class="number">1</span>; y &lt; size; y++) &#123;</div><div class="line">                    Chromosome child1;</div><div class="line">                    Chromosome child2;</div><div class="line">                    Chromosome::Crossover(P[x],P[y],child1,child2);</div><div class="line">                    <span class="keyword">if</span>(child1.Alive())</div><div class="line">                        P.push_back(child1);</div><div class="line">                    <span class="keyword">if</span>(child2.Alive())</div><div class="line">                        P.push_back(child2);</div><div class="line">                &#125;</div><div class="line"></div><div class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="string">"Crossover Finish"</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line"></div><div class="line">            <span class="comment">//变异</span></div><div class="line">            size = P.size();</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> x = <span class="number">0</span>; x &lt; size; x++) &#123;</div><div class="line">                <span class="keyword">if</span>(Probability() &lt;= eps + Mutation_Probability) &#123;</div><div class="line">                    Chromosome temp;</div><div class="line">                    temp = P[x].Mutation();</div><div class="line">                    <span class="keyword">if</span>(temp.Alive() )</div><div class="line">                        P.push_back(temp);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="comment">//适者生存</span></div><div class="line">            sort(P.begin(),P.end());</div><div class="line">            P.erase(unique(P.begin(),P.end()),P.end());</div><div class="line"></div><div class="line">            <span class="keyword">if</span>(P.size() &gt; P_SIZE)</div><div class="line">                <span class="built_in">cout</span> &lt;&lt; <span class="string">"Kill "</span> &lt;&lt; P.size() - P_SIZE &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">            <span class="keyword">while</span>(P.size() &gt; P_SIZE)</div><div class="line">                P.pop_back();</div><div class="line"></div><div class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">delete</span> gene;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> P[<span class="number">0</span>];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">    freopen(<span class="string">"in.txt"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</div><div class="line">    <span class="comment">//freopen("out.txt","w",stdout);</span></div><div class="line">    <span class="comment">/*</div><div class="line">    Sample Input</div><div class="line">    3</div><div class="line">    0</div><div class="line">    0 17 81</div><div class="line">    17 0 62</div><div class="line">    81 62 0</div><div class="line"></div><div class="line">    8</div><div class="line">    3</div><div class="line">    0  17 81 21 43 12 56 76</div><div class="line">    17 0  62 22 67 45 78 13</div><div class="line">    81 62 0  98 11 65 27 62 </div><div class="line">    21 22 98 0  27 88 52 18</div><div class="line">    43 67 11 27 0  76 13 72</div><div class="line">    12 45 65 88 76 0  47 33</div><div class="line">    56 78 27 52 13 47 0  11</div><div class="line">    76 13 62 18 72 33 11 0</div><div class="line">    */</span></div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Input the number of the cities:"</span>;</div><div class="line">    <span class="built_in">cin</span> &gt;&gt; N;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Input the begin city(0~n-1):"</span>;</div><div class="line">    <span class="built_in">cin</span> &gt;&gt; M;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Input the distance between two city(include city x with x):"</span></div><div class="line">        &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++)</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; N; j++)</div><div class="line">            <span class="built_in">cin</span> &gt;&gt; Distance[i][j];</div><div class="line"></div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Distance:"</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++) &#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; N; j++)</div><div class="line">            <span class="built_in">cout</span> &lt;&lt; Distance[i][j] &lt;&lt; <span class="string">" "</span>;</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    Chromosome Chrom = GA();</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"The best answer is:"</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++) &#123;</div><div class="line">        <span class="built_in">cout</span> &lt;&lt; Chrom.Gene[i] &lt;&lt; <span class="string">" "</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">int</span> dis = Distance[Chrom.Gene[N - <span class="number">1</span>]][Chrom.Gene[<span class="number">0</span>]];</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N - <span class="number">1</span>; i++)</div><div class="line">        dis += Distance[Chrom.Gene[i]][Chrom.Gene[i + <span class="number">1</span>]];</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"  Distance: "</span> &lt;&lt; dis &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Genetic-Algorithm/" rel="tag"># 遗传算法</a>
+          
+            <a href="/tags/TSP/" rel="tag"># TSP</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/post/Note/python_problem_format.html" rel="next" title="使用 Python 写 OJ 题目格式生成工具">
+                <i class="fa fa-chevron-left"></i> 使用 Python 写 OJ 题目格式生成工具
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/post/HDU/5983.html" rel="prev" title="HDU 5983.Pocket Cube(2016 CCPC 青岛 B)">
+                HDU 5983.Pocket Cube(2016 CCPC 青岛 B) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/OhYee.png"
+               alt="OhYee" />
+          <p class="site-author-name" itemprop="name">OhYee</p>
+          <p class="site-description motion-element" itemprop="description">OhYee在学习算法、编程和生活中的记录</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">392</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">137</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://www.oyohyee.com/" target="_blank" title="Blog">
+                  
+                    <i class="fa fa-fw fa-home"></i>
+                  
+                  Blog
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:oyohyee@oyohyee.com" target="_blank" title="Email">
+                  
+                    <i class="fa fa-fw fa-at"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ohyee" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://coding.net/u/OhYee" target="_blank" title="Coding">
+                  
+                    <i class="fa fa-fw fa-git"></i>
+                  
+                  Coding
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/kong-chen-hao" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-star"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=896817156&site=qq&menu=yes" target="_blank" title="QQ">
+                  
+                    <i class="fa fa-fw fa-qq"></i>
+                  
+                  QQ
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/OhYee/ACM.github.io" target="_blank" title="Code">
+                  
+                    <i class="fa fa-fw fa-code"></i>
+                  
+                  Code
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="/about/" target="_blank" title="About Me">
+                  
+                    <i class="fa fa-fw fa-credit-card"></i>
+                  
+                  About Me
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://hakale.cn/" title="Hakale" target="_blank">Hakale</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/acblacktea" title="ACBlackTea" target="_blank">ACBlackTea</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/snow_me" title="Wilbert" target="_blank">Wilbert</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/adjky/" title="ADjky" target="_blank">ADjky</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/JACK_JYH/" title="JACK_JYH" target="_blank">JACK_JYH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/qq_35323001" title="Super丶xd" target="_blank">Super丶xd</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/pengwill97" title="Pengwill" target="_blank">Pengwill</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/Mr_Saltyfish" title="Mr_Saltyfish" target="_blank">Mr_Saltyfish</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/wmrv587/" title="wmr" target="_blank">wmr</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/robin1998/" title="Robin" target="_blank">Robin</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#遗传算法"><span class="nav-number">1.</span> <span class="nav-text">遗传算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实现旅行商问题"><span class="nav-number">2.</span> <span class="nav-text">实现旅行商问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#完整代码"><span class="nav-number">3.</span> <span class="nav-text">完整代码</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">OhYee</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>

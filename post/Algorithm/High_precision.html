@@ -1,0 +1,1133 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans,zh-CN,zh-tw,en,default">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.proxy.ustclug.org/css?family=Monda:300,300italic,400,400italic,700,700italic|Microsoft Yahei:300,300italic,400,400italic,700,700italic|Microsoft Yahei:300,300italic,400,400italic,700,700italic|Consolas:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+<!-- Keywords -->
+<meta name="keywords" content="高精度算法,OhYeeOhYee,ACM,OYOhYee,博客,题解,C++" />
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="c++中，变量的大小是有限制的。
+比如int是 -2147483648~2147483647
+long long是-9223372036854775808~18446744073709551615
+然而他们都有一个范围，如果数据过大，就会出现错误。这时，我们需要高精度计算。
+同过数组来存储各位上的情况，模拟计算加减乘除。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高精度算法">
+<meta property="og:url" content="http://www.oyohyee.com/post/Algorithm/High_precision.html">
+<meta property="og:site_name" content="OhYee's Blog">
+<meta property="og:description" content="c++中，变量的大小是有限制的。
+比如int是 -2147483648~2147483647
+long long是-9223372036854775808~18446744073709551615
+然而他们都有一个范围，如果数据过大，就会出现错误。这时，我们需要高精度计算。
+同过数组来存储各位上的情况，模拟计算加减乘除。">
+<meta property="og:updated_time" content="2016-11-08T17:07:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="高精度算法">
+<meta name="twitter:description" content="c++中，变量的大小是有限制的。
+比如int是 -2147483648~2147483647
+long long是-9223372036854775808~18446744073709551615
+然而他们都有一个范围，如果数据过大，就会出现错误。这时，我们需要高精度计算。
+同过数组来存储各位上的情况，模拟计算加减乘除。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.oyohyee.com/post/Algorithm/High_precision.html"/>
+
+
+
+
+
+  <title> 高精度算法 | OhYee's Blog  - OhYee在学习算法、编程和生活中的记录 |高精度算法|</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c3c4a93be88257973d97af02f735ed4e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">OhYee's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <h1 class="site-subtitle" itemprop="description">随手记录一下~</h1>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-templates">
+          <a href="/templates.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-laptop"></i> <br />
+            
+            模板
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+<link href="/css/My.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/My.js"></script>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://www.oyohyee.com/post/Algorithm/High_precision.html">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="OhYee">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/OhYee.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="OhYee's Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="OhYee's Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                高精度算法
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2015-08-01T23:17:00+08:00">
+                2015-08-01 23:17:00
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Algorithm/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>c++中，变量的大小是有限制的。</p>
+<p>比如int是 <code>-2147483648~2147483647</code></p>
+<p>long long是<code>-9223372036854775808~18446744073709551615</code></p>
+<p>然而他们都有一个范围，如果数据过大，就会出现错误。这时，我们需要高精度计算。</p>
+<p>同过数组来存储各位上的情况，模拟计算加减乘除。</p>
+<a id="more"></a>
+<p>首先，我们定义一个叫做<code>bigNumber</code>的类</p>
+<p>然后，在里面声明一个整数数组（1000位）</p>
+<p>其中，num[0]保存该数位数，num[i]表示对应数位上的数</p>
+<p>数据的存储方式为(以13为例)</p>
+<p>num     0   1   2   3<br>数值      2   1   3   0<br>备注      位数  个位  十位  百位    </p>
+<p>接着，我们要定义构造函数来初始化它</p>
+<p>要注意，构造函数本身被调用是没什么琴里用的，可以再写一个初始化函数，然后在构造函数里调用它，但需要初始化时，调用初始化函数，而不是构造函数</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">bigNumber()&#123;<span class="comment">//初始化</span></div><div class="line">    init();</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">memset</span>(num,<span class="number">0</span>,<span class="keyword">sizeof</span>(num));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>然后，就是一些基本的功能的实现,例如等于、小于、大于……</p>
+<p>这些都是比较容易实现的，不详细说明了</p>
+<p>而四则运算则相对更为复杂</p>
+<h2 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h2><p>首先是加法</p>
+<p>我们先来看一下我们自己是如何计算加法的。</p>
+<p>例如5135+139</p>
+<ul>
+<li>对齐数位  5 1 3 5</li>
+</ul>
+<p>　　　　 +　 1 3 9  </p>
+<ul>
+<li><p>从低位开始加，当低位相加后大于9时，把较大数加到下一位上</p>
+<p> 而且，我们可以知道，即使是9+9也才等于18。也即计算后，和的位数最多比加数的位数多1</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">bigNumber <span class="keyword">operator</span> + (<span class="keyword">const</span> bigNumber rhs)<span class="keyword">const</span>&#123;</div><div class="line">    bigNumber temp;</div><div class="line">    <span class="keyword">int</span> len;</div><div class="line">    len=num[<span class="number">0</span>]&gt;rhs.num[<span class="number">0</span>]?num[<span class="number">0</span>]:rhs.num[<span class="number">0</span>];</div><div class="line">    len++;<span class="comment">//两数相加，位数最多比较大的位数多1</span></div><div class="line">    REP(len)&#123;</div><div class="line">        temp.num[o+<span class="number">1</span>]+=num[o+<span class="number">1</span>]+rhs.num[o+<span class="number">1</span>];</div><div class="line">        temp.num[o+<span class="number">2</span>]+=temp.num[o+<span class="number">1</span>]/<span class="number">10</span>;</div><div class="line">        temp.num[o+<span class="number">1</span>]%=<span class="number">10</span>;</div><div class="line">    &#125;</div><div class="line">    REP(len)&#123;</div><div class="line">        <span class="keyword">if</span>(temp.num[len-o]!=<span class="number">0</span>)&#123;</div><div class="line">            temp.num[<span class="number">0</span>]=len-o;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> temp;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="乘法"><a href="#乘法" class="headerlink" title="乘法"></a>乘法</h2><p>而乘法相似，只是是乘数相乘加上进位(乘数与乘数各数位都要乘一次)</p>
+<p>　　　　　5 1 3 5</p>
+<p>　× 　  　　1 3 9  </p>
+<p>-------------------------</p>
+<p>　　　　4 6 2 1 5</p>
+<p>　　　1 5 4 0 5</p>
+<p>　　　5 1 3 5       </p>
+<p>-------------------------<br>　　　7 1 3 7 6 5</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">bigNumber <span class="keyword">operator</span> * (<span class="keyword">const</span> bigNumber rhs)<span class="keyword">const</span>&#123;</div><div class="line">    bigNumber temp;</div><div class="line">    <span class="keyword">int</span> len;</div><div class="line">    len=num[<span class="number">0</span>]+rhs.num[<span class="number">0</span>];</div><div class="line">    <span class="comment">//len++;</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=num[<span class="number">0</span>];i++)&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=rhs.num[<span class="number">0</span>];j++)&#123;</div><div class="line">            temp.num[i+j<span class="number">-1</span>]+=num[i]*rhs.num[j];</div><div class="line">            temp.num[i+j]+=temp.num[i+j<span class="number">-1</span>]/<span class="number">10</span>;</div><div class="line">            temp.num[i+j<span class="number">-1</span>]%=<span class="number">10</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    REP(len)&#123;</div><div class="line">        <span class="keyword">if</span>(temp.num[len-o]!=<span class="number">0</span>)&#123;</div><div class="line">            temp.num[<span class="number">0</span>]=len-o;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> temp;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="减法"><a href="#减法" class="headerlink" title="减法"></a>减法</h2><p>而减法和除法则较为麻烦</p>
+<p>首先，本高精度计算不考虑负数情况，不过负数也并不难写，可以再加上一个bool来储存是否为负数</p>
+<p>不管减数和被减数谁大，都应该是绝对值大的减去绝对值小的（符号相同）</p>
+<p>与加法不同，减法存在借数。不过如果不管需不需要借都借一下，然后如果结果是两位数再进上去更便于书写</p>
+<p>模仿加法稍加修改</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">bigNumber <span class="keyword">operator</span> - (<span class="keyword">const</span> bigNumber rhs)<span class="keyword">const</span>&#123;</div><div class="line">    bigNumber temp,a,b;</div><div class="line">    temp=Max(*<span class="keyword">this</span>,rhs);</div><div class="line">    b=Min(*<span class="keyword">this</span>,rhs);</div><div class="line">    a=temp;</div><div class="line">    temp=<span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> len=a.num[<span class="number">0</span>];</div><div class="line">    REP(len)&#123;</div><div class="line">        temp.num[o+<span class="number">1</span>]+=<span class="number">10</span>+a.num[o+<span class="number">1</span>]-b.num[o+<span class="number">1</span>];</div><div class="line">        temp.num[o+<span class="number">2</span>]--;</div><div class="line">        temp.num[o+<span class="number">2</span>]+=temp.num[o+<span class="number">1</span>]/<span class="number">10</span>;</div><div class="line">        temp.num[o+<span class="number">1</span>]%=<span class="number">10</span>;</div><div class="line">    &#125;</div><div class="line">    REP(len)&#123;</div><div class="line">        <span class="keyword">if</span>(temp.num[len-o]!=<span class="number">0</span>)&#123;</div><div class="line">            temp.num[<span class="number">0</span>]=len-o;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> temp;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="除法"><a href="#除法" class="headerlink" title="除法"></a>除法</h2><p>除法是最难写的一部分了，因为牵扯到试商的问题</p>
+<p>我们先来理解一下除法的计算过程（以11311÷12为例）</p>
+<ol>
+<li><p>首先，从被除数的最高位开始除有1÷12=0······1</p>
+</li>
+<li><p>余数乘10加上被除数的下一位11÷12=0······11</p>
+</li>
+<li><p>余数乘10加上被除数的下一位113÷12=9······5</p>
+</li>
+<li><p>余数乘10加上被除数的下一位51÷12=4·····3</p>
+</li>
+<li><p>余数乘10加上被除数的下一位31÷12=2·····7</p>
+</li>
+</ol>
+<p>得到答案11311÷12=942······7</p>
+<p><strong>2016.7.3 修正 0 不输出的问题</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">bigNumber <span class="keyword">operator</span> / (<span class="keyword">const</span> bigNumber rhs)<span class="keyword">const</span>&#123;</div><div class="line">    bigNumber a;</div><div class="line">    <span class="keyword">int</span> it=num[<span class="number">0</span>];</div><div class="line"></div><div class="line">    bigNumber d;</div><div class="line">    bigNumber c;</div><div class="line"></div><div class="line">    <span class="keyword">while</span>(it&gt;<span class="number">0</span>)&#123;</div><div class="line">        a=(d*<span class="number">10</span>)+num[it];</div><div class="line">        c=c*<span class="number">10</span>;</div><div class="line"></div><div class="line">        <span class="keyword">int</span> t;</div><div class="line">        REP(<span class="number">9</span>)&#123;</div><div class="line">            <span class="keyword">if</span>(a &lt; rhs * (o+<span class="number">1</span>))&#123;</div><div class="line">                t=o;</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">            t=<span class="number">9</span>;</div><div class="line">        &#125;</div><div class="line">        c=c+t;</div><div class="line">        d=a-rhs*t;</div><div class="line">        it--;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> c;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="取余"><a href="#取余" class="headerlink" title="取余"></a>取余</h2><p>稍加修改，就成了取余<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">bigNumber <span class="keyword">operator</span> % (<span class="keyword">const</span> bigNumber rhs)<span class="keyword">const</span>&#123;</div><div class="line">    bigNumber a;</div><div class="line">    <span class="keyword">int</span> it=num[<span class="number">0</span>];</div><div class="line"></div><div class="line">    bigNumber d;</div><div class="line">    bigNumber c;</div><div class="line"></div><div class="line">    <span class="keyword">while</span>(it&gt;<span class="number">0</span>)&#123;</div><div class="line">        a=(d*<span class="number">10</span>)+num[it];</div><div class="line">        c=c*<span class="number">10</span>;</div><div class="line"></div><div class="line">        <span class="keyword">int</span> t;</div><div class="line">        REP(<span class="number">9</span>)&#123;</div><div class="line">            <span class="keyword">if</span>(a &lt; rhs * (o+<span class="number">1</span>))&#123;</div><div class="line">                t=o;</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">            t=<span class="number">9</span>;</div><div class="line">        &#125;</div><div class="line">        c=c+t;</div><div class="line">        d=a-rhs*t;</div><div class="line">        it--;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> d;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="完整的代码"><a href="#完整的代码" class="headerlink" title="完整的代码"></a>完整的代码</h2><p>高精度算法：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> bigNumber&#123;</div><div class="line">    <span class="keyword">private</span>:</div><div class="line">    <span class="keyword">int</span> num[<span class="number">1001</span>];</div><div class="line"></div><div class="line">    <span class="keyword">public</span>:</div><div class="line">    bigNumber()&#123;</div><div class="line">        init();</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="built_in">memset</span>(num,<span class="number">0</span>,<span class="keyword">sizeof</span>(num));</div><div class="line">    &#125;</div><div class="line">    bigNumber <span class="keyword">operator</span> = (<span class="keyword">const</span> bigNumber&amp; rhs)&#123;</div><div class="line">        init();</div><div class="line">        REP(rhs.num[<span class="number">0</span>]+<span class="number">1</span>)num[o]=rhs.num[o];</div><div class="line">        <span class="keyword">return</span> *<span class="keyword">this</span>;</div><div class="line">    &#125;</div><div class="line">    bigNumber <span class="keyword">operator</span> = (<span class="keyword">long</span> <span class="keyword">long</span> rhs)&#123;</div><div class="line">        init();</div><div class="line">        <span class="keyword">int</span> i=<span class="number">1</span>;</div><div class="line">        <span class="keyword">while</span>(rhs)&#123;</div><div class="line">            num[i]=rhs%<span class="number">10</span>;</div><div class="line">            rhs/=<span class="number">10</span>;</div><div class="line">            i++;</div><div class="line">        &#125;</div><div class="line">        num[<span class="number">0</span>]=i<span class="number">-1</span>;</div><div class="line">        <span class="keyword">return</span> *<span class="keyword">this</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (<span class="keyword">const</span> bigNumber rhs)<span class="keyword">const</span>&#123;</div><div class="line">        <span class="keyword">if</span>(num[<span class="number">0</span>]!=rhs.num[<span class="number">0</span>])<span class="keyword">return</span> (num[<span class="number">0</span>]&lt;rhs.num[<span class="number">0</span>]);</div><div class="line">        REP(num[<span class="number">0</span>])&#123;</div><div class="line">            <span class="keyword">int</span> temp=num[<span class="number">0</span>]-o;</div><div class="line">            <span class="keyword">if</span>(num[temp]!=rhs.num[temp])<span class="keyword">return</span> (num[temp]&lt;rhs.num[temp]);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span> &gt; (<span class="keyword">const</span> bigNumber rhs)<span class="keyword">const</span>&#123;</div><div class="line">        <span class="keyword">if</span>(num[<span class="number">0</span>]!=rhs.num[<span class="number">0</span>])<span class="keyword">return</span> (num[<span class="number">0</span>]&gt;rhs.num[<span class="number">0</span>]);</div><div class="line">        REP(num[<span class="number">0</span>])&#123;</div><div class="line">            <span class="keyword">int</span> temp=num[<span class="number">0</span>]-o;</div><div class="line">            <span class="keyword">if</span>(num[temp]!=rhs.num[temp])<span class="keyword">return</span> (num[temp]&gt;rhs.num[temp]);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span> == (<span class="keyword">const</span> bigNumber rhs)<span class="keyword">const</span>&#123;</div><div class="line">        <span class="keyword">return</span> !(*<span class="keyword">this</span>&gt;rhs||*<span class="keyword">this</span>&lt;rhs);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">bool</span> <span class="keyword">operator</span> &lt;= (<span class="keyword">const</span> bigNumber rhs)<span class="keyword">const</span>&#123;</div><div class="line">        <span class="keyword">return</span> *<span class="keyword">this</span>&lt;rhs||*<span class="keyword">this</span> ==rhs;</div><div class="line">    &#125;</div><div class="line">    bigNumber <span class="keyword">operator</span> + (<span class="keyword">const</span> bigNumber rhs)<span class="keyword">const</span>&#123;</div><div class="line">        bigNumber temp;</div><div class="line">        <span class="keyword">int</span> len;</div><div class="line">        len=num[<span class="number">0</span>]&gt;rhs.num[<span class="number">0</span>]?num[<span class="number">0</span>]:rhs.num[<span class="number">0</span>];</div><div class="line">        len++;</div><div class="line">        REP(len)&#123;</div><div class="line">            temp.num[o+<span class="number">1</span>]+=num[o+<span class="number">1</span>]+rhs.num[o+<span class="number">1</span>];</div><div class="line">            temp.num[o+<span class="number">2</span>]+=temp.num[o+<span class="number">1</span>]/<span class="number">10</span>;</div><div class="line">            temp.num[o+<span class="number">1</span>]%=<span class="number">10</span>;</div><div class="line">        &#125;</div><div class="line">        REP(len)&#123;</div><div class="line">            <span class="keyword">if</span>(temp.num[len-o]!=<span class="number">0</span>)&#123;</div><div class="line">                temp.num[<span class="number">0</span>]=len-o;</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> temp;</div><div class="line">    &#125;</div><div class="line">    bigNumber <span class="keyword">operator</span> + (<span class="keyword">const</span> <span class="keyword">long</span> <span class="keyword">long</span> rhs)<span class="keyword">const</span>&#123;</div><div class="line">        bigNumber temp1,temp2;</div><div class="line">        temp1=*<span class="keyword">this</span>;</div><div class="line">        temp2=rhs;</div><div class="line">        <span class="keyword">return</span> temp1 + temp2;</div><div class="line">    &#125;</div><div class="line">    bigNumber <span class="keyword">operator</span> * (<span class="keyword">const</span> bigNumber rhs)<span class="keyword">const</span>&#123;</div><div class="line">        bigNumber temp;</div><div class="line">        <span class="keyword">int</span> len;</div><div class="line">        len=num[<span class="number">0</span>]+rhs.num[<span class="number">0</span>];</div><div class="line">        <span class="comment">//len++;</span></div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=num[<span class="number">0</span>];i++)&#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=rhs.num[<span class="number">0</span>];j++)&#123;</div><div class="line">                temp.num[i+j<span class="number">-1</span>]+=num[i]*rhs.num[j];</div><div class="line">                temp.num[i+j]+=temp.num[i+j<span class="number">-1</span>]/<span class="number">10</span>;</div><div class="line">                temp.num[i+j<span class="number">-1</span>]%=<span class="number">10</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        REP(len)&#123;</div><div class="line">            <span class="keyword">if</span>(temp.num[len-o]!=<span class="number">0</span>)&#123;</div><div class="line">                temp.num[<span class="number">0</span>]=len-o;</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> temp;</div><div class="line">    &#125;</div><div class="line">    bigNumber <span class="keyword">operator</span> * (<span class="keyword">const</span> <span class="keyword">long</span> <span class="keyword">long</span> rhs)<span class="keyword">const</span>&#123;</div><div class="line">        bigNumber temp1,temp2;</div><div class="line">        temp1=*<span class="keyword">this</span>;</div><div class="line">        temp2=rhs;</div><div class="line">        <span class="keyword">return</span> temp1 * temp2;</div><div class="line">    &#125;</div><div class="line">    bigNumber <span class="keyword">operator</span> - (<span class="keyword">const</span> bigNumber rhs)<span class="keyword">const</span>&#123;</div><div class="line">        bigNumber temp,a,b;</div><div class="line">        temp=Max(*<span class="keyword">this</span>,rhs);</div><div class="line">        b=Min(*<span class="keyword">this</span>,rhs);</div><div class="line">        a=temp;</div><div class="line">        temp=<span class="number">0</span>;</div><div class="line">        <span class="keyword">int</span> len=a.num[<span class="number">0</span>];</div><div class="line">        REP(len)&#123;</div><div class="line">            temp.num[o+<span class="number">1</span>]+=<span class="number">10</span>+a.num[o+<span class="number">1</span>]-b.num[o+<span class="number">1</span>];</div><div class="line">            temp.num[o+<span class="number">2</span>]--;</div><div class="line">            temp.num[o+<span class="number">2</span>]+=temp.num[o+<span class="number">1</span>]/<span class="number">10</span>;</div><div class="line">            temp.num[o+<span class="number">1</span>]%=<span class="number">10</span>;</div><div class="line">        &#125;</div><div class="line">        REP(len)&#123;</div><div class="line">            <span class="keyword">if</span>(temp.num[len-o]!=<span class="number">0</span>)&#123;</div><div class="line">                temp.num[<span class="number">0</span>]=len-o;</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> temp;</div><div class="line">    &#125;</div><div class="line">    bigNumber <span class="keyword">operator</span> - (<span class="keyword">const</span> <span class="keyword">long</span> <span class="keyword">long</span> rhs)<span class="keyword">const</span>&#123;</div><div class="line">        bigNumber temp1,temp2;</div><div class="line">        temp1=*<span class="keyword">this</span>;</div><div class="line">        temp2=rhs;</div><div class="line">        <span class="keyword">return</span> temp1 - temp2;</div><div class="line">    &#125;</div><div class="line">    bigNumber <span class="keyword">operator</span> / (<span class="keyword">const</span> bigNumber rhs)<span class="keyword">const</span>&#123;</div><div class="line">        bigNumber a;</div><div class="line">        <span class="keyword">int</span> it=num[<span class="number">0</span>];</div><div class="line"></div><div class="line">        bigNumber d;</div><div class="line">        bigNumber c;</div><div class="line"></div><div class="line">        <span class="keyword">while</span>(it&gt;<span class="number">0</span>)&#123;</div><div class="line">            a=(d*<span class="number">10</span>)+num[it];</div><div class="line">            c=c*<span class="number">10</span>;</div><div class="line"></div><div class="line">            <span class="keyword">int</span> t;</div><div class="line">            REP(<span class="number">9</span>)&#123;</div><div class="line">                <span class="keyword">if</span>(a &lt; rhs * (o+<span class="number">1</span>))&#123;</div><div class="line">                    t=o;</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                &#125;</div><div class="line">                t=<span class="number">9</span>;</div><div class="line">            &#125;</div><div class="line">            c=c+t;</div><div class="line">            d=a-rhs*t;</div><div class="line">            it--;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> c;</div><div class="line">    &#125;</div><div class="line">    bigNumber <span class="keyword">operator</span> / (<span class="keyword">const</span> <span class="keyword">long</span> <span class="keyword">long</span> rhs)<span class="keyword">const</span>&#123;</div><div class="line">        bigNumber temp1,temp2;</div><div class="line">        temp1=*<span class="keyword">this</span>;</div><div class="line">        temp2=rhs;</div><div class="line">        <span class="keyword">return</span> temp1 / temp2;</div><div class="line">    &#125;</div><div class="line">    bigNumber <span class="keyword">operator</span> % (<span class="keyword">const</span> bigNumber rhs)<span class="keyword">const</span>&#123;</div><div class="line">        bigNumber a;</div><div class="line">        <span class="keyword">int</span> it=num[<span class="number">0</span>];</div><div class="line"></div><div class="line">        bigNumber d;</div><div class="line">        bigNumber c;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">        <span class="keyword">while</span>(it&gt;<span class="number">0</span>)&#123;</div><div class="line"></div><div class="line">            a=(d*<span class="number">10</span>)+num[it];</div><div class="line">            c=c*<span class="number">10</span>;</div><div class="line"></div><div class="line">            <span class="keyword">int</span> t;</div><div class="line">            REP(<span class="number">9</span>)&#123;</div><div class="line">                <span class="keyword">if</span>(a &lt; rhs * (o+<span class="number">1</span>))&#123;</div><div class="line">                    t=o;</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                &#125;</div><div class="line">                t=<span class="number">9</span>;</div><div class="line">            &#125;</div><div class="line">            c=c+t;</div><div class="line">            d=a-rhs*t;</div><div class="line">            it--;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> d;</div><div class="line">    &#125;</div><div class="line">    bigNumber <span class="keyword">operator</span> % (<span class="keyword">const</span> <span class="keyword">long</span> <span class="keyword">long</span> rhs)<span class="keyword">const</span>&#123;</div><div class="line">        bigNumber temp1,temp2;</div><div class="line">        temp1=*<span class="keyword">this</span>;</div><div class="line">        temp2=rhs;</div><div class="line">        <span class="keyword">return</span> temp1 % temp2;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">p</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">if</span>(num[<span class="number">0</span>] == <span class="number">0</span>)</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"0"</span>);</div><div class="line">        REP(num[<span class="number">0</span>])&#123;</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"%d"</span>,num[num[<span class="number">0</span>]-o]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/High-precision/" rel="tag"># 高精度算法</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/post/Algorithm/Prime.html" rel="next" title="筛法求素数">
+                <i class="fa fa-chevron-left"></i> 筛法求素数
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/post/Algorithm/Contour.html" rel="prev" title="康托（逆）展开">
+                康托（逆）展开 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/OhYee.png"
+               alt="OhYee" />
+          <p class="site-author-name" itemprop="name">OhYee</p>
+          <p class="site-description motion-element" itemprop="description">OhYee在学习算法、编程和生活中的记录</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">392</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">137</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://www.oyohyee.com/" target="_blank" title="Blog">
+                  
+                    <i class="fa fa-fw fa-home"></i>
+                  
+                  Blog
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:oyohyee@oyohyee.com" target="_blank" title="Email">
+                  
+                    <i class="fa fa-fw fa-at"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ohyee" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://coding.net/u/OhYee" target="_blank" title="Coding">
+                  
+                    <i class="fa fa-fw fa-git"></i>
+                  
+                  Coding
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/kong-chen-hao" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-star"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=896817156&site=qq&menu=yes" target="_blank" title="QQ">
+                  
+                    <i class="fa fa-fw fa-qq"></i>
+                  
+                  QQ
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/OhYee/ACM.github.io" target="_blank" title="Code">
+                  
+                    <i class="fa fa-fw fa-code"></i>
+                  
+                  Code
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="/about/" target="_blank" title="About Me">
+                  
+                    <i class="fa fa-fw fa-credit-card"></i>
+                  
+                  About Me
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://hakale.cn/" title="Hakale" target="_blank">Hakale</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/acblacktea" title="ACBlackTea" target="_blank">ACBlackTea</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/snow_me" title="Wilbert" target="_blank">Wilbert</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/adjky/" title="ADjky" target="_blank">ADjky</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/JACK_JYH/" title="JACK_JYH" target="_blank">JACK_JYH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/qq_35323001" title="Super丶xd" target="_blank">Super丶xd</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/pengwill97" title="Pengwill" target="_blank">Pengwill</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/Mr_Saltyfish" title="Mr_Saltyfish" target="_blank">Mr_Saltyfish</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/wmrv587/" title="wmr" target="_blank">wmr</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/robin1998/" title="Robin" target="_blank">Robin</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#加法"><span class="nav-number">1.</span> <span class="nav-text">加法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#乘法"><span class="nav-number">2.</span> <span class="nav-text">乘法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#减法"><span class="nav-number">3.</span> <span class="nav-text">减法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#除法"><span class="nav-number">4.</span> <span class="nav-text">除法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#取余"><span class="nav-number">5.</span> <span class="nav-text">取余</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完整的代码"><span class="nav-number">6.</span> <span class="nav-text">完整的代码</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">OhYee</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>

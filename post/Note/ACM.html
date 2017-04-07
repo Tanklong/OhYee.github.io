@@ -1,0 +1,1356 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans,zh-CN,zh-tw,en,default">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.proxy.ustclug.org/css?family=Monda:300,300italic,400,400italic,700,700italic|Microsoft Yahei:300,300italic,400,400italic,700,700italic|Microsoft Yahei:300,300italic,400,400italic,700,700italic|Consolas:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+<!-- Keywords -->
+<meta name="keywords" content="OhYeeOhYee,ACM,OYOhYee,博客,题解,C++" />
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="转载自：http://cojs.tk/cogs/page/page.php?aid=38
+ACM进阶计划ACM队不是为了一场比赛而存在的，为的是队员的整体提高。
+大学期间，ACM队队员必须要学好的课程有：
+l C/C++两种语言
+l 高等数学
+l 线性代数
+l 数据结构
+l 离散数学
+l 数据库原理
+l 操作系统原理
+l 计算机组成原理
+l 人工智能
+l 编译原理
+l 算法设计与分析
+除此之外，我">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ACM进阶计划">
+<meta property="og:url" content="http://www.oyohyee.com/post/Note/ACM.html">
+<meta property="og:site_name" content="OhYee's Blog">
+<meta property="og:description" content="转载自：http://cojs.tk/cogs/page/page.php?aid=38
+ACM进阶计划ACM队不是为了一场比赛而存在的，为的是队员的整体提高。
+大学期间，ACM队队员必须要学好的课程有：
+l C/C++两种语言
+l 高等数学
+l 线性代数
+l 数据结构
+l 离散数学
+l 数据库原理
+l 操作系统原理
+l 计算机组成原理
+l 人工智能
+l 编译原理
+l 算法设计与分析
+除此之外，我">
+<meta property="og:updated_time" content="2016-07-05T04:20:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ACM进阶计划">
+<meta name="twitter:description" content="转载自：http://cojs.tk/cogs/page/page.php?aid=38
+ACM进阶计划ACM队不是为了一场比赛而存在的，为的是队员的整体提高。
+大学期间，ACM队队员必须要学好的课程有：
+l C/C++两种语言
+l 高等数学
+l 线性代数
+l 数据结构
+l 离散数学
+l 数据库原理
+l 操作系统原理
+l 计算机组成原理
+l 人工智能
+l 编译原理
+l 算法设计与分析
+除此之外，我">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.oyohyee.com/post/Note/ACM.html"/>
+
+
+
+
+
+  <title> ACM进阶计划 | OhYee's Blog  - OhYee在学习算法、编程和生活中的记录 |</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c3c4a93be88257973d97af02f735ed4e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">OhYee's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <h1 class="site-subtitle" itemprop="description">随手记录一下~</h1>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-templates">
+          <a href="/templates.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-laptop"></i> <br />
+            
+            模板
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+<link href="/css/My.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/My.js"></script>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://www.oyohyee.com/post/Note/ACM.html">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="OhYee">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/OhYee.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="OhYee's Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="OhYee's Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                ACM进阶计划
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2015-07-27T17:19:00+08:00">
+                2015-07-27 17:19:00
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>转载自：<a href="http://cojs.tk/cogs/page/page.php?aid=38" target="_blank" rel="external">http://cojs.tk/cogs/page/page.php?aid=38</a></p>
+<p>ACM进阶计划<br>ACM队不是为了一场比赛而存在的，为的是队员的整体提高。</p>
+<p>大学期间，ACM队队员必须要学好的课程有：</p>
+<p>l C/C++两种语言</p>
+<p>l 高等数学</p>
+<p>l 线性代数</p>
+<p>l 数据结构</p>
+<p>l 离散数学</p>
+<p>l 数据库原理</p>
+<p>l 操作系统原理</p>
+<p>l 计算机组成原理</p>
+<p>l 人工智能</p>
+<p>l 编译原理</p>
+<p>l 算法设计与分析</p>
+<p>除此之外，我希望你们能掌握一些其它的知识，因为知识都是相互联系，触类旁通的。</p>
+<p>以下学习计划每学期中的内容不分先后顺序，虽说是为立志于学习ACM的同学列的知识清单，但内容不限于ACM的知识。英语之类与专业相距较远的课程请自行分配时间，这里不再列举。</p>
+<p>大一上学期：</p>
+<p>必学：</p>
+<ol>
+<li>C语言基础语法必须全部学会</li>
+</ol>
+<p>a) 推荐“语言入门”分类20道题以上</p>
+<p>b) 提前完成C语言课程设计</p>
+<ol>
+<li>简单数学题（推荐“数学”分类20道以上）</li>
+</ol>
+<p>需要掌握以下基本算法：</p>
+<p>a) 欧几里德算法求最大公约数</p>
+<p>b) 筛法求素数</p>
+<p>c) 康托展开</p>
+<p>d) 逆康托展开</p>
+<p>e) 同余定理</p>
+<p>f) 次方求模</p>
+<ol>
+<li>计算几何初步</li>
+</ol>
+<p>a) 三角形面积</p>
+<p>b) 三点顺序</p>
+<ol>
+<li><p>学会简单计算程序的时间复杂度与空间复杂度</p>
+</li>
+<li><p>二分查找法</p>
+</li>
+<li><p>简单的排序算法</p>
+</li>
+</ol>
+<p>a) 冒泡排序法</p>
+<p>b) 插入排序法</p>
+<ol>
+<li>贪心算法经典题目</li>
+</ol>
+<ol>
+<li>高等数学</li>
+</ol>
+<p>以下为选修：</p>
+<ol>
+<li>学会使用简单的DOS命令（较重要）</li>
+</ol>
+<p>a) color/dir/copy/shutdown/mkdir(md)/rmdir(rd)/attrib/cd/</p>
+<p>b) 知道什么是绝对路径与相对路径</p>
+<p>c) 学会使用C语言调用DOS命令</p>
+<p>d) 学会在命令提示符下调用你自己用C语言编写的程序，并使用命令行参数给自己的程序传参（比如自己制作一个copyfile.exe实现与copy命令基本功能一致的功能）</p>
+<p>e) 学会编写bat批处理文件</p>
+<ol>
+<li><p>学会Windows系统的一些小知识，如设置隐藏文件，autoRun.inf的设置等。</p>
+</li>
+<li><p>学会编辑注册表（包括使用注册表编辑器regedit和使用DOS命令编辑注册表）</p>
+</li>
+<li><p>学会使用组策略管理器管理(gpedit.msc)组策略。</p>
+</li>
+</ol>
+<p>大一下学期：</p>
+<ol>
+<li><p>掌握C++部分语法，如引用类型，函数重载等，基本明白什么是类。</p>
+</li>
+<li><p>学会BFS与DFS</p>
+</li>
+</ol>
+<p>a) 迷宫求解（最少步数）</p>
+<p>b) 水池数目(NYOJ27)</p>
+<p>c) 图像有用区域(NYOJ92)</p>
+<p>d) 树的前序中序后序遍历</p>
+<ol>
+<li>动态规划（15题以上），要学会使用循环的方法写动态规划，同时也要学会使用记忆化搜索的方法。</li>
+</ol>
+<p>a) 最大子串和</p>
+<p>b) 最长公共子序列</p>
+<p>c) 最长单调递增子序列(O(n)与O(n log n)算法都需要掌握)</p>
+<p>d) 01背包</p>
+<p>e) RMQ算法</p>
+<ol>
+<li><p>学会分析与计算复杂程序的时间复杂度</p>
+</li>
+<li><p>学会使用栈与队列等线性存储结构</p>
+</li>
+<li><p>学会分治策略</p>
+</li>
+<li><p>排序算法</p>
+</li>
+</ol>
+<p>a) 归并排序</p>
+<p>b) 快速排序</p>
+<p>c) 计数排序</p>
+<ol>
+<li>数论</li>
+</ol>
+<p>a) 扩展欧几里德算法</p>
+<p>b) 求逆元</p>
+<p>c) 同余方程</p>
+<p>d) 中国剩余定理</p>
+<ol>
+<li>博弈论</li>
+</ol>
+<p>a) 博弈问题与SG函数的定义</p>
+<p>b) 多个博弈问题SG值的合并</p>
+<ol>
+<li>图论：</li>
+</ol>
+<p>a) 图的邻接矩阵与邻接表两种常见存储方式</p>
+<p>b) 欧拉路的判定</p>
+<p>c) 单最短路bellman-ford算法dijkstra算法。</p>
+<p>d) 最小生成树的kruskal算法与prim算法。</p>
+<ol>
+<li>学会使用C语言进行网络编程与多线程编程</li>
+</ol>
+<ol>
+<li>高等数学</li>
+</ol>
+<ol>
+<li>线性代数</li>
+</ol>
+<p>a) 明确线性代数的重要性，首先是课本必须学好</p>
+<p>b) 编写一个Matrix类，进行矩阵的各种操作，并求编写程序解线性方程组。</p>
+<p>c) 推荐做一两道“矩阵运算”分类下的题目。</p>
+<p>以下为选修，随便选一两个学学即可：</p>
+<ol>
+<li>（较重要）使用C语言或C++编写简单程序来调用一些简单的windows API，或者在linux下进行linux系统调用，其目的是明白什么是API（应用程序接口）。</li>
+</ol>
+<ol>
+<li>网页设计</li>
+</ol>
+<p>a) 学习静态网页技术(html+css+javascript)</p>
+<p>b) 较具有艺术细胞的可以试试Photoshop</p>
+<p>c) php或其它动态网页技术</p>
+<ol>
+<li>学习matlab，如果想参加数学建模大赛的话，需要学这个软件。</li>
+</ol>
+<p>大一假期（如果留校集训）</p>
+<ol>
+<li><p>掌握C++语法，并熟练使用STL</p>
+</li>
+<li><p>试着实现STL的一些基本容器和函数，使自己基本能看懂STL源码</p>
+</li>
+<li><p>图论</p>
+</li>
+</ol>
+<p>a) 使用优先队列优化Dijkstra和Prim</p>
+<p>b) 单源最短路径之SPFA</p>
+<p>c) 差分约束系统</p>
+<p>d) 多源多点最短路径之FloydWarshall算法</p>
+<p>e) 求欧拉路(圈套圈算法）</p>
+<ol>
+<li><p>进行复杂模拟题训练</p>
+</li>
+<li><p>拓扑排序</p>
+</li>
+<li><p>动态规划进阶</p>
+</li>
+</ol>
+<p>a) 完全背包、多重背包等各种背包问题（参见背包九讲）</p>
+<p>b) POJ上完成一定数目的动态规划题目</p>
+<p>c) 状态压缩动态规划</p>
+<p>d) 树形动态规划</p>
+<ol>
+<li>搜索</li>
+</ol>
+<p>a) 回溯法熟练应用</p>
+<p>b) 复杂的搜索题目练习</p>
+<p>c) 双向广度优先搜索</p>
+<p>d) 启发式搜索(包括A*算法，如八数码问题)</p>
+<ol>
+<li>计算几何</li>
+</ol>
+<p>a) 判断点是否在线段上</p>
+<p>b) 判断线段相交</p>
+<p>c) 判断矩形是否包含点</p>
+<p>d) 判断圆与矩形关系</p>
+<p>e) 判断点是否在多边形内</p>
+<p>f) 判断点到线段的最近点</p>
+<p>g) 计算两个圆的公切线</p>
+<p>h) 求矩形的并的面积</p>
+<p>i) 求多边形面积</p>
+<p>j) 求多边形重心</p>
+<p>k) 求凸包</p>
+<p>选修</p>
+<ol>
+<li><p>可以学习一种C++的开发框架来编写一些窗体程序玩玩（如MFC,Qt等)。</p>
+</li>
+<li><p>学习使用C或C++连接数据库。</p>
+</li>
+</ol>
+<p>大二一整年：</p>
+<ol>
+<li>数据结构</li>
+</ol>
+<p>a) 单调队列</p>
+<p>b) 堆</p>
+<p>c) 并查集</p>
+<p>d) 树状数组</p>
+<p>e) 哈希表</p>
+<p>f) 线段树</p>
+<p>g) 字典树</p>
+<ol>
+<li>图论</li>
+</ol>
+<p>a) 强连通分量</p>
+<p>b) 双连通分量（求割点，桥）</p>
+<p>c) 强连通分量与双连通分量缩点</p>
+<p>d) LCA、LCA与RMQ的转化</p>
+<p>e) 二分图匹配</p>
+<p>i. 二分图最大匹配</p>
+<p>ii. 最小点集覆盖</p>
+<p>iii. 最小路径覆盖</p>
+<p>iv. 二分图最优匹配</p>
+<p>v. 二分图多重匹配</p>
+<p>f) 网络流</p>
+<p>i. 最大流的基本SAP</p>
+<p>ii. 最大流的ISAP或者Dinic等高效算法（任一）</p>
+<p>iii. 最小费用最大流</p>
+<p>iv. 最大流最小割定理</p>
+<ol>
+<li><p>动态规划多做题提高（10道难题以上）</p>
+</li>
+<li><p>数论</p>
+</li>
+</ol>
+<p>a) 积性函数的应用</p>
+<p>b) 欧拉定理</p>
+<p>c) 费马小定理</p>
+<p>d) 威乐逊定理</p>
+<ol>
+<li>组合数学</li>
+</ol>
+<p>a) 群论基础</p>
+<p>b) Polya定理与计数问题</p>
+<p>c) Catalan数</p>
+<ol>
+<li>计算几何</li>
+</ol>
+<p>a) 各种旋转卡壳相关算法</p>
+<p>b) 三维计算几何算法</p>
+<ol>
+<li><p>理解数据库原理，学会SQL语句</p>
+</li>
+<li><p>学好计算机组成原理</p>
+</li>
+</ol>
+<ol>
+<li><p>学习Transact-SQL语言，学会使用触发器，存储过程，学会数据库事务等。</p>
+</li>
+<li><p>图论二</p>
+</li>
+</ol>
+<p>a) 网络流的各种构图训练（重要）</p>
+<p>b) 最小割与最小点权覆盖等的关系（详见《最小割模型在信息学竞赛中的应用》一文）</p>
+<p>c) 次小生成树</p>
+<p>d) 第k短路</p>
+<p>e) 最小比率生成树</p>
+<ol>
+<li><p>线性规划</p>
+</li>
+<li><p>动态规划更高级进阶</p>
+</li>
+<li><p>KMP算法</p>
+</li>
+<li><p>AC自动机理论与实现</p>
+</li>
+<li><p>博弈论之Alpha-beta剪枝</p>
+</li>
+</ol>
+<p>选修，有相关兴趣的可以学一下：</p>
+<ol>
+<li><p>自学C#或Java做一个项目，比如C++/C#/Java考试系统之类的。</p>
+</li>
+<li><p>先做一些小游戏玩玩，然后可以学一下DirectX或者OpenGL，或者可以试试XNA游戏框架。</p>
+</li>
+<li><p>了解一下游戏引擎相关的知识</p>
+</li>
+</ol>
+<p>其中的寒假假期最好：</p>
+<ol>
+<li><p>自学完离散数学</p>
+</li>
+<li><p>自学概率论的部分章节</p>
+</li>
+<li><p>自学操作系统部分章节</p>
+</li>
+</ol>
+<p>大三、</p>
+<ol>
+<li><p>巩固之前的知识，进行一遍大复习。</p>
+</li>
+<li><p>一些如蚁群算法，遗传算法，模拟退火算法等人工智能方面应用较广的随机性算法。</p>
+</li>
+<li><p>把编译原理上学的东西应用到编程中：如DFA,NFA，还有语法分析的各种方法等。</p>
+</li>
+</ol>
+<p>当你按上面那些一步步走过来时你已经是牛人了，后面要学的东西，就是由牛人自己来发掘的了。</p>
+<p><a href="http://acm.nyist.net" target="_blank" rel="external">http://acm.nyist.net</a></p>
+<p>2011年6月21日</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/post/Algorithm/Dijkstra.html" rel="next" title="Dijkstra算法">
+                <i class="fa fa-chevron-left"></i> Dijkstra算法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/post/Note/STLNote.html" rel="prev" title="STL笔记">
+                STL笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/OhYee.png"
+               alt="OhYee" />
+          <p class="site-author-name" itemprop="name">OhYee</p>
+          <p class="site-description motion-element" itemprop="description">OhYee在学习算法、编程和生活中的记录</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">392</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">137</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://www.oyohyee.com/" target="_blank" title="Blog">
+                  
+                    <i class="fa fa-fw fa-home"></i>
+                  
+                  Blog
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:oyohyee@oyohyee.com" target="_blank" title="Email">
+                  
+                    <i class="fa fa-fw fa-at"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ohyee" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://coding.net/u/OhYee" target="_blank" title="Coding">
+                  
+                    <i class="fa fa-fw fa-git"></i>
+                  
+                  Coding
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/kong-chen-hao" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-star"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=896817156&site=qq&menu=yes" target="_blank" title="QQ">
+                  
+                    <i class="fa fa-fw fa-qq"></i>
+                  
+                  QQ
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/OhYee/ACM.github.io" target="_blank" title="Code">
+                  
+                    <i class="fa fa-fw fa-code"></i>
+                  
+                  Code
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="/about/" target="_blank" title="About Me">
+                  
+                    <i class="fa fa-fw fa-credit-card"></i>
+                  
+                  About Me
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://hakale.cn/" title="Hakale" target="_blank">Hakale</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/acblacktea" title="ACBlackTea" target="_blank">ACBlackTea</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/snow_me" title="Wilbert" target="_blank">Wilbert</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/adjky/" title="ADjky" target="_blank">ADjky</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/JACK_JYH/" title="JACK_JYH" target="_blank">JACK_JYH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/qq_35323001" title="Super丶xd" target="_blank">Super丶xd</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/pengwill97" title="Pengwill" target="_blank">Pengwill</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/Mr_Saltyfish" title="Mr_Saltyfish" target="_blank">Mr_Saltyfish</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/wmrv587/" title="wmr" target="_blank">wmr</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/robin1998/" title="Robin" target="_blank">Robin</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">OhYee</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>

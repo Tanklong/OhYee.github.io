@@ -1,0 +1,1181 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans,zh-CN,zh-tw,en,default">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.proxy.ustclug.org/css?family=Monda:300,300italic,400,400italic,700,700italic|Microsoft Yahei:300,300italic,400,400italic,700,700italic|Microsoft Yahei:300,300italic,400,400italic,700,700italic|Consolas:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+<!-- Keywords -->
+<meta name="keywords" content="DFS,BFS,图论,最短路,Floyd,Dijkstra,A*,IDA*,Bellman-Ford,SPFA,迭代加深,OhYeeOhYee,ACM,OYOhYee,博客,题解,C++" />
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="Dijlkstra算法
+Dijkstra算法是一种常见的计算正权图上的单源最短路的算法，能同时用在有向图和无向图上。
+
+&amp;gt;Dijkstra算法的解释&amp;lt;
+其以BFS为基础进行优化。
+BFS算法
+宽度优先遍历算法，先从起点向周围拓展，再从拓展后的每个点向外拓展，如果某个节点已经访问过，则不再访问该节点。
+由于每个节点只访问一次，并且按层逐层向外访问，因此第一次访问到终点时走过的路径就是最短">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初窥Dijkstra算法、Bellman-Ford、SPFA算法、Floyd算法、迭代加深搜索、A*、IDA*">
+<meta property="og:url" content="http://www.oyohyee.com/post/Algorithm/Shortest_Path.html">
+<meta property="og:site_name" content="OhYee's Blog">
+<meta property="og:description" content="Dijlkstra算法
+Dijkstra算法是一种常见的计算正权图上的单源最短路的算法，能同时用在有向图和无向图上。
+
+&amp;gt;Dijkstra算法的解释&amp;lt;
+其以BFS为基础进行优化。
+BFS算法
+宽度优先遍历算法，先从起点向周围拓展，再从拓展后的每个点向外拓展，如果某个节点已经访问过，则不再访问该节点。
+由于每个节点只访问一次，并且按层逐层向外访问，因此第一次访问到终点时走过的路径就是最短">
+<meta property="og:updated_time" content="2017-03-22T12:19:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="初窥Dijkstra算法、Bellman-Ford、SPFA算法、Floyd算法、迭代加深搜索、A*、IDA*">
+<meta name="twitter:description" content="Dijlkstra算法
+Dijkstra算法是一种常见的计算正权图上的单源最短路的算法，能同时用在有向图和无向图上。
+
+&amp;gt;Dijkstra算法的解释&amp;lt;
+其以BFS为基础进行优化。
+BFS算法
+宽度优先遍历算法，先从起点向周围拓展，再从拓展后的每个点向外拓展，如果某个节点已经访问过，则不再访问该节点。
+由于每个节点只访问一次，并且按层逐层向外访问，因此第一次访问到终点时走过的路径就是最短">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.oyohyee.com/post/Algorithm/Shortest_Path.html"/>
+
+
+
+
+
+  <title> 初窥Dijkstra算法、Bellman-Ford、SPFA算法、Floyd算法、迭代加深搜索、A*、IDA* | OhYee's Blog  - OhYee在学习算法、编程和生活中的记录 |DFS|BFS|图论|最短路|Floyd|Dijkstra|A*|IDA*|Bellman-Ford|SPFA|迭代加深|</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c3c4a93be88257973d97af02f735ed4e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">OhYee's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <h1 class="site-subtitle" itemprop="description">随手记录一下~</h1>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-templates">
+          <a href="/templates.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-laptop"></i> <br />
+            
+            模板
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+<link href="/css/My.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/My.js"></script>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://www.oyohyee.com/post/Algorithm/Shortest_Path.html">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="OhYee">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/OhYee.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="OhYee's Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="OhYee's Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                初窥Dijkstra算法、Bellman-Ford、SPFA算法、Floyd算法、迭代加深搜索、A*、IDA*
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-03-26T22:48:00+08:00">
+                2016-03-26 22:48:00
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Algorithm/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Dijlkstra算法"><a href="#Dijlkstra算法" class="headerlink" title="Dijlkstra算法"></a>Dijlkstra算法</h1><blockquote>
+<p>Dijkstra算法是一种常见的计算正权图上的单源最短路的算法，能同时用在有向图和无向图上。</p>
+</blockquote>
+<p><a href="/post/Algorithm/Dijkstra.html">&gt;Dijkstra算法的解释&lt;</a></p>
+<p>其以<strong>BFS</strong>为基础进行优化。</p>
+<h2 id="BFS算法"><a href="#BFS算法" class="headerlink" title="BFS算法"></a>BFS算法</h2><blockquote>
+<p>宽度优先遍历算法，先从起点向周围拓展，再从拓展后的每个点向外拓展，如果某个节点已经访问过，则不再访问该节点。</p>
+<p>由于每个节点只访问一次，并且按层逐层向外访问，因此第一次访问到终点时走过的路径就是最短路径。</p>
+<p>可以用于无权图的最短路搜索。</p>
+<p>通常使用<strong>循环</strong>和<strong>队列</strong>进行搜索。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; Q;</div><div class="line"><span class="keyword">bool</span> visited[maxn];</div><div class="line"><span class="built_in">memset</span>(visited,flase,<span class="keyword">sizeof</span>(visited));</div><div class="line"></div><div class="line">Q.push(v);</div><div class="line">visited[v]=<span class="literal">true</span>;</div><div class="line"><span class="keyword">while</span>(!Q.empty())&#123;</div><div class="line">    <span class="keyword">int</span> it=Q.top();</div><div class="line">    Q.pop();</div><div class="line">    </div><div class="line">    <span class="comment">//拓展到终点</span></div><div class="line">    <span class="keyword">if</span>(it==s)&#123;</div><div class="line">    ...</div><div class="line">     <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    ...<span class="comment">//从it向外拓展到itn</span></div><div class="line">    <span class="keyword">if</span>(!visited[itn])</div><div class="line">        Q.push(itn);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="DFS算法"><a href="#DFS算法" class="headerlink" title="DFS算法"></a>DFS算法</h2><blockquote>
+<p>深度优先遍历，从起点开始，沿着一条分支一直走到终点。</p>
+<p>与BFS不同，DFS的在搜索最短路的大多数情况下，是不如BFS的，它更多是用在状态的转移上。</p>
+<p>根据已有的状态向下一个状态进行转移。</p>
+<p>在较为复杂的迷宫中（牵扯到时间、方向等各种复杂状态）时，用DFS来传递参数会更有优势</p>
+<p>由于DFS强调的是状态的转移。因此，更多用递归来实现。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span><span class="params">(...)</span></span>&#123;</div><div class="line">    <span class="comment">//不符合要求的拓展</span></div><div class="line">    <span class="keyword">if</span>(...)</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    <span class="comment">//达到叶节点</span></div><div class="line">    <span class="keyword">if</span>(...)</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    ...<span class="comment">//向下拓展到itn(n=1、2、……)</span></div><div class="line">    DFS(it1);</div><div class="line">    ...</div><div class="line">    DFS(itn);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</blockquote>
+<p>当图为<strong>有权图</strong>时，如果我们想要走最短的路径，就要<strong>优先走权值更小的路</strong>，这样才能走出最小的解（可证明）</p>
+<p>因此，在BFS中，我们在队列中不应该选取先进队的节点，而应该走权值最小的节点。</p>
+<p>将BFS的队列(queue)改成优先队列(priority_queue)即可。</p>
+<p>然后每次拓展节点后，更新每个节点的权值(取最小)</p>
+<p>最后终点的权值就是最小路的距离。</p>
+<h1 id="Bellman-Ford算法"><a href="#Bellman-Ford算法" class="headerlink" title="Bellman-Ford算法"></a>Bellman-Ford算法</h1><p>Dijkstra算法只适用于正权图上最短路，而Bellman-Ford还可计算副权存在时的最短路。</p>
+<p>首先要明确：</p>
+<ul>
+<li><p>如果最短路存在，一定存在一个不含环的最短路。</p>
+</li>
+<li><p>最短路最多只经过(不含起点)n-1个节点，可以通过n-1轮松弛操作得到。</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">将起点权值设置为0，其他点权值设置为无穷大。</div><div class="line"></div><div class="line">循环节点个数-1次</div><div class="line"></div><div class="line">　　循环边的个数次(i)</div><div class="line"></div><div class="line">　　　　对第i条边进行松弛操作</div><div class="line"></div><div class="line">　　　　检测是否存在负权回路</div><div class="line"></div><div class="line">　　　　　　存在</div><div class="line"></div><div class="line">　　　　　　　返回false</div><div class="line"></div><div class="line">　　　　　　不存在</div><div class="line"></div><div class="line">　　　　　　　继续</div></pre></td></tr></table></figure>
+<h1 id="SPFA算法"><a href="#SPFA算法" class="headerlink" title="SPFA算法"></a>SPFA算法</h1><p>Bellman-Ford算法虽然解决了负权路的问题，但是其效率过于底下，并不常使用。</p>
+<p>而SPFA算法，是其高效率的替代方法。</p>
+<p>其与无权图的BFS较为相近。</p>
+<p>不同的是，visited数组记录的不是是否已经访问过，而是是否在队列Q中</p>
+<p>每次松弛操作更新估计值(d[i])，如果i点不在队列中，则要把i点入队</p>
+<p>如果有边入队的次数超过N次，则说明存在负环。</p>
+<h1 id="Floyd算法"><a href="#Floyd算法" class="headerlink" title="Floyd算法"></a>Floyd算法</h1><p>如果需要求出每两点之间的最短路，则可以使用Floyd算法，这是一个非常简洁的算法</p>
+<p>不断进行松弛操作，即可得到最短路径</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;n;k++)</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;n;j++)</div><div class="line">            d[i][j]=min(d[i][j],d[i][k]+d[k][j]);</div></pre></td></tr></table></figure>
+<p>迭代加深搜索、A*、IDA*是三种相似并且很有用的算法。</p>
+<p>他们是一种解题的思路，并没有具体的实现代码，在脑海中有这种思路，有可能会帮助我们获取解题的思路</p>
+<h1 id="迭代加深搜索"><a href="#迭代加深搜索" class="headerlink" title="迭代加深搜索"></a>迭代加深搜索</h1><p>迭代加深搜索是一种不断拓展搜索范围的搜索方式。</p>
+<p>可以将其形象成一棵树，这棵树有无数层（深度无限深），每一层有无限个节点（无限广）</p>
+<p>因此，无论是DFS还是BFS，都不能拓展一支，拓展一层。</p>
+<p>而其答案可能就在第二层第二支上……</p>
+<p>为了求解这种问题，有了迭代加深搜索。</p>
+<p>顾名思义，迭代加深就是逐渐增加搜索的范围。</p>
+<p>最初我们只搜索maxd的范围，当maxd内没有我们需要的答案时，我们将maxd+1，而后继续搜索。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(maxd=<span class="number">1</span>;;maxd++)</div><div class="line">    <span class="keyword">if</span>(dfs(...))</div><div class="line">        <span class="keyword">break</span>;</div></pre></td></tr></table></figure>
+<p>埃及分数问题，是经典的迭代加深问题</p>
+<p>在古埃及，人们使用单位分数的和（形如 1/a 的，a 是正整数）表示一切有理数。</p>
+<p>如：<code>2/3 = 1/2 + 1/6</code>，但不允许 <code>2/3 = 1/3 + 1/3</code>，因为加数中有相同的。</p>
+<p>首先，加数少的比加数多的好，其次，加数个数相同的，最小的分数越大越好。</p>
+<p>首先BFS无法求解这个问题，我们不知道有几个加数；其次DFS也不能求解这个问题，我们不知道加数没有最小值（分母可以无限大）。</p>
+<p>因此，我们需要使用迭代加深算法。先让每个加数都大于1/10，进行DFS，如果没有答案，再搜索每个加数都大于1/20……</p>
+<p>很显然，每次maxd的增加，都导致了重复搜索，不过相比搜索总数指数级的增加，重复搜索的这部分可以忽略……</p>
+<h1 id="A-算法"><a href="#A-算法" class="headerlink" title="A*算法"></a>A*算法</h1><p>A*算法，又称启发式搜索。</p>
+<p>用公式表示为</p>
+<blockquote>
+<p>f(n)=g(n)+h(n)</p>
+</blockquote>
+<p>其中</p>
+<blockquote>
+<p>f(n)是初始点经由节点n到目标点的估价函数</p>
+<p>g(n)是在状态空间中从初始节点到n节点的实际代价</p>
+<p>h(n)是从n到目标结点的最佳路径的估计代价</p>
+</blockquote>
+<p>具体是什么意思呢，就是我们要优先选择一条我们估计最好的分支进行拓展，对于我们估计不是很好的分支进行剪枝。</p>
+<p>由于最好只是我们的估计，因此，如果估计的不合理，可能会丢失最优解或者并没有有效提升效率。</p>
+<p>与Dijkstra对比，我们可以发现，Dijkstra其实是简化的一种A*算法：</p>
+<p>它与A*相比少了剪枝的部分，与BFS相比，多了估价的部分</p>
+<h1 id="IDA-算法"><a href="#IDA-算法" class="headerlink" title="IDA*算法"></a>IDA*算法</h1><p>将迭代加深的有上限的搜索和A<em>算法的剪枝与估价结合，就得到了IDA</em>算法</p>
+<p>IDA*算法有以下优缺点：</p>
+<ul>
+<li>优化了A*对空间的小号</li>
+<li>在每一次迭代的过程中避免了判重</li>
+<li>比普通的DFS相比更加明确目标，并能够有效剪枝</li>
+<li>迭代加深会导致重复搜索内容</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/DFS/" rel="tag"># DFS</a>
+          
+            <a href="/tags/BFS/" rel="tag"># BFS</a>
+          
+            <a href="/tags/Graph/" rel="tag"># 图论</a>
+          
+            <a href="/tags/Shortest-Path/" rel="tag"># 最短路</a>
+          
+            <a href="/tags/Floyd/" rel="tag"># Floyd</a>
+          
+            <a href="/tags/Dijkstra/" rel="tag"># Dijkstra</a>
+          
+            <a href="/tags/A/" rel="tag"># A*</a>
+          
+            <a href="/tags/IDA/" rel="tag"># IDA*</a>
+          
+            <a href="/tags/Bellman-Ford/" rel="tag"># Bellman-Ford</a>
+          
+            <a href="/tags/SPFA/" rel="tag"># SPFA</a>
+          
+            <a href="/tags/Iteration/" rel="tag"># 迭代加深</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/post/Note/bit.html" rel="next" title="(转)巧妙运用C语言位运算+位运算笔记">
+                <i class="fa fa-chevron-left"></i> (转)巧妙运用C语言位运算+位运算笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/post/Algorithm/MST.html" rel="prev" title="最小生成树">
+                最小生成树 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/OhYee.png"
+               alt="OhYee" />
+          <p class="site-author-name" itemprop="name">OhYee</p>
+          <p class="site-description motion-element" itemprop="description">OhYee在学习算法、编程和生活中的记录</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">392</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">137</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://www.oyohyee.com/" target="_blank" title="Blog">
+                  
+                    <i class="fa fa-fw fa-home"></i>
+                  
+                  Blog
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:oyohyee@oyohyee.com" target="_blank" title="Email">
+                  
+                    <i class="fa fa-fw fa-at"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ohyee" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://coding.net/u/OhYee" target="_blank" title="Coding">
+                  
+                    <i class="fa fa-fw fa-git"></i>
+                  
+                  Coding
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/kong-chen-hao" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-star"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://wpa.qq.com/msgrd?v=3&uin=896817156&site=qq&menu=yes" target="_blank" title="QQ">
+                  
+                    <i class="fa fa-fw fa-qq"></i>
+                  
+                  QQ
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/OhYee/ACM.github.io" target="_blank" title="Code">
+                  
+                    <i class="fa fa-fw fa-code"></i>
+                  
+                  Code
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="/about/" target="_blank" title="About Me">
+                  
+                    <i class="fa fa-fw fa-credit-card"></i>
+                  
+                  About Me
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://hakale.cn/" title="Hakale" target="_blank">Hakale</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/acblacktea" title="ACBlackTea" target="_blank">ACBlackTea</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/snow_me" title="Wilbert" target="_blank">Wilbert</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/adjky/" title="ADjky" target="_blank">ADjky</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/JACK_JYH/" title="JACK_JYH" target="_blank">JACK_JYH</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/qq_35323001" title="Super丶xd" target="_blank">Super丶xd</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/pengwill97" title="Pengwill" target="_blank">Pengwill</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/Mr_Saltyfish" title="Mr_Saltyfish" target="_blank">Mr_Saltyfish</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/wmrv587/" title="wmr" target="_blank">wmr</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/robin1998/" title="Robin" target="_blank">Robin</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Dijlkstra算法"><span class="nav-number">1.</span> <span class="nav-text">Dijlkstra算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#BFS算法"><span class="nav-number">1.1.</span> <span class="nav-text">BFS算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DFS算法"><span class="nav-number">1.2.</span> <span class="nav-text">DFS算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bellman-Ford算法"><span class="nav-number">2.</span> <span class="nav-text">Bellman-Ford算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SPFA算法"><span class="nav-number">3.</span> <span class="nav-text">SPFA算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Floyd算法"><span class="nav-number">4.</span> <span class="nav-text">Floyd算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#迭代加深搜索"><span class="nav-number">5.</span> <span class="nav-text">迭代加深搜索</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#A-算法"><span class="nav-number">6.</span> <span class="nav-text">A*算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IDA-算法"><span class="nav-number">7.</span> <span class="nav-text">IDA*算法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">OhYee</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>
