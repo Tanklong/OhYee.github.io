@@ -182,7 +182,7 @@
       
       <title><![CDATA[AOJ 835.FJ的旅行]]></title>
       <url>%2Fpost%2FAOJ%2F835.html</url>
-      <content type="text"><![CDATA[题解|AOJ|网络流|最短路|题目 点击显/隐题目 每当西瓜的朋友来西瓜家看他，西瓜总是喜欢带他们逛自己的豪宅。西瓜的豪宅有N幢楼（1&lt;=N&lt;=1000），用1到N的整数编号。1号楼是西瓜豪宅的大门，N号楼是西瓜的储藏室。西瓜的豪宅里总共有M条道路（1&lt;=M&lt;=10000）。每条道路连接两栋不同的楼房，道路的长度不超过35000。为了最好地炫耀他的豪宅，西瓜准备从大门出发，经过一些楼房到达储藏室，再经过一些楼房回到自己的大门。他要求他的路径越短越好，但是不能经过任意一条道路多于一次。请你计算这样的一条最短路径。西瓜保证这样的路径是存在的。 第一行：N和M第2..M+1行：每行三个整数表示一条道路（起点，终点，长度） 一个整数，表示最短路径长度 4 51 2 12 3 13 4 11 3 22 4 2 6]]></content>
+      <content type="text"><![CDATA[题解|网络流|AOJ|最短路|题目 点击显/隐题目 每当西瓜的朋友来西瓜家看他，西瓜总是喜欢带他们逛自己的豪宅。西瓜的豪宅有N幢楼（1&lt;=N&lt;=1000），用1到N的整数编号。1号楼是西瓜豪宅的大门，N号楼是西瓜的储藏室。西瓜的豪宅里总共有M条道路（1&lt;=M&lt;=10000）。每条道路连接两栋不同的楼房，道路的长度不超过35000。为了最好地炫耀他的豪宅，西瓜准备从大门出发，经过一些楼房到达储藏室，再经过一些楼房回到自己的大门。他要求他的路径越短越好，但是不能经过任意一条道路多于一次。请你计算这样的一条最短路径。西瓜保证这样的路径是存在的。 第一行：N和M第2..M+1行：每行三个整数表示一条道路（起点，终点，长度） 一个整数，表示最短路径长度 4 51 2 12 3 13 4 11 3 22 4 2 6]]></content>
     </entry>
 
     
@@ -238,7 +238,7 @@
       
       <title><![CDATA[AOJ 482.二分法求方程的根]]></title>
       <url>%2Fpost%2FAOJ%2F482.html</url>
-      <content type="text"><![CDATA[题解|AOJ|数学|double|题目 点击显/隐题目 用二分法求方程f(x)=ax4+bx3+cx2+dx+e=0 在 (x1,x2) 之内的根本题保证f(x1)*f(x2)&lt;=0且(x1,x2)内只有一个根 行1：5个空格分隔的整数a,b,c,d,e，a,b,c,d,e∈[-9,9]行2：2个空格分隔的整数x1,x2，x1,x2∈[-10,10]，x1&lt;x2 行1：一个浮点数，代表根，精确到小数点后10位 0 2 -4 3 -6-10 10 2.0000000000]]></content>
+      <content type="text"><![CDATA[题解|数学|AOJ|double|题目 点击显/隐题目 用二分法求方程f(x)=ax4+bx3+cx2+dx+e=0 在 (x1,x2) 之内的根本题保证f(x1)*f(x2)&lt;=0且(x1,x2)内只有一个根 行1：5个空格分隔的整数a,b,c,d,e，a,b,c,d,e∈[-9,9]行2：2个空格分隔的整数x1,x2，x1,x2∈[-10,10]，x1&lt;x2 行1：一个浮点数，代表根，精确到小数点后10位 0 2 -4 3 -6-10 10 2.0000000000]]></content>
     </entry>
 
     
@@ -342,7 +342,7 @@
       
       <title><![CDATA[Hexo本地搜索及部分SEO优化]]></title>
       <url>%2Fpost%2FNote%2FLocalSearch.html</url>
-      <content type="text"><![CDATA[undefined|undefined|笔记|Hexo|SEO|解决本地搜索问题,并且修改了 Next 主题的部分SEO内容,写了一个小插件用于生成 urls.txt 用来给百度主动推送]]></content>
+      <content type="text"><![CDATA[undefined|undefined|笔记|SEO|Hexo|解决本地搜索问题,并且修改了 Next 主题的部分SEO内容,写了一个小插件用于生成 urls.txt 用来给百度主动推送]]></content>
     </entry>
 
     
@@ -446,7 +446,7 @@
       
       <title><![CDATA[HDU 5937.Equation(2016 CCPC 杭州 E)]]></title>
       <url>%2Fpost%2FHDU%2F5937.html</url>
-      <content type="text"><![CDATA[题解|HDU|DFS|暴力|CCPC|搜索|剪枝|题目 Description Little Ruins is a studious boy, recently he learned addition operation! He was rewarded some number bricks of 1 to 9 and infinity bricks of addition mark ‘+’ and equal mark ‘=’. Now little Ruins is puzzled by those bricks because he wants to put those bricks into as many different addition equations form x+y=z as possible. Each brick can be used at most once and x, y, z are one digit integer. As Ruins is a beginer of addition operation, x, y and z will be single digit number. Two addition equations are different if any number of x, y and z is different. Please help little Ruins to calculate the maximum number of different addition equations.]]></content>
+      <content type="text"><![CDATA[题解|HDU|DFS|CCPC|搜索|剪枝|暴力|题目 Description Little Ruins is a studious boy, recently he learned addition operation! He was rewarded some number bricks of 1 to 9 and infinity bricks of addition mark ‘+’ and equal mark ‘=’. Now little Ruins is puzzled by those bricks because he wants to put those bricks into as many different addition equations form x+y=z as possible. Each brick can be used at most once and x, y, z are one digit integer. As Ruins is a beginer of addition operation, x, y and z will be single digit number. Two addition equations are different if any number of x, y and z is different. Please help little Ruins to calculate the maximum number of different addition equations.]]></content>
     </entry>
 
     
@@ -454,7 +454,7 @@
       
       <title><![CDATA[HDU 5936.Difference(2016 CCPC 杭州 D)]]></title>
       <url>%2Fpost%2FHDU%2F5936.html</url>
-      <content type="text"><![CDATA[题解|HDU|记忆化搜索|暴力|CCPC|中途相遇法|题目 Description Little Ruins is playing a number game, first he chooses two positive integers y and K and calculates f(y,K), here f(y,K) = ∑in every digits of y zK (f(233,2) = 22+32+32=22) then he gets the result x=f(y,K)-y As Ruins is forgetful, a few seconds later, he only remembers K, x and forgets y. please help him find how many y satisfy x=f(y,K)-y.]]></content>
+      <content type="text"><![CDATA[题解|HDU|记忆化搜索|CCPC|暴力|中途相遇法|题目 Description Little Ruins is playing a number game, first he chooses two positive integers y and K and calculates f(y,K), here f(y,K) = ∑in every digits of y zK (f(233,2) = 22+32+32=22) then he gets the result x=f(y,K)-y As Ruins is forgetful, a few seconds later, he only remembers K, x and forgets y. please help him find how many y satisfy x=f(y,K)-y.]]></content>
     </entry>
 
     
@@ -542,7 +542,7 @@
       
       <title><![CDATA[hihocoder 1383.The Book List(ACM-ICPC国际大学生程序设计竞赛北京赛区(2016)网络赛)]]></title>
       <url>%2Fpost%2Fhihocoder%2F1383.html</url>
-      <content type="text"><![CDATA[题解|模拟|链表(list)|hihocoder|]]></content>
+      <content type="text"><![CDATA[题解|模拟|hihocoder|链表(list)|]]></content>
     </entry>
 
     
@@ -630,7 +630,7 @@
       
       <title><![CDATA[POJ 2739.Sum of Consecutive Prime Numbers]]></title>
       <url>%2Fpost%2FPOJ%2F2739.html</url>
-      <content type="text"><![CDATA[题解|质数|打表|模拟|POJ|题目 Description Some positive integers can be represented by a sum of one or more consecutive prime numbers. How many such representations does a given positive integer have For example, the integer 53 has two representations 5 + 7 + 11 + 13 + 17 and 53. The integer 41 has three representations 2+3+5+7+11+13, 11+13+17, and 41. The integer 3 has only one representation, which is 3. The integer 20 has no such representations. Note that summands must be consecutive primenumbers, so neither 7 + 13 nor 3 + 5 + 5 + 7 is a valid representation for the integer 20.Your mission is to write a program that reports the number of representations for the given positive integer.]]></content>
+      <content type="text"><![CDATA[题解|质数|模拟|打表|POJ|题目 Description Some positive integers can be represented by a sum of one or more consecutive prime numbers. How many such representations does a given positive integer have For example, the integer 53 has two representations 5 + 7 + 11 + 13 + 17 and 53. The integer 41 has three representations 2+3+5+7+11+13, 11+13+17, and 41. The integer 3 has only one representation, which is 3. The integer 20 has no such representations. Note that summands must be consecutive primenumbers, so neither 7 + 13 nor 3 + 5 + 5 + 7 is a valid representation for the integer 20.Your mission is to write a program that reports the number of representations for the given positive integer.]]></content>
     </entry>
 
     
@@ -734,7 +734,7 @@
       
       <title><![CDATA[HDU 5074.Hatsune Miku(2014 鞍山赛区现场赛 E)]]></title>
       <url>%2Fpost%2FHDU%2F5074.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|题目 Description Hatsune Miku is a popular virtual singer. It is very popular in both Japan and China. Basically it is a computer software that allows you to compose a song on your own using the vocal package. Today you want to compose a song, which is just a sequence of notes. There are only m different notes provided in the package. And you want to make a song with n notes. Also, you know that there is a system to evaluate the beautifulness of a song. For each two consecutive notes a and b, if b comes after a, then the beautifulness for these two notes is evaluated as score(a, b). So the total beautifulness for a song consisting of notes a 1, a 2, . . . , a n, is simply the sum of score(a i, a i+1) for 1 ≤ i ≤ n - 1. Now, you find that at some positions, the notes have to be some specific ones, but at other positions you can decide what notes to use. You want to maximize your song’s beautifulness. What is the maximum beautifulness you can achieve]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|题目 Description Hatsune Miku is a popular virtual singer. It is very popular in both Japan and China. Basically it is a computer software that allows you to compose a song on your own using the vocal package. Today you want to compose a song, which is just a sequence of notes. There are only m different notes provided in the package. And you want to make a song with n notes. Also, you know that there is a system to evaluate the beautifulness of a song. For each two consecutive notes a and b, if b comes after a, then the beautifulness for these two notes is evaluated as score(a, b). So the total beautifulness for a song consisting of notes a 1, a 2, . . . , a n, is simply the sum of score(a i, a i+1) for 1 ≤ i ≤ n - 1. Now, you find that at some positions, the notes have to be some specific ones, but at other positions you can decide what notes to use. You want to maximize your song’s beautifulness. What is the maximum beautifulness you can achieve]]></content>
     </entry>
 
     
@@ -926,7 +926,7 @@
       
       <title><![CDATA[HDU 5366.The mook jong]]></title>
       <url>%2Fpost%2FHDU%2F5366.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|打表|题目 Description ZJiaQ want to become a strong man, so he decided to play the mook jong。ZJiaQ want to put some mook jongs in his backyard. His backyard consist of n bricks that is 11,so it is 1n。ZJiaQ want to put a mook jong in a brick. because of the hands of the mook jong， the distance of two mook jongs should be equal or more than 2 bricks. Now ZJiaQ want to know how many ways can ZJiaQ put mook jongs legally(at least one mook jong).]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|打表|题目 Description ZJiaQ want to become a strong man, so he decided to play the mook jong。ZJiaQ want to put some mook jongs in his backyard. His backyard consist of n bricks that is 11,so it is 1n。ZJiaQ want to put a mook jong in a brick. because of the hands of the mook jong， the distance of two mook jongs should be equal or more than 2 bricks. Now ZJiaQ want to know how many ways can ZJiaQ put mook jongs legally(at least one mook jong).]]></content>
     </entry>
 
     
@@ -1054,7 +1054,7 @@
       
       <title><![CDATA[线段树]]></title>
       <url>%2Fpost%2FAlgorithm%2FSegment_tree.html</url>
-      <content type="text"><![CDATA[算法|树|线段树|递归与分治|线段树是一种二叉搜索树，与区间树相似，它将一个区间划分成一些单元区间，每个单元区间对应线段树中的一个叶结点。使用线段树可以快速的查找某一个节点在若干条线段中出现的次数，时间复杂度为O(logN）。而未优化的空间复杂度为2N，因此有时需要离散化让空间压缩。 百度百科线段树]]></content>
+      <content type="text"><![CDATA[算法|树|递归与分治|线段树|线段树是一种二叉搜索树，与区间树相似，它将一个区间划分成一些单元区间，每个单元区间对应线段树中的一个叶结点。使用线段树可以快速的查找某一个节点在若干条线段中出现的次数，时间复杂度为O(logN）。而未优化的空间复杂度为2N，因此有时需要离散化让空间压缩。 百度百科线段树]]></content>
     </entry>
 
     
@@ -1118,7 +1118,7 @@
       
       <title><![CDATA[HDU 1227.Fast Food]]></title>
       <url>%2Fpost%2FHDU%2F1227.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|题目 Description The fastfood chain McBurger owns several restaurants along a highway. Recently, they have decided to build several depots along the highway, each one located at a restaurant and supplying several of the restaurants with the needed ingredients. Naturally, these depots should be placed so that the average distance between a restaurant and its assigned depot is minimized. You are to write a program that computes the optimal positions and assignments of the depots. To make this more precise, the management of McBurger has issued the following specification: You will be given the positions of n restaurants along the highway as n integers d1 &lt; d2 &lt; … &lt; dn (these are the distances measured from the company’s headquarter, which happens to be at the same highway). Furthermore, a number k (k &lt;= n) will be given, the number of depots to be built. The k depots will be built at the locations of k different restaurants. Each restaurant will be assigned to the closest depot, from which it will then receive its supplies. To minimize shipping costs, the total distance sum, defined as must be as small as possible. Write a program that computes the positions of the k depots, such that the total distance sum is minimized.]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|题目 Description The fastfood chain McBurger owns several restaurants along a highway. Recently, they have decided to build several depots along the highway, each one located at a restaurant and supplying several of the restaurants with the needed ingredients. Naturally, these depots should be placed so that the average distance between a restaurant and its assigned depot is minimized. You are to write a program that computes the optimal positions and assignments of the depots. To make this more precise, the management of McBurger has issued the following specification: You will be given the positions of n restaurants along the highway as n integers d1 &lt; d2 &lt; … &lt; dn (these are the distances measured from the company’s headquarter, which happens to be at the same highway). Furthermore, a number k (k &lt;= n) will be given, the number of depots to be built. The k depots will be built at the locations of k different restaurants. Each restaurant will be assigned to the closest depot, from which it will then receive its supplies. To minimize shipping costs, the total distance sum, defined as must be as small as possible. Write a program that computes the positions of the k depots, such that the total distance sum is minimized.]]></content>
     </entry>
 
     
@@ -1126,7 +1126,7 @@
       
       <title><![CDATA[HDU 1224.Free DIY Tour]]></title>
       <url>%2Fpost%2FHDU%2F1224.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|题目 Description Weiwei is a software engineer of ShiningSoft. He has just excellently fulfilled a software project with his fellow workers. His boss is so satisfied with their job that he decide to provide them a free tour around the world. It’s a good chance to relax themselves. To most of them, it’s the first time to go abroad so they decide to make a collective tour. The tour company shows them a new kind of tour circuit - DIY circuit. Each circuit contains some cities which can be selected by tourists themselves. According to the company’s statistic, each city has its own interesting point. For instance, Paris has its interesting point of 90, New York has its interesting point of 70, ect. Not any two cities in the world have straight flight so the tour company provide a map to tell its tourists whether they can got a straight flight between any two cities on the map. In order to fly back, the company has made it impossible to make a circle-flight on the half way, using the cities on the map. That is, they marked each city on the map with one number, a city with higher number has no straight flight to a city with lower number. Note: Weiwei always starts from Hangzhou(in this problem, we assume Hangzhou is always the first city and also the last city, so we mark Hangzhou both 1 and N+1), and its interesting point is always 0. Now as the leader of the team, Weiwei wants to make a tour as interesting as possible. If you were Weiwei, how did you DIY it]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|题目 Description Weiwei is a software engineer of ShiningSoft. He has just excellently fulfilled a software project with his fellow workers. His boss is so satisfied with their job that he decide to provide them a free tour around the world. It’s a good chance to relax themselves. To most of them, it’s the first time to go abroad so they decide to make a collective tour. The tour company shows them a new kind of tour circuit - DIY circuit. Each circuit contains some cities which can be selected by tourists themselves. According to the company’s statistic, each city has its own interesting point. For instance, Paris has its interesting point of 90, New York has its interesting point of 70, ect. Not any two cities in the world have straight flight so the tour company provide a map to tell its tourists whether they can got a straight flight between any two cities on the map. In order to fly back, the company has made it impossible to make a circle-flight on the half way, using the cities on the map. That is, they marked each city on the map with one number, a city with higher number has no straight flight to a city with lower number. Note: Weiwei always starts from Hangzhou(in this problem, we assume Hangzhou is always the first city and also the last city, so we mark Hangzhou both 1 and N+1), and its interesting point is always 0. Now as the leader of the team, Weiwei wants to make a tour as interesting as possible. If you were Weiwei, how did you DIY it]]></content>
     </entry>
 
     
@@ -1134,7 +1134,7 @@
       
       <title><![CDATA[HDU 1074.Doing Homework]]></title>
       <url>%2Fpost%2FHDU%2F1074.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|栈(stack)|状态压缩|题目 Description Ignatius has just come back school from the 30th ACM/ICPC. Now he has a lot of homework to do. Every teacher gives him a deadline of handing in the homework. If Ignatius hands in the homework after the deadline, the teacher will reduce his score of the final test, 1 day for 1 point. And as you know, doing homework always takes a long time. So Ignatius wants you to help him to arrange the order of doing homework to minimize the reduced score.]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|状态压缩|栈(stack)|题目 Description Ignatius has just come back school from the 30th ACM/ICPC. Now he has a lot of homework to do. Every teacher gives him a deadline of handing in the homework. If Ignatius hands in the homework after the deadline, the teacher will reduce his score of the final test, 1 day for 1 point. And as you know, doing homework always takes a long time. So Ignatius wants you to help him to arrange the order of doing homework to minimize the reduced score.]]></content>
     </entry>
 
     
@@ -1142,7 +1142,7 @@
       
       <title><![CDATA[HDU 3008.Warcraft]]></title>
       <url>%2Fpost%2FHDU%2F3008.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|题目 Description Have you ever played the Warcraft It doesn’t matter whether you have played it !We will give you such an experience.There are so many Heroes in it,but you could only choose one of them.Each Hero has his own skills.When such a Skill is used ,it costs some MagicValue,but hurts the Boss at the same time.Using the skills needs intellegence,one should hurt the enemy to the most when using certain MagicValue. Now we send you to complete such a duty to kill the Boss(So cool~~).To simplify the problem:you can assume the LifeValue of the monster is 100, your LifeValue is 100,but you have also a 100 MagicValue!You can choose to use the ordinary Attack(which doesn’t cost MagicValue),or a certain skill(in condition that you own this skill and the MagicValue you have at that time is no less than the skill costs),there is no free lunch so that you should pay certain MagicValue after you use one skill!But we are good enough to offer you a “ResumingCirclet”(with which you can resume the MagicValue each seconds),But you can’t own more than 100 MagicValue and resuming MagicValue is always after you attack.The Boss is cruel , be careful!]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|题目 Description Have you ever played the Warcraft It doesn’t matter whether you have played it !We will give you such an experience.There are so many Heroes in it,but you could only choose one of them.Each Hero has his own skills.When such a Skill is used ,it costs some MagicValue,but hurts the Boss at the same time.Using the skills needs intellegence,one should hurt the enemy to the most when using certain MagicValue. Now we send you to complete such a duty to kill the Boss(So cool~~).To simplify the problem:you can assume the LifeValue of the monster is 100, your LifeValue is 100,but you have also a 100 MagicValue!You can choose to use the ordinary Attack(which doesn’t cost MagicValue),or a certain skill(in condition that you own this skill and the MagicValue you have at that time is no less than the skill costs),there is no free lunch so that you should pay certain MagicValue after you use one skill!But we are good enough to offer you a “ResumingCirclet”(with which you can resume the MagicValue each seconds),But you can’t own more than 100 MagicValue and resuming MagicValue is always after you attack.The Boss is cruel , be careful!]]></content>
     </entry>
 
     
@@ -1150,7 +1150,7 @@
       
       <title><![CDATA[HDU 1025.Constructing Roads In JGShining's Kingdom]]></title>
       <url>%2Fpost%2FHDU%2F1025.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|最长上升子序列|二分|题目 Description JGShining’s kingdom consists of 2n(n is no more than 500,000) small cities which are located in two parallel lines. Half of these cities are rich in resource (we call them rich cities) while the others are short of resource (we call them poor cities). Each poor city is short of exactly one kind of resource and also each rich city is rich in exactly one kind of resource. You may assume no two poor cities are short of one same kind of resource and no two rich cities are rich in one same kind of resource. With the development of industry, poor cities wanna import resource from rich ones. The roads existed are so small that they’re unable to ensure the heavy trucks, so new roads should be built. The poor cities strongly BS each other, so are the rich ones. Poor cities don’t wanna build a road with other poor ones, and rich ones also can’t abide sharing an end of road with other rich ones. Because of economic benefit, any rich city will be willing to export resource to any poor one. Rich citis marked from 1 to n are located in Line I and poor ones marked from 1 to n are located in Line II. The location of Rich City 1 is on the left of all other cities, Rich City 2 is on the left of all other cities excluding Rich City 1, Rich City 3 is on the right of Rich City 1 and Rich City 2 but on the left of all other cities … And so as the poor ones. But as you know, two crossed roads may cause a lot of traffic accident so JGShining has established a law to forbid constructing crossed roads. For example, the roads in Figure I are forbidden. In order to build as many roads as possible, the young and handsome king of the kingdom - JGShining needs your help, please help him. ^_^]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|最长上升子序列|二分|题目 Description JGShining’s kingdom consists of 2n(n is no more than 500,000) small cities which are located in two parallel lines. Half of these cities are rich in resource (we call them rich cities) while the others are short of resource (we call them poor cities). Each poor city is short of exactly one kind of resource and also each rich city is rich in exactly one kind of resource. You may assume no two poor cities are short of one same kind of resource and no two rich cities are rich in one same kind of resource. With the development of industry, poor cities wanna import resource from rich ones. The roads existed are so small that they’re unable to ensure the heavy trucks, so new roads should be built. The poor cities strongly BS each other, so are the rich ones. Poor cities don’t wanna build a road with other poor ones, and rich ones also can’t abide sharing an end of road with other rich ones. Because of economic benefit, any rich city will be willing to export resource to any poor one. Rich citis marked from 1 to n are located in Line I and poor ones marked from 1 to n are located in Line II. The location of Rich City 1 is on the left of all other cities, Rich City 2 is on the left of all other cities excluding Rich City 1, Rich City 3 is on the right of Rich City 1 and Rich City 2 but on the left of all other cities … And so as the poor ones. But as you know, two crossed roads may cause a lot of traffic accident so JGShining has established a law to forbid constructing crossed roads. For example, the roads in Figure I are forbidden. In order to build as many roads as possible, the young and handsome king of the kingdom - JGShining needs your help, please help him. ^_^]]></content>
     </entry>
 
     
@@ -1158,7 +1158,7 @@
       
       <title><![CDATA[HDU 1502.Regular Words]]></title>
       <url>%2Fpost%2FHDU%2F1502.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|高精度算法|打表|题目 Description Consider words of length 3n over alphabet {A, B, C} . Denote the number of occurences of A in a word a as A(a) , analogously let the number of occurences of B be denoted as B(a), and the number of occurenced of C as C(a) . Let us call the word w regular if the following conditions are satisfied: A(w)=B(w)=C(w) ;if c is a prefix of w , then A(c)&gt;= B(c) &gt;= C(c) .For example, if n = 2 there are 5 regular words: AABBCC , AABCBC , ABABCC , ABACBC and ABCABC . Regular words in some sense generalize regular brackets sequences (if we consider two-letter alphabet and put similar conditions on regular words, they represent regular brackets sequences). Given n , find the number of regular words.]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|高精度算法|打表|题目 Description Consider words of length 3n over alphabet {A, B, C} . Denote the number of occurences of A in a word a as A(a) , analogously let the number of occurences of B be denoted as B(a), and the number of occurenced of C as C(a) . Let us call the word w regular if the following conditions are satisfied: A(w)=B(w)=C(w) ;if c is a prefix of w , then A(c)&gt;= B(c) &gt;= C(c) .For example, if n = 2 there are 5 regular words: AABBCC , AABCBC , ABABCC , ABACBC and ABCABC . Regular words in some sense generalize regular brackets sequences (if we consider two-letter alphabet and put similar conditions on regular words, they represent regular brackets sequences). Given n , find the number of regular words.]]></content>
     </entry>
 
     
@@ -1182,7 +1182,7 @@
       
       <title><![CDATA[HDU 5119.Happy Matt Friends]]></title>
       <url>%2Fpost%2FHDU%2F5119.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|题目 Description Matt has N friends. They are playing a game together. Each of Matt’s friends has a magic number. In the game, Matt selects some (could be zero) of his friends. If the xor (exclusive-or) sum of the selected friends’magic numbers is no less than M , Matt wins. Matt wants to know the number of ways to win.]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|题目 Description Matt has N friends. They are playing a game together. Each of Matt’s friends has a magic number. In the game, Matt selects some (could be zero) of his friends. If the xor (exclusive-or) sum of the selected friends’magic numbers is no less than M , Matt wins. Matt wants to know the number of ways to win.]]></content>
     </entry>
 
     
@@ -1206,7 +1206,7 @@
       
       <title><![CDATA[HDU 1503.Advanced Fruits]]></title>
       <url>%2Fpost%2FHDU%2F1503.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|最长公共子序列|题目 Description The company “21st Century Fruits” has specialized in creating new sorts of fruits by transferring genes from one fruit into the genome of another one. Most times this method doesn’t work, but sometimes, in very rare cases, a new fruit emerges that tastes like a mixture between both of them.A big topic of discussion inside the company is “How should the new creations be called “ A mixture between an apple and a pear could be called an apple-pear, of course, but this doesn’t sound very interesting. The boss finally decides to use the shortest string that contains both names of the original fruits as sub-strings as the new name. For instance, “applear” contains “apple” and “pear” (APPLEar and apPlEAR), and there is no shorter string that has the same property. A combination of a cranberry and a boysenberry would therefore be called a “boysecranberry” or a “craboysenberry”, for example. Your job is to write a program that computes such a shortest name for a combination of two given fruits. Your algorithm should be efficient, otherwise it is unlikely that it will execute in the alloted time for long fruit names.]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|最长公共子序列|题目 Description The company “21st Century Fruits” has specialized in creating new sorts of fruits by transferring genes from one fruit into the genome of another one. Most times this method doesn’t work, but sometimes, in very rare cases, a new fruit emerges that tastes like a mixture between both of them.A big topic of discussion inside the company is “How should the new creations be called “ A mixture between an apple and a pear could be called an apple-pear, of course, but this doesn’t sound very interesting. The boss finally decides to use the shortest string that contains both names of the original fruits as sub-strings as the new name. For instance, “applear” contains “apple” and “pear” (APPLEar and apPlEAR), and there is no shorter string that has the same property. A combination of a cranberry and a boysenberry would therefore be called a “boysecranberry” or a “craboysenberry”, for example. Your job is to write a program that computes such a shortest name for a combination of two given fruits. Your algorithm should be efficient, otherwise it is unlikely that it will execute in the alloted time for long fruit names.]]></content>
     </entry>
 
     
@@ -1214,7 +1214,7 @@
       
       <title><![CDATA[HDU 1501.Zipper]]></title>
       <url>%2Fpost%2FHDU%2F1501.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|题目 Description Given three strings, you are to determine whether the third string can be formed by combining the characters in the first two strings. The first two strings can be mixed arbitrarily, but each must stay in its original order. For example, consider forming “tcraete” from “cat” and “tree”: String A: catString B: treeString C: tcraete As you can see, we can form the third string by alternating characters from the two strings. As a second example, consider forming “catrtee” from “cat” and “tree”: String A: catString B: treeString C: catrtee Finally, notice that it is impossible to form “cttaree” from “cat” and “tree”.]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|题目 Description Given three strings, you are to determine whether the third string can be formed by combining the characters in the first two strings. The first two strings can be mixed arbitrarily, but each must stay in its original order. For example, consider forming “tcraete” from “cat” and “tree”: String A: catString B: treeString C: tcraete As you can see, we can form the third string by alternating characters from the two strings. As a second example, consider forming “catrtee” from “cat” and “tree”: String A: catString B: treeString C: catrtee Finally, notice that it is impossible to form “cttaree” from “cat” and “tree”.]]></content>
     </entry>
 
     
@@ -1222,7 +1222,7 @@
       
       <title><![CDATA[HDU 1158.Employment Planning]]></title>
       <url>%2Fpost%2FHDU%2F1158.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|题目 Description A project manager wants to determine the number of the workers needed in every month. He does know the minimal number of the workers needed in each month. When he hires or fires a worker, there will be some extra cost. Once a worker is hired, he will get the salary even if he is not working. The manager knows the costs of hiring a worker, firing a worker, and the salary of a worker. Then the manager will confront such a problem: how many workers he will hire or fire each month in order to keep the lowest total cost of the project.]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|题目 Description A project manager wants to determine the number of the workers needed in every month. He does know the minimal number of the workers needed in each month. When he hires or fires a worker, there will be some extra cost. Once a worker is hired, he will get the salary even if he is not working. The manager knows the costs of hiring a worker, firing a worker, and the salary of a worker. Then the manager will confront such a problem: how many workers he will hire or fire each month in order to keep the lowest total cost of the project.]]></content>
     </entry>
 
     
@@ -1230,7 +1230,7 @@
       
       <title><![CDATA[HDU 2059.龟兔赛跑]]></title>
       <url>%2Fpost%2FHDU%2F2059.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|题目 Description 据说在很久很久以前，可怜的兔子经历了人生中最大的打击——赛跑输给乌龟后，心中郁闷，发誓要报仇雪恨，于是躲进了杭州下沙某农业园卧薪尝胆潜心修炼，终于练成了绝技，能够毫不休息得以恒定的速度(VR m/s)一直跑。兔子一直想找机会好好得教训一下乌龟，以雪前耻。最近正值HDU举办50周年校庆，社会各大名流齐聚下沙，兔子也趁此机会向乌龟发起挑战。虽然乌龟深知获胜希望不大，不过迫于舆论压力，只能接受挑战。比赛是设在一条笔直的道路上，长度为L米，规则很简单，谁先到达终点谁就算获胜。无奈乌龟自从上次获胜以后，成了名龟，被一些八卦杂志称为“动物界的刘翔”，广告不断，手头也有了不少积蓄。为了能够再赢兔子，乌龟不惜花下血本买了最先进的武器——“”小飞鸽”牌电动车。这辆车在有电的情况下能够以VT1 m/s的速度“飞驰”，可惜电池容量有限，每次充满电最多只能行驶C米的距离，以后就只能用脚来蹬了，乌龟用脚蹬时的速度为VT2 m/s。更过分的是，乌龟竟然在跑道上修建了很多很多（N个)的供电站，供自己给电动车充电。其中，每次充电需要花费T秒钟的时间。当然，乌龟经过一个充电站的时候可以选择去或不去充电。比赛马上开始了，兔子和带着充满电的电动车的乌龟并列站在起跑线上。你的任务就是写个程序，判断乌龟用最佳的方案进军时，能不能赢了一直以恒定速度奔跑的兔子。]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|题目 Description 据说在很久很久以前，可怜的兔子经历了人生中最大的打击——赛跑输给乌龟后，心中郁闷，发誓要报仇雪恨，于是躲进了杭州下沙某农业园卧薪尝胆潜心修炼，终于练成了绝技，能够毫不休息得以恒定的速度(VR m/s)一直跑。兔子一直想找机会好好得教训一下乌龟，以雪前耻。最近正值HDU举办50周年校庆，社会各大名流齐聚下沙，兔子也趁此机会向乌龟发起挑战。虽然乌龟深知获胜希望不大，不过迫于舆论压力，只能接受挑战。比赛是设在一条笔直的道路上，长度为L米，规则很简单，谁先到达终点谁就算获胜。无奈乌龟自从上次获胜以后，成了名龟，被一些八卦杂志称为“动物界的刘翔”，广告不断，手头也有了不少积蓄。为了能够再赢兔子，乌龟不惜花下血本买了最先进的武器——“”小飞鸽”牌电动车。这辆车在有电的情况下能够以VT1 m/s的速度“飞驰”，可惜电池容量有限，每次充满电最多只能行驶C米的距离，以后就只能用脚来蹬了，乌龟用脚蹬时的速度为VT2 m/s。更过分的是，乌龟竟然在跑道上修建了很多很多（N个)的供电站，供自己给电动车充电。其中，每次充电需要花费T秒钟的时间。当然，乌龟经过一个充电站的时候可以选择去或不去充电。比赛马上开始了，兔子和带着充满电的电动车的乌龟并列站在起跑线上。你的任务就是写个程序，判断乌龟用最佳的方案进军时，能不能赢了一直以恒定速度奔跑的兔子。]]></content>
     </entry>
 
     
@@ -1238,7 +1238,7 @@
       
       <title><![CDATA[HDU 1081.To The Max]]></title>
       <url>%2Fpost%2FHDU%2F1081.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|题目 Description Given a two-dimensional array of positive and negative integers, a sub-rectangle is any contiguous sub-array of size 1 x 1 or greater located within the whole array. The sum of a rectangle is the sum of all the elements in that rectangle. In this problem the sub-rectangle with the largest sum is referred to as the maximal sub-rectangle. As an example, the maximal sub-rectangle of the array: 0 -2 -7 09 2 -6 2-4 1 -4 1-1 8 0 -2 is in the lower left corner: 9 2-4 1-1 8 and has a sum of 15.]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|题目 Description Given a two-dimensional array of positive and negative integers, a sub-rectangle is any contiguous sub-array of size 1 x 1 or greater located within the whole array. The sum of a rectangle is the sum of all the elements in that rectangle. In this problem the sub-rectangle with the largest sum is referred to as the maximal sub-rectangle. As an example, the maximal sub-rectangle of the array: 0 -2 -7 09 2 -6 2-4 1 -4 1-1 8 0 -2 is in the lower left corner: 9 2-4 1-1 8 and has a sum of 15.]]></content>
     </entry>
 
     
@@ -1246,7 +1246,7 @@
       
       <title><![CDATA[HDU 1078.FatMouse and Cheese]]></title>
       <url>%2Fpost%2FHDU%2F1078.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|DFS|记忆化搜索|题目 Description FatMouse has stored some cheese in a city. The city can be considered as a square grid of dimension n: each grid location is labelled (p,q) where 0 &lt;= p &lt; n and 0 &lt;= q &lt; n. At each grid location Fatmouse has hid between 0 and 100 blocks of cheese in a hole. Now he’s going to enjoy his favorite food. FatMouse begins by standing at location (0,0). He eats up the cheese where he stands and then runs either horizontally or vertically to another location. The problem is that there is a super Cat named Top Killer sitting near his hole, so each time he can run at most k locations to get into the hole before being caught by Top Killer. What is worse – after eating up the cheese at one location, FatMouse gets fatter. So in order to gain enough energy for his next run, he has to run to a location which have more blocks of cheese than those that were at the current hole. Given n, k, and the number of blocks of cheese at each grid location, compute the maximum amount of cheese FatMouse can eat before being unable to move.]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|DFS|记忆化搜索|题目 Description FatMouse has stored some cheese in a city. The city can be considered as a square grid of dimension n: each grid location is labelled (p,q) where 0 &lt;= p &lt; n and 0 &lt;= q &lt; n. At each grid location Fatmouse has hid between 0 and 100 blocks of cheese in a hole. Now he’s going to enjoy his favorite food. FatMouse begins by standing at location (0,0). He eats up the cheese where he stands and then runs either horizontally or vertically to another location. The problem is that there is a super Cat named Top Killer sitting near his hole, so each time he can run at most k locations to get into the hole before being caught by Top Killer. What is worse – after eating up the cheese at one location, FatMouse gets fatter. So in order to gain enough energy for his next run, he has to run to a location which have more blocks of cheese than those that were at the current hole. Given n, k, and the number of blocks of cheese at each grid location, compute the maximum amount of cheese FatMouse can eat before being unable to move.]]></content>
     </entry>
 
     
@@ -1254,7 +1254,7 @@
       
       <title><![CDATA[HDU 1422.重温世界杯]]></title>
       <url>%2Fpost%2FHDU%2F1422.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|模拟|题目 Description 世界杯结束了,意大利人连本带利的收回了法国人6年前欠他们的债,捧起了大力神杯,成就了4星意大利.世界杯虽然结束了,但是这界世界杯给我们还是留下许多值得回忆的东西.比如我们听到了黄名嘴的3分钟激情解说,我们懂得了原来可以向同一个人出示3张黄牌，我们还看到了齐达内的头不仅能顶球还能顶人…………介于有这么多的精彩,xhd决定重温德国世界杯,当然只是去各个承办世界杯比赛的城市走走看看.但是这需要一大比钱,幸运的是xhd对世界杯的热爱之情打动了德国世界杯组委会,他们将提供xhd在中国杭州和德国任意世界杯承办城市的往返机票,并说服了这些城市在xhd到达这座城市时为他提供一笔生活费以便他在那里参观时用,当参观完时剩余的钱也将留给xhd,但当生活费不够时他们将强行结束xhd的这次德国之行,除了这个,他们还有一个条件,xhd只能根据他们所给的路线参观.比如有3座城市a,b,c,他们给定了a-b-c-a的路线,那么xhd只有3种参观顺序abc,bca,cab.由于各个城市所提供的生活费和在那里的花费都不同,这使xhd很头痛,还好我们事先知道了这笔生活费和花费.请问xhd最多能顺利参观几座城市]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|模拟|题目 Description 世界杯结束了,意大利人连本带利的收回了法国人6年前欠他们的债,捧起了大力神杯,成就了4星意大利.世界杯虽然结束了,但是这界世界杯给我们还是留下许多值得回忆的东西.比如我们听到了黄名嘴的3分钟激情解说,我们懂得了原来可以向同一个人出示3张黄牌，我们还看到了齐达内的头不仅能顶球还能顶人…………介于有这么多的精彩,xhd决定重温德国世界杯,当然只是去各个承办世界杯比赛的城市走走看看.但是这需要一大比钱,幸运的是xhd对世界杯的热爱之情打动了德国世界杯组委会,他们将提供xhd在中国杭州和德国任意世界杯承办城市的往返机票,并说服了这些城市在xhd到达这座城市时为他提供一笔生活费以便他在那里参观时用,当参观完时剩余的钱也将留给xhd,但当生活费不够时他们将强行结束xhd的这次德国之行,除了这个,他们还有一个条件,xhd只能根据他们所给的路线参观.比如有3座城市a,b,c,他们给定了a-b-c-a的路线,那么xhd只有3种参观顺序abc,bca,cab.由于各个城市所提供的生活费和在那里的花费都不同,这使xhd很头痛,还好我们事先知道了这笔生活费和花费.请问xhd最多能顺利参观几座城市]]></content>
     </entry>
 
     
@@ -1270,7 +1270,7 @@
       
       <title><![CDATA[AOJ 261.货币兑换]]></title>
       <url>%2Fpost%2FAOJ%2F261.html</url>
-      <content type="text"><![CDATA[题解|动态规划|AOJ|贪心算法|模拟|题目 Description 招商银行遇到一位很奇怪的顾客。这位顾客起初用一些人民兑换了另一种货币，然后不断地用一种货币兑换另一种货币，最后又换回人民币。令人惊奇的是，最后换回的人民币居然比他最初带来的多了一些。例如这样一个兑换过程：假设1单位人民币兑换6.89单位火星币，1单位火星币兑换0.18单位水星币，1单位水星币兑换0.81单位人民币。我们用1.20单位人民兑换得8.27单位火星币，然后用这8.27单位火星币兑换得1.49单位水星币，最后用1.49单位水星币兑换到1.21单位人民币。奇迹就这样发生了。聪明的你一定已经发现了，这都是四舍五入的功劳。当然这种事情在现实中是不可能的，但我们还是来研究一下这个问题。假设共有n种货币，编号从1到n。我们最初持有m单位的货币1。已知各种货币之间兑换比率，每次兑换后都四舍五入到小数点后两位。请问兑换k次且换回到货币1后，最多能让我们持有的货币增加多少单位？]]></content>
+      <content type="text"><![CDATA[题解|动态规划|AOJ|模拟|贪心算法|题目 Description 招商银行遇到一位很奇怪的顾客。这位顾客起初用一些人民兑换了另一种货币，然后不断地用一种货币兑换另一种货币，最后又换回人民币。令人惊奇的是，最后换回的人民币居然比他最初带来的多了一些。例如这样一个兑换过程：假设1单位人民币兑换6.89单位火星币，1单位火星币兑换0.18单位水星币，1单位水星币兑换0.81单位人民币。我们用1.20单位人民兑换得8.27单位火星币，然后用这8.27单位火星币兑换得1.49单位水星币，最后用1.49单位水星币兑换到1.21单位人民币。奇迹就这样发生了。聪明的你一定已经发现了，这都是四舍五入的功劳。当然这种事情在现实中是不可能的，但我们还是来研究一下这个问题。假设共有n种货币，编号从1到n。我们最初持有m单位的货币1。已知各种货币之间兑换比率，每次兑换后都四舍五入到小数点后两位。请问兑换k次且换回到货币1后，最多能让我们持有的货币增加多少单位？]]></content>
     </entry>
 
     
@@ -1310,7 +1310,7 @@
       
       <title><![CDATA[HDU 1106.FatMouse's Speed]]></title>
       <url>%2Fpost%2FHDU%2F1106.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|最长上升子序列|栈(stack)|题目 Description FatMouse believes that the fatter a mouse is, the faster it runs. To disprove this, you want to take the data on a collection of mice and put as large a subset of this data as possible into a sequence so that the weights are increasing, but the speeds are decreasing.]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|最长上升子序列|栈(stack)|题目 Description FatMouse believes that the fatter a mouse is, the faster it runs. To disprove this, you want to take the data on a collection of mice and put as large a subset of this data as possible into a sequence so that the weights are increasing, but the speeds are decreasing.]]></content>
     </entry>
 
     
@@ -1318,7 +1318,7 @@
       
       <title><![CDATA[HDU 1024.Max Sum Plus Plus]]></title>
       <url>%2Fpost%2FHDU%2F1024.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|题目 Description Now I think you have got an AC in Ignatius.L’s “Max Sum” problem. To be a brave ACMer, we always challenge ourselves to more difficult problems. Now you are faced with a more difficult problem. Given a consecutive number sequence S 1, S 2, S 3, S 4 … S x, … S n (1 ≤ x ≤ n ≤ 1,000,000, -32768 ≤ S x ≤ 32767). We define a function sum(i, j) = S i + … + S j (1 ≤ i ≤ j ≤ n). Now given an integer m (m &gt; 0), your task is to find m pairs of i and j which make sum(i 1, j 1) + sum(i 2, j 2) + sum(i 3, j 3) + … + sum(i m, j m) maximal (i x ≤ i y ≤ j x or i x ≤ j y ≤ j x is not allowed). But I`m lazy, I don’t want to write a special-judge module, so you don’t have to ## Output m pairs of i and j, just output the maximal summation of sum(i x, j x)(1 ≤ x ≤ m) instead. ^_^]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|题目 Description Now I think you have got an AC in Ignatius.L’s “Max Sum” problem. To be a brave ACMer, we always challenge ourselves to more difficult problems. Now you are faced with a more difficult problem. Given a consecutive number sequence S 1, S 2, S 3, S 4 … S x, … S n (1 ≤ x ≤ n ≤ 1,000,000, -32768 ≤ S x ≤ 32767). We define a function sum(i, j) = S i + … + S j (1 ≤ i ≤ j ≤ n). Now given an integer m (m &gt; 0), your task is to find m pairs of i and j which make sum(i 1, j 1) + sum(i 2, j 2) + sum(i 3, j 3) + … + sum(i m, j m) maximal (i x ≤ i y ≤ j x or i x ≤ j y ≤ j x is not allowed). But I`m lazy, I don’t want to write a special-judge module, so you don’t have to ## Output m pairs of i and j, just output the maximal summation of sum(i x, j x)(1 ≤ x ≤ m) instead. ^_^]]></content>
     </entry>
 
     
@@ -1326,7 +1326,7 @@
       
       <title><![CDATA[HDU 1114.Piggy-Bank]]></title>
       <url>%2Fpost%2FHDU%2F1114.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|背包问题|题目 Description Before ACM can do anything, a budget must be prepared and the necessary financial support obtained. The main income for this action comes from Irreversibly Bound Money (IBM). The idea behind is simple. Whenever some ACM member has any small money, he takes all the coins and throws them into a piggy-bank. You know that this process is irreversible, the coins cannot be removed without breaking the pig. After a sufficiently long time, there should be enough cash in the piggy-bank to pay everything that needs to be paid. But there is a big problem with piggy-banks. It is not possible to determine how much money is inside. So we might break the pig into pieces only to find out that there is not enough money. Clearly, we want to avoid this unpleasant situation. The only possibility is to weigh the piggy-bank and try to guess how many coins are inside. Assume that we are able to determine the weight of the pig exactly and that we know the weights of all coins of a given currency. Then there is some minimum amount of money in the piggy-bank that we can guarantee. Your task is to find out this worst case and determine the minimum amount of cash inside the piggy-bank. We need your help. No more prematurely broken pigs!]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|背包问题|题目 Description Before ACM can do anything, a budget must be prepared and the necessary financial support obtained. The main income for this action comes from Irreversibly Bound Money (IBM). The idea behind is simple. Whenever some ACM member has any small money, he takes all the coins and throws them into a piggy-bank. You know that this process is irreversible, the coins cannot be removed without breaking the pig. After a sufficiently long time, there should be enough cash in the piggy-bank to pay everything that needs to be paid. But there is a big problem with piggy-banks. It is not possible to determine how much money is inside. So we might break the pig into pieces only to find out that there is not enough money. Clearly, we want to avoid this unpleasant situation. The only possibility is to weigh the piggy-bank and try to guess how many coins are inside. Assume that we are able to determine the weight of the pig exactly and that we know the weights of all coins of a given currency. Then there is some minimum amount of money in the piggy-bank that we can guarantee. Your task is to find out this worst case and determine the minimum amount of cash inside the piggy-bank. We need your help. No more prematurely broken pigs!]]></content>
     </entry>
 
     
@@ -1334,7 +1334,7 @@
       
       <title><![CDATA[HDU 2191.悼念512汶川大地震遇难同胞——珍惜现在，感恩生活]]></title>
       <url>%2Fpost%2FHDU%2F2191.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|背包问题|题目 Description 急！灾区的食物依然短缺！为了挽救灾区同胞的生命，心系灾区同胞的你准备自己采购一些粮食支援灾区，现在假设你一共有资金n元，而市场有m种大米，每种大米都是袋装产品，其价格不等，并且只能整袋购买。请问：你用有限的资金最多能采购多少公斤粮食呢？ 后记：人生是一个充满了变数的生命过程，天灾、人祸、病痛是我们生命历程中不可预知的威胁。月有阴晴圆缺，人有旦夕祸福，未来对于我们而言是一个未知数。那么，我们要做的就应该是珍惜现在，感恩生活——感谢父母，他们给予我们生命，抚养我们成人；感谢老师，他们授给我们知识，教我们做人感谢朋友，他们让我们感受到世界的温暖；感谢对手，他们令我们不断进取、努力。同样，我们也要感谢痛苦与艰辛带给我们的财富～]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|背包问题|题目 Description 急！灾区的食物依然短缺！为了挽救灾区同胞的生命，心系灾区同胞的你准备自己采购一些粮食支援灾区，现在假设你一共有资金n元，而市场有m种大米，每种大米都是袋装产品，其价格不等，并且只能整袋购买。请问：你用有限的资金最多能采购多少公斤粮食呢？ 后记：人生是一个充满了变数的生命过程，天灾、人祸、病痛是我们生命历程中不可预知的威胁。月有阴晴圆缺，人有旦夕祸福，未来对于我们而言是一个未知数。那么，我们要做的就应该是珍惜现在，感恩生活——感谢父母，他们给予我们生命，抚养我们成人；感谢老师，他们授给我们知识，教我们做人感谢朋友，他们让我们感受到世界的温暖；感谢对手，他们令我们不断进取、努力。同样，我们也要感谢痛苦与艰辛带给我们的财富～]]></content>
     </entry>
 
     
@@ -1342,7 +1342,7 @@
       
       <title><![CDATA[HDU 1300.Pearls]]></title>
       <url>%2Fpost%2FHDU%2F1300.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|贪心算法|原题,具体看&gt;POJ 1260.Pearls&lt;]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|贪心算法|原题,具体看&gt;POJ 1260.Pearls&lt;]]></content>
     </entry>
 
     
@@ -1350,7 +1350,7 @@
       
       <title><![CDATA[HDU 1059.Dividing]]></title>
       <url>%2Fpost%2FHDU%2F1059.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|背包问题|原题,具体看&gt;AOJ 182.Dividing&lt;]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|背包问题|原题,具体看&gt;AOJ 182.Dividing&lt;]]></content>
     </entry>
 
     
@@ -1358,7 +1358,7 @@
       
       <title><![CDATA[HDU 1978.How many ways]]></title>
       <url>%2Fpost%2FHDU%2F1978.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|记忆化搜索|题目 Description 这是一个简单的生存游戏，你控制一个机器人从一个棋盘的起始点(1,1)走到棋盘的终点(n,m)。游戏的规则描述如下：1.机器人一开始在棋盘的起始点并有起始点所标有的能量。2.机器人只能向右或者向下走，并且每走一步消耗一单位能量。3.机器人不能在原地停留。4.当机器人选择了一条可行路径后，当他走到这条路径的终点时，他将只有终点所标记的能量。 如上图，机器人一开始在(1,1)点，并拥有4单位能量，蓝色方块表示他所能到达的点，如果他在这次路径选择中选择的终点是(2,4) 点，当他到达(2,4)点时将拥有1单位的能量，并开始下一次路径选择，直到到达(6,6)点。我们的问题是机器人有多少种方式从起点走到终点。这可能是一个很大的数，输出的结果对10000取模。]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|记忆化搜索|题目 Description 这是一个简单的生存游戏，你控制一个机器人从一个棋盘的起始点(1,1)走到棋盘的终点(n,m)。游戏的规则描述如下：1.机器人一开始在棋盘的起始点并有起始点所标有的能量。2.机器人只能向右或者向下走，并且每走一步消耗一单位能量。3.机器人不能在原地停留。4.当机器人选择了一条可行路径后，当他走到这条路径的终点时，他将只有终点所标记的能量。 如上图，机器人一开始在(1,1)点，并拥有4单位能量，蓝色方块表示他所能到达的点，如果他在这次路径选择中选择的终点是(2,4) 点，当他到达(2,4)点时将拥有1单位的能量，并开始下一次路径选择，直到到达(6,6)点。我们的问题是机器人有多少种方式从起点走到终点。这可能是一个很大的数，输出的结果对10000取模。]]></content>
     </entry>
 
     
@@ -1374,7 +1374,7 @@
       
       <title><![CDATA[HDU 1080.Human Gene Functions]]></title>
       <url>%2Fpost%2FHDU%2F1080.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|原题,具体看&gt;AOJ 225.Human Gene Functions&lt;]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|原题,具体看&gt;AOJ 225.Human Gene Functions&lt;]]></content>
     </entry>
 
     
@@ -1502,7 +1502,7 @@
       
       <title><![CDATA[HDU 1058.Humble Numbers]]></title>
       <url>%2Fpost%2FHDU%2F1058.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|丑数|题目 Description A number whose only prime factors are 2,3,5 or 7 is called a humble number. The sequence 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 15, 16, 18, 20, 21, 24, 25, 27, … shows the first 20 humble numbers. Write a program to find and print the nth element in this sequence]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|丑数|题目 Description A number whose only prime factors are 2,3,5 or 7 is called a humble number. The sequence 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 15, 16, 18, 20, 21, 24, 25, 27, … shows the first 20 humble numbers. Write a program to find and print the nth element in this sequence]]></content>
     </entry>
 
     
@@ -1510,7 +1510,7 @@
       
       <title><![CDATA[HDU 1421.搬寝室]]></title>
       <url>%2Fpost%2FHDU%2F1421.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|题目 Description 搬寝室是很累的,xhd深有体会.时间追述2006年7月9号,那天xhd迫于无奈要从27号楼搬到3号楼,因为10号要封楼了.看着寝室里的n件物品,xhd开始发呆,因为n是一个小于2000的整数,实在是太多了,于是xhd决定随便搬2*k件过去就行了.但还是会很累,因为2*k也不小是一个不大于n的整数.幸运的是xhd根据多年的搬东西的经验发现每搬一次的疲劳度是和左右手的物品的重量差的平方成正比(这里补充一句,xhd每次搬两件东西,左手一件右手一件).例如xhd左手拿重量为3的物品,右手拿重量为6的物品,则他搬完这次的疲劳度为(6-3)^2 = 9.现在可怜的xhd希望知道搬完这2*k件物品后的最佳状态是怎样的(也就是最低的疲劳度),请告诉他吧.]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|题目 Description 搬寝室是很累的,xhd深有体会.时间追述2006年7月9号,那天xhd迫于无奈要从27号楼搬到3号楼,因为10号要封楼了.看着寝室里的n件物品,xhd开始发呆,因为n是一个小于2000的整数,实在是太多了,于是xhd决定随便搬2*k件过去就行了.但还是会很累,因为2*k也不小是一个不大于n的整数.幸运的是xhd根据多年的搬东西的经验发现每搬一次的疲劳度是和左右手的物品的重量差的平方成正比(这里补充一句,xhd每次搬两件东西,左手一件右手一件).例如xhd左手拿重量为3的物品,右手拿重量为6的物品,则他搬完这次的疲劳度为(6-3)^2 = 9.现在可怜的xhd希望知道搬完这2*k件物品后的最佳状态是怎样的(也就是最低的疲劳度),请告诉他吧.]]></content>
     </entry>
 
     
@@ -1518,7 +1518,7 @@
       
       <title><![CDATA[HDU 1159.Common Subsequence]]></title>
       <url>%2Fpost%2FHDU%2F1159.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|最长公共子序列|题目 Description A subsequence of a given sequence is the given sequence with some elements (possible none) left out. Given a sequence X = another sequence Z = is a subsequence of X if there exists a strictly increasing sequence of indices of X such that for all j = 1,2,…,k, xij = zj. For example, Z = is a subsequence of X = with index sequence . Given two sequences X and Y the problem is to find the length of the maximum-length common subsequence of X and Y.The program]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|最长公共子序列|题目 Description A subsequence of a given sequence is the given sequence with some elements (possible none) left out. Given a sequence X = another sequence Z = is a subsequence of X if there exists a strictly increasing sequence of indices of X such that for all j = 1,2,…,k, xij = zj. For example, Z = is a subsequence of X = with index sequence . Given two sequences X and Y the problem is to find the length of the maximum-length common subsequence of X and Y.The program]]></content>
     </entry>
 
     
@@ -1526,7 +1526,7 @@
       
       <title><![CDATA[HDU 1257.最少拦截系统]]></title>
       <url>%2Fpost%2FHDU%2F1257.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|最长上升子序列|题目 Description 某国为了防御敌国的导弹袭击,发展出一种导弹拦截系统.但是这种导弹拦截系统有一个缺陷:虽然它的第一发炮弹能够到达任意的高度,但是以后每一发炮弹都不能超过前一发的高度.某天,雷达捕捉到敌国的导弹来袭.由于该系统还在试用阶段,所以只有一套系统,因此有可能不能拦截所有的导弹.怎么办呢 多搞几套系统呗!你说说倒蛮容易,成本呢 成本是个大问题啊.所以俺就到这里来求救了,请帮助计算一下最少需要多少套拦截系统.]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|最长上升子序列|题目 Description 某国为了防御敌国的导弹袭击,发展出一种导弹拦截系统.但是这种导弹拦截系统有一个缺陷:虽然它的第一发炮弹能够到达任意的高度,但是以后每一发炮弹都不能超过前一发的高度.某天,雷达捕捉到敌国的导弹来袭.由于该系统还在试用阶段,所以只有一套系统,因此有可能不能拦截所有的导弹.怎么办呢 多搞几套系统呗!你说说倒蛮容易,成本呢 成本是个大问题啊.所以俺就到这里来求救了,请帮助计算一下最少需要多少套拦截系统.]]></content>
     </entry>
 
     
@@ -1534,7 +1534,7 @@
       
       <title><![CDATA[HDU 2830.Matrix Swapping II]]></title>
       <url>%2Fpost%2FHDU%2F2830.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|最大矩形|题目 Description Given an N * M matrix with each entry equal to 0 or 1. We can find some rectangles in the matrix whose entries are all 1, and we define the maximum area of such rectangle as this matrix’s goodness. We can swap any two columns any times, and we are to make the goodness of the matrix as large as possible.]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|最大矩形|题目 Description Given an N * M matrix with each entry equal to 0 or 1. We can find some rectangles in the matrix whose entries are all 1, and we define the maximum area of such rectangle as this matrix’s goodness. We can swap any two columns any times, and we are to make the goodness of the matrix as large as possible.]]></content>
     </entry>
 
     
@@ -1550,7 +1550,7 @@
       
       <title><![CDATA[HDU 2870.Largest Submatrix]]></title>
       <url>%2Fpost%2FHDU%2F2870.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|最大矩形|题目 Description Now here is a matrix with letter ‘a’,’b’,’c’,’w’,’x’,’y’,’z’ and you can change ‘w’ to ‘a’ or ‘b’, change ‘x’ to ‘b’ or ‘c’, change ‘y’ to ‘a’ or ‘c’, and change ‘z’ to ‘a’, ‘b’ or ‘c’. After you changed it, what’s the largest submatrix with the same letters you can make]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|最大矩形|题目 Description Now here is a matrix with letter ‘a’,’b’,’c’,’w’,’x’,’y’,’z’ and you can change ‘w’ to ‘a’ or ‘b’, change ‘x’ to ‘b’ or ‘c’, change ‘y’ to ‘a’ or ‘c’, and change ‘z’ to ‘a’, ‘b’ or ‘c’. After you changed it, what’s the largest submatrix with the same letters you can make]]></content>
     </entry>
 
     
@@ -1582,7 +1582,7 @@
       
       <title><![CDATA[HDU 2845.Beans]]></title>
       <url>%2Fpost%2FHDU%2F2845.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|最大不连续子序列|题目 Description Bean-eating is an interesting game, everyone owns an M*N matrix, which is filled with different qualities beans. Meantime, there is only one bean in any 1*1 grid. Now you want to eat the beans and collect the qualities, but everyone must obey by the following rules: if you eat the bean at the coordinate(x, y), you can’t eat the beans anyway at the coordinates listed (if exiting): (x, y-1), (x, y+1), and the both rows whose abscissas are x-1 and x+1. Now, how much qualities can you eat and then get]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|最大不连续子序列|题目 Description Bean-eating is an interesting game, everyone owns an M*N matrix, which is filled with different qualities beans. Meantime, there is only one bean in any 1*1 grid. Now you want to eat the beans and collect the qualities, but everyone must obey by the following rules: if you eat the bean at the coordinate(x, y), you can’t eat the beans anyway at the coordinates listed (if exiting): (x, y-1), (x, y+1), and the both rows whose abscissas are x-1 and x+1. Now, how much qualities can you eat and then get]]></content>
     </entry>
 
     
@@ -1598,7 +1598,7 @@
       
       <title><![CDATA[HDU 2844.Coins]]></title>
       <url>%2Fpost%2FHDU%2F2844.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|题目 Description Whuacmers use coins.They have coins of value A1,A2,A3…An Silverland dollar. One day Hibix opened purse and found there were some coins. He decided to buy a very nice watch in a nearby shop. He wanted to pay the exact price(without change) and he known the price would not more than m.But he didn’t know the exact price of the watch. You are to write a program which reads n,m,A1,A2,A3…An and C1,C2,C3…Cn corresponding to the number of Tony’s coins of value A1,A2,A3…An then calculate how many prices(form 1 to m) Tony can pay use these coins.]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|题目 Description Whuacmers use coins.They have coins of value A1,A2,A3…An Silverland dollar. One day Hibix opened purse and found there were some coins. He decided to buy a very nice watch in a nearby shop. He wanted to pay the exact price(without change) and he known the price would not more than m.But he didn’t know the exact price of the watch. You are to write a program which reads n,m,A1,A2,A3…An and C1,C2,C3…Cn corresponding to the number of Tony’s coins of value A1,A2,A3…An then calculate how many prices(form 1 to m) Tony can pay use these coins.]]></content>
     </entry>
 
     
@@ -1606,7 +1606,7 @@
       
       <title><![CDATA[HDU 2577.How to Type]]></title>
       <url>%2Fpost%2FHDU%2F2577.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|模拟|题目 Description Pirates have finished developing the typing software. He called Cathy to test his typing software. She is good at thinking. After testing for several days, she finds that if she types a string by some ways, she will type the key at least. But she has a bad habit that if the caps lock is on, she must turn off it, after she finishes typing. Now she wants to know the smallest times of typing the key to finish typing a string.]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|模拟|题目 Description Pirates have finished developing the typing software. He called Cathy to test his typing software. She is good at thinking. After testing for several days, she finds that if she types a string by some ways, she will type the key at least. But she has a bad habit that if the caps lock is on, she must turn off it, after she finishes typing. Now she wants to know the smallest times of typing the key to finish typing a string.]]></content>
     </entry>
 
     
@@ -1622,7 +1622,7 @@
       
       <title><![CDATA[HDU 2159.FATE]]></title>
       <url>%2Fpost%2FHDU%2F2159.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|背包问题|题目 Description 最近xhd正在玩一款叫做FATE的游戏，为了得到极品装备，xhd在不停的杀怪做任务。久而久之xhd开始对杀怪产生的厌恶感，但又不得不通过杀怪来升完这最后一级。现在的问题是，xhd升掉最后一级还需n的经验值，xhd还留有m的忍耐度，每杀一个怪xhd会得到相应的经验，并减掉相应的忍耐度。当忍耐度降到0或者0以下时，xhd就不会玩这游戏。xhd还说了他最多只杀s只怪。请问他能升掉这最后一级吗？]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|背包问题|题目 Description 最近xhd正在玩一款叫做FATE的游戏，为了得到极品装备，xhd在不停的杀怪做任务。久而久之xhd开始对杀怪产生的厌恶感，但又不得不通过杀怪来升完这最后一级。现在的问题是，xhd升掉最后一级还需n的经验值，xhd还留有m的忍耐度，每杀一个怪xhd会得到相应的经验，并减掉相应的忍耐度。当忍耐度降到0或者0以下时，xhd就不会玩这游戏。xhd还说了他最多只杀s只怪。请问他能升掉这最后一级吗？]]></content>
     </entry>
 
     
@@ -1630,7 +1630,7 @@
       
       <title><![CDATA[HDU 1203.I NEED A OFFER!]]></title>
       <url>%2Fpost%2FHDU%2F1203.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|背包问题|题目 Description Speakless很早就想出国，现在他已经考完了所有需要的考试，准备了所有要准备的材料，于是，便需要去申请学校了。要申请国外的任何大学，你都要交纳一定的申请费用，这可是很惊人的。Speakless没有多少钱，总共只攒了n万美元。他将在m个学校中选择若干的（当然要在他的经济承受范围内）。每个学校都有不同的申请费用a（万美元），并且Speakless估计了他得到这个学校offer的可能性b。不同学校之间是否得到offer不会互相影响。“I NEED A OFFER”，他大叫一声。帮帮这个可怜的人吧，帮助他计算一下，他可以收到至少一份offer的最大概率。（如果Speakless选择了多个学校，得到任意一个学校的offer都可以）。]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|背包问题|题目 Description Speakless很早就想出国，现在他已经考完了所有需要的考试，准备了所有要准备的材料，于是，便需要去申请学校了。要申请国外的任何大学，你都要交纳一定的申请费用，这可是很惊人的。Speakless没有多少钱，总共只攒了n万美元。他将在m个学校中选择若干的（当然要在他的经济承受范围内）。每个学校都有不同的申请费用a（万美元），并且Speakless估计了他得到这个学校offer的可能性b。不同学校之间是否得到offer不会互相影响。“I NEED A OFFER”，他大叫一声。帮帮这个可怜的人吧，帮助他计算一下，他可以收到至少一份offer的最大概率。（如果Speakless选择了多个学校，得到任意一个学校的offer都可以）。]]></content>
     </entry>
 
     
@@ -1646,7 +1646,7 @@
       
       <title><![CDATA[HDU 1176.免费馅饼]]></title>
       <url>%2Fpost%2FHDU%2F1176.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|题目 Description 都说天上不会掉馅饼，但有一天gameboy正走在回家的小径上，忽然天上掉下大把大把的馅饼。说来gameboy的人品实在是太好了，这馅饼别处都不掉，就掉落在他身旁的10米范围内。馅饼如果掉在了地上当然就不能吃了，所以gameboy马上卸下身上的背包去接。但由于小径两侧都不能站人，所以他只能在小径上接。由于gameboy平时老呆在房间里玩游戏，虽然在游戏中是个身手敏捷的高手，但在现实中运动神经特别迟钝，每秒种只有在移动不超过一米的范围内接住坠落的馅饼。现在给这条小径如图标上坐标： 为了使问题简化，假设在接下来的一段时间里，馅饼都掉落在0-10这11个位置。开始时gameboy站在5这个位置，因此在第一秒，他只能接到4,5,6这三个位置中其中一个位置上的馅饼。问gameboy最多可能接到多少个馅饼？（假设他的背包可以容纳无穷多个馅饼）]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|题目 Description 都说天上不会掉馅饼，但有一天gameboy正走在回家的小径上，忽然天上掉下大把大把的馅饼。说来gameboy的人品实在是太好了，这馅饼别处都不掉，就掉落在他身旁的10米范围内。馅饼如果掉在了地上当然就不能吃了，所以gameboy马上卸下身上的背包去接。但由于小径两侧都不能站人，所以他只能在小径上接。由于gameboy平时老呆在房间里玩游戏，虽然在游戏中是个身手敏捷的高手，但在现实中运动神经特别迟钝，每秒种只有在移动不超过一米的范围内接住坠落的馅饼。现在给这条小径如图标上坐标： 为了使问题简化，假设在接下来的一段时间里，馅饼都掉落在0-10这11个位置。开始时gameboy站在5这个位置，因此在第一秒，他只能接到4,5,6这三个位置中其中一个位置上的馅饼。问gameboy最多可能接到多少个馅饼？（假设他的背包可以容纳无穷多个馅饼）]]></content>
     </entry>
 
     
@@ -1670,7 +1670,7 @@
       
       <title><![CDATA[AOJ 786.数字序列]]></title>
       <url>%2Fpost%2FAOJ%2F786.html</url>
-      <content type="text"><![CDATA[题解|AOJ|数学|题目 Description f(1) =1；f(2)=1；f(n)=(A*f(n-1)+B*f(n-2)) mod 7给定A,B和n时，计算f(n)]]></content>
+      <content type="text"><![CDATA[题解|数学|AOJ|题目 Description f(1) =1；f(2)=1；f(n)=(A*f(n-1)+B*f(n-2)) mod 7给定A,B和n时，计算f(n)]]></content>
     </entry>
 
     
@@ -1678,7 +1678,7 @@
       
       <title><![CDATA[AOJ 785.棋盘完美覆盖]]></title>
       <url>%2Fpost%2FAOJ%2F785.html</url>
-      <content type="text"><![CDATA[题解|AOJ|数学|打表|题目 Description 问题描述:有2×n的一个长方形棋盘,用一些1×2的骨牌铺满方格.例如:n=3时,在2×3的棋盘上用1×2的骨牌覆盖,共有3种铺法。问题求解:编写一个程序,试对给出的任意一个n(n&gt;0),输出铺法总数.]]></content>
+      <content type="text"><![CDATA[题解|数学|AOJ|打表|题目 Description 问题描述:有2×n的一个长方形棋盘,用一些1×2的骨牌铺满方格.例如:n=3时,在2×3的棋盘上用1×2的骨牌覆盖,共有3种铺法。问题求解:编写一个程序,试对给出的任意一个n(n&gt;0),输出铺法总数.]]></content>
     </entry>
 
     
@@ -1686,7 +1686,7 @@
       
       <title><![CDATA[HDU 2084.数塔]]></title>
       <url>%2Fpost%2FHDU%2F2084.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|题目 Description 在讲述DP算法的时候，一个经典的例子就是数塔问题，它是这样描述的： 有如下所示的数塔，要求从顶层走到底层，若每一步只能走到相邻的结点，则经过的结点的数字之和最大是多少？已经告诉你了，这是个DP的题目，你能AC吗]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|题目 Description 在讲述DP算法的时候，一个经典的例子就是数塔问题，它是这样描述的： 有如下所示的数塔，要求从顶层走到底层，若每一步只能走到相邻的结点，则经过的结点的数字之和最大是多少？已经告诉你了，这是个DP的题目，你能AC吗]]></content>
     </entry>
 
     
@@ -1694,7 +1694,7 @@
       
       <title><![CDATA[HDU 1171.Big Event in HDU]]></title>
       <url>%2Fpost%2FHDU%2F1171.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|背包问题|题目 Description Nowadays, we all know that Computer College is the biggest department in HDU. But, maybe you don’t know that Computer College had ever been split into Computer College and Software College in 2002.The splitting is absolutely a big event in HDU! At the same time, it is a trouble thing too. All facilities must go halves. First, all facilities are assessed, and two facilities are thought to be same if they have the same value. It is assumed that there is N (0&lt;N&lt;1000) kinds of facilities (different value, different kinds).]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|背包问题|题目 Description Nowadays, we all know that Computer College is the biggest department in HDU. But, maybe you don’t know that Computer College had ever been split into Computer College and Software College in 2002.The splitting is absolutely a big event in HDU! At the same time, it is a trouble thing too. All facilities must go halves. First, all facilities are assessed, and two facilities are thought to be same if they have the same value. It is assumed that there is N (0&lt;N&lt;1000) kinds of facilities (different value, different kinds).]]></content>
     </entry>
 
     
@@ -1726,7 +1726,7 @@
       
       <title><![CDATA[HDU 1069.Monkey and Banana]]></title>
       <url>%2Fpost%2FHDU%2F1069.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|最长上升子序列|题目 Description A group of researchers are designing an experiment to test the IQ of a monkey. They will hang a banana at the roof of a building, and at the mean time, provide the monkey with some blocks. If the monkey is clever enough, it shall be able to reach the banana by placing one block on the top another to build a tower and climb up to get its favorite food. The researchers have n types of blocks, and an unlimited supply of blocks of each type. Each type-i block was a rectangular solid with linear dimensions (xi, yi, zi). A block could be reoriented so that any two of its three dimensions determined the dimensions of the base and the other dimension was the height. They want to make sure that the tallest tower possible by stacking blocks can reach the roof. The problem is that, in building a tower, one block could only be placed on top of another block as long as the two base dimensions of the upper block were both strictly smaller than the corresponding base dimensions of the lower block because there has to be some space for the monkey to step on. This meant, for example, that blocks oriented to have equal-sized bases couldn’t be stacked. Your job is to write a program that determines the height of the tallest tower the monkey can build with a given set of blocks.]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|最长上升子序列|题目 Description A group of researchers are designing an experiment to test the IQ of a monkey. They will hang a banana at the roof of a building, and at the mean time, provide the monkey with some blocks. If the monkey is clever enough, it shall be able to reach the banana by placing one block on the top another to build a tower and climb up to get its favorite food. The researchers have n types of blocks, and an unlimited supply of blocks of each type. Each type-i block was a rectangular solid with linear dimensions (xi, yi, zi). A block could be reoriented so that any two of its three dimensions determined the dimensions of the base and the other dimension was the height. They want to make sure that the tallest tower possible by stacking blocks can reach the roof. The problem is that, in building a tower, one block could only be placed on top of another block as long as the two base dimensions of the upper block were both strictly smaller than the corresponding base dimensions of the lower block because there has to be some space for the monkey to step on. This meant, for example, that blocks oriented to have equal-sized bases couldn’t be stacked. Your job is to write a program that determines the height of the tallest tower the monkey can build with a given set of blocks.]]></content>
     </entry>
 
     
@@ -1734,7 +1734,7 @@
       
       <title><![CDATA[HDU 2571.命运]]></title>
       <url>%2Fpost%2FHDU%2F2571.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|题目 Description 穿过幽谷意味着离大魔王lemon已经无限接近了！可谁能想到，yifenfei在斩杀了一些虾兵蟹将后，却再次面临命运大迷宫的考验，这是魔王lemon设下的又一个机关。要知道，不论何人，若在迷宫中被困1小时以上，则必死无疑！可怜的yifenfei为了去救MM，义无返顾地跳进了迷宫。让我们一起帮帮执着的他吧！命运大迷宫可以看成是一个两维的方格阵列，如下图所示： yifenfei一开始在左上角，目的当然是到达右下角的大魔王所在地。迷宫的每一个格子都受到幸运女神眷恋或者痛苦魔王的诅咒，所以每个格子都对应一个值，走到那里便自动得到了对应的值。现在规定yifenfei只能向右或者向下走，向下一次只能走一格。但是如果向右走，则每次可以走一格或者走到该行的列数是当前所在列数倍数的格子，即：如果当前格子是（x,y），下一步可以是（x+1,y），(x,y+1)或者(x,y*k) 其中k&gt;1。为了能够最大把握的消灭魔王lemon，yifenfei希望能够在这个命运大迷宫中得到最大的幸运值。]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|题目 Description 穿过幽谷意味着离大魔王lemon已经无限接近了！可谁能想到，yifenfei在斩杀了一些虾兵蟹将后，却再次面临命运大迷宫的考验，这是魔王lemon设下的又一个机关。要知道，不论何人，若在迷宫中被困1小时以上，则必死无疑！可怜的yifenfei为了去救MM，义无返顾地跳进了迷宫。让我们一起帮帮执着的他吧！命运大迷宫可以看成是一个两维的方格阵列，如下图所示： yifenfei一开始在左上角，目的当然是到达右下角的大魔王所在地。迷宫的每一个格子都受到幸运女神眷恋或者痛苦魔王的诅咒，所以每个格子都对应一个值，走到那里便自动得到了对应的值。现在规定yifenfei只能向右或者向下走，向下一次只能走一格。但是如果向右走，则每次可以走一格或者走到该行的列数是当前所在列数倍数的格子，即：如果当前格子是（x,y），下一步可以是（x+1,y），(x,y+1)或者(x,y*k) 其中k&gt;1。为了能够最大把握的消灭魔王lemon，yifenfei希望能够在这个命运大迷宫中得到最大的幸运值。]]></content>
     </entry>
 
     
@@ -1758,7 +1758,7 @@
       
       <title><![CDATA[HDU 1087.Super Jumping! Jumping! Jumping!]]></title>
       <url>%2Fpost%2FHDU%2F1087.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|最大上升子序列|题目 Description Nowadays, a kind of chess game called “Super Jumping! Jumping! Jumping!” is very popular in HDU. Maybe you are a good boy, and know little about this game, so I introduce it to you now. The game can be played by two or more than two players. It consists of a chessboard（棋盘）and some chessmen（棋子）, and all chessmen are marked by a positive integer or “start” or “end”. The player starts from start-point and must jumps into end-point finally. In the course of jumping, the player will visit the chessmen in the path, but everyone must jumps from one chessman to another absolutely bigger (you can assume start-point is a minimum and end-point is a maximum.). And all players cannot go backwards. One jumping can go from a chessman to next, also can go across many chessmen, and even you can straightly get to end-point from start-point. Of course you get zero point in this situation. A player is a winner if and only if he can get a bigger score according to his jumping solution. Note that your score comes from the sum of value on the chessmen in you jumping path.Your task is to output the maximum value according to the given chessmen list.]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|最大上升子序列|题目 Description Nowadays, a kind of chess game called “Super Jumping! Jumping! Jumping!” is very popular in HDU. Maybe you are a good boy, and know little about this game, so I introduce it to you now. The game can be played by two or more than two players. It consists of a chessboard（棋盘）and some chessmen（棋子）, and all chessmen are marked by a positive integer or “start” or “end”. The player starts from start-point and must jumps into end-point finally. In the course of jumping, the player will visit the chessmen in the path, but everyone must jumps from one chessman to another absolutely bigger (you can assume start-point is a minimum and end-point is a maximum.). And all players cannot go backwards. One jumping can go from a chessman to next, also can go across many chessmen, and even you can straightly get to end-point from start-point. Of course you get zero point in this situation. A player is a winner if and only if he can get a bigger score according to his jumping solution. Note that your score comes from the sum of value on the chessmen in you jumping path.Your task is to output the maximum value according to the given chessmen list.]]></content>
     </entry>
 
     
@@ -1774,7 +1774,7 @@
       
       <title><![CDATA[AOJ 784.平面分隔问题]]></title>
       <url>%2Fpost%2FAOJ%2F784.html</url>
-      <content type="text"><![CDATA[题解|动态规划|AOJ|数学|记忆化搜索|题目 Description 在平面上画n条封闭的曲线，各曲线之间两两相交于两点，并且三条封闭的曲线都不相交于一点，求这样的n条曲线将平面分为多少个区域。]]></content>
+      <content type="text"><![CDATA[题解|数学|动态规划|AOJ|记忆化搜索|题目 Description 在平面上画n条封闭的曲线，各曲线之间两两相交于两点，并且三条封闭的曲线都不相交于一点，求这样的n条曲线将平面分为多少个区域。]]></content>
     </entry>
 
     
@@ -1838,7 +1838,7 @@
       
       <title><![CDATA[HDU 2602.Bone Collector]]></title>
       <url>%2Fpost%2FHDU%2F2602.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|题目 Description Many years ago , in Teddy’s hometown there was a man who was called “Bone Collector”. This man like to collect varies of bones , such as dog’s , cow’s , also he went to the grave …The bone collector had a big bag with a volume of V ,and along his trip of collecting there are a lot of bones , obviously , different bone has different value and different volume, now given the each bone’s value along his trip , can you calculate out the maximum of the total value the bone collector can get]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|题目 Description Many years ago , in Teddy’s hometown there was a man who was called “Bone Collector”. This man like to collect varies of bones , such as dog’s , cow’s , also he went to the grave …The bone collector had a big bag with a volume of V ,and along his trip of collecting there are a lot of bones , obviously , different bone has different value and different volume, now given the each bone’s value along his trip , can you calculate out the maximum of the total value the bone collector can get]]></content>
     </entry>
 
     
@@ -1846,7 +1846,7 @@
       
       <title><![CDATA[HDU 1505.City Game]]></title>
       <url>%2Fpost%2FHDU%2F1505.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|最大矩形|题目 Description Bob is a strategy game programming specialist. In his new city building game the gaming environment is as follows: a city is built up by areas, in which there are streets, trees,factories and buildings. There is still some space in the area that is unoccupied. The strategic task of his game is to win as much rent money from these free spaces. To win rent money you must erect buildings, that can only be rectangular, as long and wide as you can. Bob is trying to find a way to build the biggest possible building in each area. But he comes across some problems – he is not allowed to destroy already existing buildings, trees, factories and streets in the area he is building in. Each area has its width and length. The area is divided into a grid of equal square units.The rent paid for each unit on which you’re building stands is 3$. Your task is to help Bob solve this problem. The whole city is divided into K areas. Each one of the areas is rectangular and has a different grid size with its own length M and width N.The existing occupied units are marked with the symbol R. The unoccupied units are marked with the symbol F.]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|最大矩形|题目 Description Bob is a strategy game programming specialist. In his new city building game the gaming environment is as follows: a city is built up by areas, in which there are streets, trees,factories and buildings. There is still some space in the area that is unoccupied. The strategic task of his game is to win as much rent money from these free spaces. To win rent money you must erect buildings, that can only be rectangular, as long and wide as you can. Bob is trying to find a way to build the biggest possible building in each area. But he comes across some problems – he is not allowed to destroy already existing buildings, trees, factories and streets in the area he is building in. Each area has its width and length. The area is divided into a grid of equal square units.The rent paid for each unit on which you’re building stands is 3$. Your task is to help Bob solve this problem. The whole city is divided into K areas. Each one of the areas is rectangular and has a different grid size with its own length M and width N.The existing occupied units are marked with the symbol R. The unoccupied units are marked with the symbol F.]]></content>
     </entry>
 
     
@@ -1870,7 +1870,7 @@
       
       <title><![CDATA[Codeforces 639A.Bear and Displayed Friends]]></title>
       <url>%2Fpost%2FCodeforces%2F639A.html</url>
-      <content type="text"><![CDATA[题解|模拟|队列(queue)|Codeforces|题目 Description Limak is a little polar bear. He loves connecting with other bears via social networks. He has n friends and his relation with the i-th of them is described by a unique integer ti. The bigger this value is, the better the friendship is. No two friends have the same value ti. Spring is starting and the Winter sleep is over for bears. Limak has just woken up and logged in. All his friends still sleep and thus none of them is online. Some (maybe all) of them will appear online in the next hours, one at a time. The system displays friends who are online. On the screen there is space to display at most k friends. If there are more than k friends online then the system displays only k best of them — those with biggest ti. Your task is to handle queries of two types: “1 id” — Friend id becomes online. It’s guaranteed that he wasn’t online before.“2 id” — Check whether friend id is displayed by the system. Print “YES” or “NO” in a separate line.Are you able to help Limak and answer all queries of the second type?]]></content>
+      <content type="text"><![CDATA[题解|队列(queue)|模拟|Codeforces|题目 Description Limak is a little polar bear. He loves connecting with other bears via social networks. He has n friends and his relation with the i-th of them is described by a unique integer ti. The bigger this value is, the better the friendship is. No two friends have the same value ti. Spring is starting and the Winter sleep is over for bears. Limak has just woken up and logged in. All his friends still sleep and thus none of them is online. Some (maybe all) of them will appear online in the next hours, one at a time. The system displays friends who are online. On the screen there is space to display at most k friends. If there are more than k friends online then the system displays only k best of them — those with biggest ti. Your task is to handle queries of two types: “1 id” — Friend id becomes online. It’s guaranteed that he wasn’t online before.“2 id” — Check whether friend id is displayed by the system. Print “YES” or “NO” in a separate line.Are you able to help Limak and answer all queries of the second type?]]></content>
     </entry>
 
     
@@ -1878,7 +1878,7 @@
       
       <title><![CDATA[HDU 1506.Largest Rectangle in a Histogram]]></title>
       <url>%2Fpost%2FHDU%2F1506.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|题目 Description A histogram is a polygon composed of a sequence of rectangles aligned at a common base line. The rectangles have equal widths but may have different heights. For example, the figure on the left shows the histogram that consists of rectangles with the heights 2, 1, 4, 5, 1, 3, 3, measured in units where 1 is the width of the rectangles: Usually, histograms are used to represent discrete distributions, e.g., the frequencies of characters in texts. Note that the order of the rectangles, i.e., their heights, is important. Calculate the area of the largest rectangle in a histogram that is aligned at the common base line, too. The figure on the right shows the largest aligned rectangle for the depicted histogram.]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|题目 Description A histogram is a polygon composed of a sequence of rectangles aligned at a common base line. The rectangles have equal widths but may have different heights. For example, the figure on the left shows the histogram that consists of rectangles with the heights 2, 1, 4, 5, 1, 3, 3, measured in units where 1 is the width of the rectangles: Usually, histograms are used to represent discrete distributions, e.g., the frequencies of characters in texts. Note that the order of the rectangles, i.e., their heights, is important. Calculate the area of the largest rectangle in a histogram that is aligned at the common base line, too. The figure on the right shows the largest aligned rectangle for the depicted histogram.]]></content>
     </entry>
 
     
@@ -1958,7 +1958,7 @@
       
       <title><![CDATA[HDU 1231.最大连续子序列]]></title>
       <url>%2Fpost%2FHDU%2F1231.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|递归与分治|最大连续子序列|题目 Description 给定K个整数的序列{ N1, N2, …, NK }，其任意连续子序列可表示为{ Ni, Ni+1, …,Nj }，其中 1 &lt;= i &lt;= j &lt;= K。最大连续子序列是所有连续子序列中元素和最大的一个，例如给定序列{ -2, 11, -4, 13, -5, -2 }，其最大连续子序列为{ 11, -4, 13 }，最大和为20。在今年的数据结构考卷中，要求编写程序得到最大和，现在增加一个要求，即还需要输出该子序列的第一个和最后一个元素。]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|递归与分治|最大连续子序列|题目 Description 给定K个整数的序列{ N1, N2, …, NK }，其任意连续子序列可表示为{ Ni, Ni+1, …,Nj }，其中 1 &lt;= i &lt;= j &lt;= K。最大连续子序列是所有连续子序列中元素和最大的一个，例如给定序列{ -2, 11, -4, 13, -5, -2 }，其最大连续子序列为{ 11, -4, 13 }，最大和为20。在今年的数据结构考卷中，要求编写程序得到最大和，现在增加一个要求，即还需要输出该子序列的第一个和最后一个元素。]]></content>
     </entry>
 
     
@@ -1966,7 +1966,7 @@
       
       <title><![CDATA[百度站长主动推动工具]]></title>
       <url>%2Fpost%2FNote%2FBaiduPush.html</url>
-      <content type="text"><![CDATA[笔记|Hexo|SEO|工具|易语言|]]></content>
+      <content type="text"><![CDATA[笔记|SEO|工具|Hexo|易语言|]]></content>
     </entry>
 
     
@@ -1974,7 +1974,7 @@
       
       <title><![CDATA[HDU 1864.最大报销额]]></title>
       <url>%2Fpost%2FHDU%2F1864.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|背包问题|动态内存|题目 Description 现有一笔经费可以报销一定额度的发票。允许报销的发票类型包括买图书（A类）、文具（B类）、差旅（C类），要求每张发票的总额不得超过1000元，每张发票上，单项物品的价值不得超过600元。现请你编写程序，在给出的一堆发票中找出可以报销的、不超过给定额度的最大报销额。]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|背包问题|动态内存|题目 Description 现有一笔经费可以报销一定额度的发票。允许报销的发票类型包括买图书（A类）、文具（B类）、差旅（C类），要求每张发票的总额不得超过1000元，每张发票上，单项物品的价值不得超过600元。现请你编写程序，在给出的一堆发票中找出可以报销的、不超过给定额度的最大报销额。]]></content>
     </entry>
 
     
@@ -2030,7 +2030,7 @@
       
       <title><![CDATA[VPS搭建Git服务器及git pages]]></title>
       <url>%2Fpost%2FNote%2FVPS_hexo.html</url>
-      <content type="text"><![CDATA[undefined|undefined|undefined|undefined|undefined|笔记|Hexo|VPS|Linux|Git|对比了以下腾讯云和阿里云,觉得个人更喜欢腾讯云一点腾讯云每天中午12点能够在官网上抢学生优惠一个月1元钱拿到 VPS 服务器练手专用]]></content>
+      <content type="text"><![CDATA[undefined|undefined|undefined|undefined|undefined|笔记|Hexo|VPS|Git|Linux|对比了以下腾讯云和阿里云,觉得个人更喜欢腾讯云一点腾讯云每天中午12点能够在官网上抢学生优惠一个月1元钱拿到 VPS 服务器练手专用]]></content>
     </entry>
 
     
@@ -2038,7 +2038,7 @@
       
       <title><![CDATA[Codeforces 681B.Economy Game]]></title>
       <url>%2Fpost%2FCodeforces%2F681B.html</url>
-      <content type="text"><![CDATA[题解|动态规划|数学|Codeforces|题目 Description Kolya is developing an economy simulator game. His most favourite part of the development process is in-game testing. Once he was entertained by the testing so much, that he found out his game-coin score become equal to 0. Kolya remembers that at the beginning of the game his game-coin score was equal to n and that he have bought only some houses (for 1 234 567 game-coins each), cars (for 123 456 game-coins each) and computers (for 1 234 game-coins each). Kolya is now interested, whether he could have spent all of his initial n game-coins buying only houses, cars and computers or there is a bug in the game. Formally, is there a triple of non-negative integers a, b and c such that a × 1 234 567 + b × 123 456 + c × 1 234 = n? Please help Kolya answer this question.]]></content>
+      <content type="text"><![CDATA[题解|数学|动态规划|Codeforces|题目 Description Kolya is developing an economy simulator game. His most favourite part of the development process is in-game testing. Once he was entertained by the testing so much, that he found out his game-coin score become equal to 0. Kolya remembers that at the beginning of the game his game-coin score was equal to n and that he have bought only some houses (for 1 234 567 game-coins each), cars (for 123 456 game-coins each) and computers (for 1 234 game-coins each). Kolya is now interested, whether he could have spent all of his initial n game-coins buying only houses, cars and computers or there is a bug in the game. Formally, is there a triple of non-negative integers a, b and c such that a × 1 234 567 + b × 123 456 + c × 1 234 = n? Please help Kolya answer this question.]]></content>
     </entry>
 
     
@@ -2054,7 +2054,7 @@
       
       <title><![CDATA[HDU 2955.Robberies]]></title>
       <url>%2Fpost%2FHDU%2F2955.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|背包问题|题目 Description The aspiring Roy the Robber has seen a lot of American movies, and knows that the bad guys usually gets caught in the end, often because they become too greedy. He has decided to work in the lucrative business of bank robbery only for a short while, before retiring to a comfortable job at a university. For a few months now, Roy has been assessing the security of various banks and the amount of cash they hold. He wants to make a calculated risk, and grab as much money as possible. His mother, Ola, has decided upon a tolerable probability of getting caught. She feels that he is safe enough if the banks he robs together give a probability less than this.]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|背包问题|题目 Description The aspiring Roy the Robber has seen a lot of American movies, and knows that the bad guys usually gets caught in the end, often because they become too greedy. He has decided to work in the lucrative business of bank robbery only for a short while, before retiring to a comfortable job at a university. For a few months now, Roy has been assessing the security of various banks and the amount of cash they hold. He wants to make a calculated risk, and grab as much money as possible. His mother, Ola, has decided upon a tolerable probability of getting caught. She feels that he is safe enough if the banks he robs together give a probability less than this.]]></content>
     </entry>
 
     
@@ -2302,7 +2302,7 @@
       
       <title><![CDATA[AOJ 762.分数数列]]></title>
       <url>%2Fpost%2FAOJ%2F762.html</url>
-      <content type="text"><![CDATA[题解|AOJ|数学|题目 Description 一个数列的前6项为：1/2，3/5，4/7，6/10，8/13，9/15等，试求数列的第n项(n&lt;2000)]]></content>
+      <content type="text"><![CDATA[题解|数学|AOJ|题目 Description 一个数列的前6项为：1/2，3/5，4/7，6/10，8/13，9/15等，试求数列的第n项(n&lt;2000)]]></content>
     </entry>
 
     
@@ -2310,7 +2310,7 @@
       
       <title><![CDATA[AOJ 761.Fibonacci序列]]></title>
       <url>%2Fpost%2FAOJ%2F761.html</url>
-      <content type="text"><![CDATA[题解|AOJ|递推|记忆化搜索|题目 Description Fibonacci 数列的另一种形式F(0)=7, F(1)=11 F(n)=F(n-1)+F(n-2) (n&gt;=2)]]></content>
+      <content type="text"><![CDATA[题解|AOJ|记忆化搜索|递推|题目 Description Fibonacci 数列的另一种形式F(0)=7, F(1)=11 F(n)=F(n-1)+F(n-2) (n&gt;=2)]]></content>
     </entry>
 
     
@@ -2366,7 +2366,7 @@
       
       <title><![CDATA[AOJ 758.大数的位数]]></title>
       <url>%2Fpost%2FAOJ%2F758.html</url>
-      <content type="text"><![CDATA[题解|AOJ|数学|题目 Description 给出一个整数，确定这个数的阶乘的位数。]]></content>
+      <content type="text"><![CDATA[题解|数学|AOJ|题目 Description 给出一个整数，确定这个数的阶乘的位数。]]></content>
     </entry>
 
     
@@ -2614,7 +2614,7 @@
       
       <title><![CDATA[HDU 5642.King's Order]]></title>
       <url>%2Fpost%2FHDU%2F5642.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|记忆化搜索|题目 DescriptionAfter the king’s speech , everyone is encouraged. But the war is not over. The king needs to give orders from time to time. But sometimes he can not speak things well. So in his order there are some ones like this: “Let the group-p-p three come to me”. As you can see letter ‘p’ repeats for 3 times. &gt; &gt; Poor king! Now , it is war time , because of the spies from enemies , sometimes it is pretty hard for the general to tell which orders come from the king. But fortunately the general know how the king speaks: the king never repeats a letter for more than 3 times continually .And only this kind of order is &gt; &gt; legal. For example , the order: “Let the group-p-p-p three come to me” can never come from the king. While the order:” Let the group-p three come to me” is a legal statement. The general wants to know how many legal orders that has the length of n To make it simple , only lower case English Letters can appear in king’s order , and please output the answer modulo 10000000071000000007 We regard two strings are the same if and only if each charactor is the same place of these two strings are the same.]]></content>
+      <content type="text"><![CDATA[题解|HDU|动态规划|记忆化搜索|题目 DescriptionAfter the king’s speech , everyone is encouraged. But the war is not over. The king needs to give orders from time to time. But sometimes he can not speak things well. So in his order there are some ones like this: “Let the group-p-p three come to me”. As you can see letter ‘p’ repeats for 3 times. &gt; &gt; Poor king! Now , it is war time , because of the spies from enemies , sometimes it is pretty hard for the general to tell which orders come from the king. But fortunately the general know how the king speaks: the king never repeats a letter for more than 3 times continually .And only this kind of order is &gt; &gt; legal. For example , the order: “Let the group-p-p-p three come to me” can never come from the king. While the order:” Let the group-p three come to me” is a legal statement. The general wants to know how many legal orders that has the length of n To make it simple , only lower case English Letters can appear in king’s order , and please output the answer modulo 10000000071000000007 We regard two strings are the same if and only if each charactor is the same place of these two strings are the same.]]></content>
     </entry>
 
     
@@ -2670,7 +2670,7 @@
       
       <title><![CDATA[AOJ 802.运输宝物]]></title>
       <url>%2Fpost%2FAOJ%2F802.html</url>
-      <content type="text"><![CDATA[题解|AOJ|贪心算法|模拟|题目 Time Limit: 1000 msCase Time Limit: 1000 msMemory Limit: 64 MBTotal Submission: 53Submission Accepted: 22 Description 众所周知，“西瓜”是大名鼎鼎的江洋大盗。有一次他偷到了一批宝库。这批宝物共有n个，他一共有k个箱子。他只能用这些箱子把这些宝物运出去，为了保证运输安全，他不会把两个以上的宝物装入同一个箱子（一个箱子只能装1个或者2个宝物）。这些宝物的大小分别是s(1)、s(2)、s(3)……s(n)。（题目给出的重量保证是非降序，即s(i-1)&lt;=s(i) 对于任何i&gt;1)。装进宝物后，每个箱子的容量要大于或者等于所装的宝物大小之和。为了规格统一，这些箱子每个的容量要一致。为了降低运费，箱子的容量要尽可能小。“西瓜”想要知道，在能运走的情况下，箱子容量最小是多少。]]></content>
+      <content type="text"><![CDATA[题解|AOJ|模拟|贪心算法|题目 Time Limit: 1000 msCase Time Limit: 1000 msMemory Limit: 64 MBTotal Submission: 53Submission Accepted: 22 Description 众所周知，“西瓜”是大名鼎鼎的江洋大盗。有一次他偷到了一批宝库。这批宝物共有n个，他一共有k个箱子。他只能用这些箱子把这些宝物运出去，为了保证运输安全，他不会把两个以上的宝物装入同一个箱子（一个箱子只能装1个或者2个宝物）。这些宝物的大小分别是s(1)、s(2)、s(3)……s(n)。（题目给出的重量保证是非降序，即s(i-1)&lt;=s(i) 对于任何i&gt;1)。装进宝物后，每个箱子的容量要大于或者等于所装的宝物大小之和。为了规格统一，这些箱子每个的容量要一致。为了降低运费，箱子的容量要尽可能小。“西瓜”想要知道，在能运走的情况下，箱子容量最小是多少。]]></content>
     </entry>
 
     
@@ -2678,7 +2678,7 @@
       
       <title><![CDATA[AOJ 794.西瓜理发记(二)]]></title>
       <url>%2Fpost%2FAOJ%2F794.html</url>
-      <content type="text"><![CDATA[题解|AOJ|数学|题目 Time Limit: 1000 msCase Time Limit: 1000 msMemory Limit: 64 MBTotal Submission: 151Submission Accepted: 28 Description 剃完光头后，西瓜表示非常开心，于是直接骑上自行车去往勺林寺。等骑到勺林寺的时候，头发已经都长出来了，于是西瓜决定在附近的理发店再剃一次。然而这里的理发店老板WzyJerry表示正在做ACM练习，没空给他理发。西瓜决定帮助老板AK。题目是这样的：你现在有一个培养盒，盒中没有细菌每天早上，你可以向盒中放入一个细菌每天晚上，一个细菌会分裂成两个。求如果你想在将来的某天使盒中恰好有n个细菌，你最少要向盒中放入几个细菌]]></content>
+      <content type="text"><![CDATA[题解|数学|AOJ|题目 Time Limit: 1000 msCase Time Limit: 1000 msMemory Limit: 64 MBTotal Submission: 151Submission Accepted: 28 Description 剃完光头后，西瓜表示非常开心，于是直接骑上自行车去往勺林寺。等骑到勺林寺的时候，头发已经都长出来了，于是西瓜决定在附近的理发店再剃一次。然而这里的理发店老板WzyJerry表示正在做ACM练习，没空给他理发。西瓜决定帮助老板AK。题目是这样的：你现在有一个培养盒，盒中没有细菌每天早上，你可以向盒中放入一个细菌每天晚上，一个细菌会分裂成两个。求如果你想在将来的某天使盒中恰好有n个细菌，你最少要向盒中放入几个细菌]]></content>
     </entry>
 
     
@@ -2750,7 +2750,7 @@
       
       <title><![CDATA[AOJ 803.魔方]]></title>
       <url>%2Fpost%2FAOJ%2F803.html</url>
-      <content type="text"><![CDATA[题解|AOJ|数学|题目 Time Limit: 5000 msCase Time Limit: 5000 msMemory Limit: 64 MBTotal Submission: 181Submission Accepted: 71 Description 西瓜很喜欢玩魔方，现在西瓜想知道，一个N阶魔方在表面一共有多少个立方体能被看见？]]></content>
+      <content type="text"><![CDATA[题解|数学|AOJ|题目 Time Limit: 5000 msCase Time Limit: 5000 msMemory Limit: 64 MBTotal Submission: 181Submission Accepted: 71 Description 西瓜很喜欢玩魔方，现在西瓜想知道，一个N阶魔方在表面一共有多少个立方体能被看见？]]></content>
     </entry>
 
     
@@ -2758,7 +2758,7 @@
       
       <title><![CDATA[AOJ 796.数三角形]]></title>
       <url>%2Fpost%2FAOJ%2F796.html</url>
-      <content type="text"><![CDATA[题解|AOJ|数学|题目 Time Limit: 5000 msCase Time Limit: 5000 msMemory Limit: 128 MBTotal Submission: 112Submission Accepted: 40 Description ACMer最讨厌大段大段的题目描述了，尤其当题目描述是英文的时候。还好，1243France为大家准备了一道简洁且简单的问题。给出平面上n个点的坐标，求这n个点总共可以围成多少个面积大于0的三角形。保证每个点的横纵坐标均为整数且绝对值小于等于100。保证给出点当中没有重点]]></content>
+      <content type="text"><![CDATA[题解|数学|AOJ|题目 Time Limit: 5000 msCase Time Limit: 5000 msMemory Limit: 128 MBTotal Submission: 112Submission Accepted: 40 Description ACMer最讨厌大段大段的题目描述了，尤其当题目描述是英文的时候。还好，1243France为大家准备了一道简洁且简单的问题。给出平面上n个点的坐标，求这n个点总共可以围成多少个面积大于0的三角形。保证每个点的横纵坐标均为整数且绝对值小于等于100。保证给出点当中没有重点]]></content>
     </entry>
 
     
@@ -2766,7 +2766,7 @@
       
       <title><![CDATA[AOJ 800.热身之开关灯]]></title>
       <url>%2Fpost%2FAOJ%2F800.html</url>
-      <content type="text"><![CDATA[题解|AOJ|打表|模拟|题目 Time Limit: 1000 msCase Time Limit: 1000 msMemory Limit: 64 MBTotal Submission: 224Submission Accepted: 86 Description 吃完草莓以后，机房的小伙伴们要开始做些运动。在ACM实验室里有N盏灯编号为1到N，起初都是开着的，从第一盏灯开始，凡是编号是一的倍数的灯的开关都要被按一遍（亮的变成暗的，暗的变成亮的），然后到第二盏灯，凡是编号是二的倍数的灯的开关都要被按一遍，一直到第N盏灯，凡是编号是N的倍数的灯都要被按一遍。那么问题来了，在灯质量比较好的情况下，最后还有多少盏灯是亮着的。]]></content>
+      <content type="text"><![CDATA[题解|AOJ|模拟|打表|题目 Time Limit: 1000 msCase Time Limit: 1000 msMemory Limit: 64 MBTotal Submission: 224Submission Accepted: 86 Description 吃完草莓以后，机房的小伙伴们要开始做些运动。在ACM实验室里有N盏灯编号为1到N，起初都是开着的，从第一盏灯开始，凡是编号是一的倍数的灯的开关都要被按一遍（亮的变成暗的，暗的变成亮的），然后到第二盏灯，凡是编号是二的倍数的灯的开关都要被按一遍，一直到第N盏灯，凡是编号是N的倍数的灯都要被按一遍。那么问题来了，在灯质量比较好的情况下，最后还有多少盏灯是亮着的。]]></content>
     </entry>
 
     
@@ -2798,7 +2798,7 @@
       
       <title><![CDATA[AOJ 708.序列匹配]]></title>
       <url>%2Fpost%2FAOJ%2F708.html</url>
-      <content type="text"><![CDATA[题解|AOJ|数学|题目 Time Limit: 5000 msMemory Limit: 128 MBTotal Submission: 146Submission Accepted: 34 Description 给定两个长度均为3的数字序列，每位上为一个范围是1-N的正整数，求有多少个仍然由3个1-N的整数构成的数字序列能与给定的两个序列中的任意一个匹配。如果两个序列匹配，当且仅当两个序列中的每个对应数字的最近距离不超过2。比如当N为9时，每一位数字可能是1,2,3,4,5,6,7,8,9，并且数字是循环的。也就是说9和1是相邻的。数字之间的距离就是两个数字的位置之差。也就是说在上面的例子中，9和1的最近距离是1,9和2的最近距离是2,2和5的最近距离是3。比如现在给定两个序列组合为(1,2,3)和(4,5,6), (2,4,8)或者(1, N, 5) 是能和两个序列匹配中的至少一个匹配的，但是(1, 5, 6)是不能和给定的两个序列中的任何一个匹配的。]]></content>
+      <content type="text"><![CDATA[题解|数学|AOJ|题目 Time Limit: 5000 msMemory Limit: 128 MBTotal Submission: 146Submission Accepted: 34 Description 给定两个长度均为3的数字序列，每位上为一个范围是1-N的正整数，求有多少个仍然由3个1-N的整数构成的数字序列能与给定的两个序列中的任意一个匹配。如果两个序列匹配，当且仅当两个序列中的每个对应数字的最近距离不超过2。比如当N为9时，每一位数字可能是1,2,3,4,5,6,7,8,9，并且数字是循环的。也就是说9和1是相邻的。数字之间的距离就是两个数字的位置之差。也就是说在上面的例子中，9和1的最近距离是1,9和2的最近距离是2,2和5的最近距离是3。比如现在给定两个序列组合为(1,2,3)和(4,5,6), (2,4,8)或者(1, N, 5) 是能和两个序列匹配中的至少一个匹配的，但是(1, 5, 6)是不能和给定的两个序列中的任何一个匹配的。]]></content>
     </entry>
 
     
@@ -2814,7 +2814,7 @@
       
       <title><![CDATA[AOJ 335.三角形]]></title>
       <url>%2Fpost%2FAOJ%2F335.html</url>
-      <content type="text"><![CDATA[题解|AOJ|数学|题目 Time Limit: 1000 ms Case Time Limit: 1000 ms Memory Limit: 64 MBTotal Submission: 41 Submission Accepted: 26 Description 一个名为PC的安大学生希望写一个程序来计算三角形的三条边长，你可以帮帮她吗？ Input 第一行是一个整数m(0&lt;m&lt;200)，代表有m组数据。之后m行，每行有三个整数(x&lt;10000),三角形的三条边]]></content>
+      <content type="text"><![CDATA[题解|数学|AOJ|题目 Time Limit: 1000 ms Case Time Limit: 1000 ms Memory Limit: 64 MBTotal Submission: 41 Submission Accepted: 26 Description 一个名为PC的安大学生希望写一个程序来计算三角形的三条边长，你可以帮帮她吗？ Input 第一行是一个整数m(0&lt;m&lt;200)，代表有m组数据。之后m行，每行有三个整数(x&lt;10000),三角形的三条边]]></content>
     </entry>
 
     
@@ -2830,7 +2830,7 @@
       
       <title><![CDATA[AOJ 609.LOL系列之回到现实]]></title>
       <url>%2Fpost%2FAOJ%2F609.html</url>
-      <content type="text"><![CDATA[题解|AOJ|数学|题目 Time Limit: 1000 msCase Time Limit: 1000 msMemory Limit: 64 MBTotal Submission: 72Submission Accepted: 28 Description 天天LOL，没怎么上过自习，这就是小小明生活的真实写照，殊不知，期末考试悄悄降临，首先考的是大物，纳尼？！！！这学期物理卷子改版？只有一道计算题？！题目描述如下：你在一数轴原点上，需要朝正方向一颗炮弹，你可以给炮弹提供的最大初速度为V，你应该调整炮弹的发射角度为多少才可以使得炮弹水平飞行距离最大呢？请输出炮弹最远飞行的水平距离，由于期末考试只有一题，所以要么AC，要么挂大物，你们自己看着办吧（这就是天天撸的后果，学霸们早已在你们看完这题的时候AC了）（g = 9.8）注：不考虑空气阻力]]></content>
+      <content type="text"><![CDATA[题解|数学|AOJ|题目 Time Limit: 1000 msCase Time Limit: 1000 msMemory Limit: 64 MBTotal Submission: 72Submission Accepted: 28 Description 天天LOL，没怎么上过自习，这就是小小明生活的真实写照，殊不知，期末考试悄悄降临，首先考的是大物，纳尼？！！！这学期物理卷子改版？只有一道计算题？！题目描述如下：你在一数轴原点上，需要朝正方向一颗炮弹，你可以给炮弹提供的最大初速度为V，你应该调整炮弹的发射角度为多少才可以使得炮弹水平飞行距离最大呢？请输出炮弹最远飞行的水平距离，由于期末考试只有一题，所以要么AC，要么挂大物，你们自己看着办吧（这就是天天撸的后果，学霸们早已在你们看完这题的时候AC了）（g = 9.8）注：不考虑空气阻力]]></content>
     </entry>
 
     
@@ -2908,17 +2908,17 @@
     
     <entry>
       
-      <title><![CDATA[AOJ 667.抢占白房子]]></title>
-      <url>%2Fpost%2FAOJ%2F667.html</url>
-      <content type="text"><![CDATA[题解|AOJ|数学|题目 Time Limit: 1000 msCase Time Limit: 1000 msMemory Limit: 64 MBTotal Submission: 79Submission Accepted: 25 Description 在一个8×8的宫格图中，每个格子要么是白色，要么是黑色，且相邻的两个格子的颜色一定不同；已知左上角（1，1）的格子的颜色为白色。现给出用字符描述的该图G，如果有G（i，j）=’F’，则说明从上向下数的第i行（从1开始数），从左向右数的第j行（从1开始数）交叉的格子被占领，否则这个格子是空的，未被占领。求出被占领的白格子数量。]]></content>
+      <title><![CDATA[AOJ 6.Hero In Maze]]></title>
+      <url>%2Fpost%2FAOJ%2F6.html</url>
+      <content type="text"><![CDATA[题解|AOJ|最短路|图论|BFS|DFS|简单的最短路 BFS DFS都可以实现（BFS应该会更快一点吧） 其中输入的N、M、T中，N是列，M是行，而不是和大多数题目一样，N是行，M是列 另外，类中不要乱放常量，类中不要直接为类变量赋初值（不是所有编译器都承认貌似~）]]></content>
     </entry>
 
     
     <entry>
       
-      <title><![CDATA[AOJ 6.Hero In Maze]]></title>
-      <url>%2Fpost%2FAOJ%2F6.html</url>
-      <content type="text"><![CDATA[题解|AOJ|最短路|图论|BFS|DFS|简单的最短路 BFS DFS都可以实现（BFS应该会更快一点吧） 其中输入的N、M、T中，N是列，M是行，而不是和大多数题目一样，N是行，M是列 另外，类中不要乱放常量，类中不要直接为类变量赋初值（不是所有编译器都承认貌似~）]]></content>
+      <title><![CDATA[AOJ 667.抢占白房子]]></title>
+      <url>%2Fpost%2FAOJ%2F667.html</url>
+      <content type="text"><![CDATA[题解|数学|AOJ|题目 Time Limit: 1000 msCase Time Limit: 1000 msMemory Limit: 64 MBTotal Submission: 79Submission Accepted: 25 Description 在一个8×8的宫格图中，每个格子要么是白色，要么是黑色，且相邻的两个格子的颜色一定不同；已知左上角（1，1）的格子的颜色为白色。现给出用字符描述的该图G，如果有G（i，j）=’F’，则说明从上向下数的第i行（从1开始数），从左向右数的第j行（从1开始数）交叉的格子被占领，否则这个格子是空的，未被占领。求出被占领的白格子数量。]]></content>
     </entry>
 
     
@@ -2942,7 +2942,7 @@
       
       <title><![CDATA[AOJ 3.Redraiment的遭遇]]></title>
       <url>%2Fpost%2FAOJ%2F3.html</url>
-      <content type="text"><![CDATA[题解|AOJ|打表|模拟|打表 要注意不到7月前和8月后的情况 同时注意“0号”等特殊情况]]></content>
+      <content type="text"><![CDATA[题解|AOJ|模拟|打表|打表 要注意不到7月前和8月后的情况 同时注意“0号”等特殊情况]]></content>
     </entry>
 
     
@@ -2998,7 +2998,7 @@
       
       <title><![CDATA[Uva 101.The Blocks Problem]]></title>
       <url>%2Fpost%2FUva%2F101.html</url>
-      <content type="text"><![CDATA[题解|向量(vector)|Uva|链表(list)|题意比较容易理解 《入门经典》上用的是向量，不过觉得用链表更快点~ 于是，就在链表这个大坑中爬不出来了…… 要注意对两种情况的排除，一个是a==b，另一个就是a、b在同一堆 在链表中，要注意什么时候链表到尽头，到底用 temp!=NULL 还是用 temp-&gt;next!=NULL 做循环判断的条件 另外，当链表的节点进行移动操作的时候，要注意移动 temp-&gt;next-&gt;last 和 temp-&gt;last-&gt;next （其中还要判断 temp-&gt;last 和 temp-&gt;next 存在与否） （要在这里被坑多少次才能记住╮(╯-╰)╭）]]></content>
+      <content type="text"><![CDATA[题解|向量(vector)|链表(list)|Uva|题意比较容易理解 《入门经典》上用的是向量，不过觉得用链表更快点~ 于是，就在链表这个大坑中爬不出来了…… 要注意对两种情况的排除，一个是a==b，另一个就是a、b在同一堆 在链表中，要注意什么时候链表到尽头，到底用 temp!=NULL 还是用 temp-&gt;next!=NULL 做循环判断的条件 另外，当链表的节点进行移动操作的时候，要注意移动 temp-&gt;next-&gt;last 和 temp-&gt;last-&gt;next （其中还要判断 temp-&gt;last 和 temp-&gt;next 存在与否） （要在这里被坑多少次才能记住╮(╯-╰)╭）]]></content>
     </entry>
 
     
@@ -3134,7 +3134,7 @@
       
       <title><![CDATA[STL笔记]]></title>
       <url>%2Fpost%2FNote%2FSTLNote.html</url>
-      <content type="text"><![CDATA[笔记|栈(stack)|队列(queue)|映射(map)|集合(set)|向量(vector)|STL方面的笔记以下为vector queue map set stack的基本用法可编译结合注释查看]]></content>
+      <content type="text"><![CDATA[笔记|队列(queue)|栈(stack)|映射(map)|集合(set)|向量(vector)|STL方面的笔记以下为vector queue map set stack的基本用法可编译结合注释查看]]></content>
     </entry>
 
     
