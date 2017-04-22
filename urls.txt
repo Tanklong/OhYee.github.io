@@ -106,8 +106,8 @@ http://www.oyohyee.com/post/Codeforces/707A.html
 http://www.oyohyee.com/post/Uva/11292.html
 http://www.oyohyee.com/post/POJ/2342.html
 http://www.oyohyee.com/post/Uva/11584.html
-http://www.oyohyee.com/post/POJ/2549.html
 http://www.oyohyee.com/post/Uva/10125.html
+http://www.oyohyee.com/post/POJ/2549.html
 http://www.oyohyee.com/post/Study/2016_08_16-2016_08_18.html
 http://www.oyohyee.com/post/POJ/3517.html
 http://www.oyohyee.com/post/POJ/3061.html
@@ -274,7 +274,6 @@ http://www.oyohyee.com/post/Writing/WOW_Movie.html
 http://www.oyohyee.com/post/Algorithm/TopoSort.html
 http://www.oyohyee.com/post/HFUT/1359.html
 http://www.oyohyee.com/post/HFUT/1358.html
-http://www.oyohyee.com/post/Note/about/index.html
 http://www.oyohyee.com/post/Note/HexoBuild.html
 http://www.oyohyee.com/post/Note/double.html
 http://www.oyohyee.com/post/Test.html
