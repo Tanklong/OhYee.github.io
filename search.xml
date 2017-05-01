@@ -4,6 +4,30 @@
     
     <entry>
       
+      <title><![CDATA[制作手工精灵球]]></title>
+      <url>%2Fpost%2FWriting%2FPokemon_ball_DIY.html</url>
+      <content type="text"><![CDATA[undefined|undefined|随笔|DIY|]]></content>
+    </entry>
+
+    
+    <entry>
+      
+      <title><![CDATA[AOJ 863.分书问题]]></title>
+      <url>%2Fpost%2FAOJ%2F863.html</url>
+      <content type="text"><![CDATA[题解|AOJ|DFS|剪枝|题目点击显/隐题目 已知有n本书（从1～n编号）和n个人（从1～n编号），每个人都有一个自己喜爱的书的列表，现在请你编写一个程序，设计一种分书方案，使得每个人都能获得一本书，且这本书一定要在他的喜爱列表中。输入数据共若干行，第一行为一个正整数n（n &lt;= 20），从第2行到第n+1行，每行有n个0或1组成，第k行表示编号为k-1的人对这n本书的喜好列表，0表示不喜欢，1表示喜欢。输出数据仅一个整数，表示符合条件的分配方案的总数。500110110010110000010010011]]></content>
+    </entry>
+
+    
+    <entry>
+      
+      <title><![CDATA[AOJ 862.平面上最近点对]]></title>
+      <url>%2Fpost%2FAOJ%2F862.html</url>
+      <content type="text"><![CDATA[题解|AOJ|递归与分治|二分|题目点击显/隐题目 给定平面上n个点，找出其中的一对点的距离，使得这n个点的所有点对中，该距离为所有点对中最小的。第一行：n；2≤n≤60000；接下来n行：每行两个整数：x y，表示一个点的行坐标和列坐标，中间用一个空格隔开。仅一行，一个实数，表示最短距离，精确到小数点后面4位。31 11 22 21.0000]]></content>
+    </entry>
+
+    
+    <entry>
+      
       <title><![CDATA[VPS gengrator 命令导致 hexo 被 killed 解决方案]]></title>
       <url>%2Fpost%2FNote%2FVPS_gengrator.html</url>
       <content type="text"><![CDATA[undefined|笔记|Hexo|VPS|Linux|问题在 Segmentfault 上提问 Linux(CentOs)下hexo生成文章被killed 有解决方案: 内存不足，创建交互空间即可。见：https://www.qcloud.com/document/product/362/3597]]></content>
@@ -118,7 +142,7 @@
       
       <title><![CDATA[AOJ 840.下一个幸运数]]></title>
       <url>%2Fpost%2FAOJ%2F840.html</url>
-      <content type="text"><![CDATA[题解|AOJ|二分|打表|题目 点击显/隐题目 数字的每一位只可能是4或者7的称为幸运数，比如说4，7，44，474，7474都是幸运数，而54，40，444467777都不是幸运数。而数字A的下一个幸运数，表示的是大于等于A的最小的幸运数。比如4的下一个幸运数是4，而5的下一个幸运数是7。现在给出一个区间[L, R]，求出区间内每个数的下一个幸运数的和。 一个整数t，表示测试数据的组数(1&lt;=t&lt;=200)。每组测试数据，两个整数L和R，空格隔开(1&lt;=L&lt;=R&lt;=1000000000)。 区间内每个数的下一个幸运数的和 34 43 44 7 4825]]></content>
+      <content type="text"><![CDATA[题解|AOJ|打表|二分|题目 点击显/隐题目 数字的每一位只可能是4或者7的称为幸运数，比如说4，7，44，474，7474都是幸运数，而54，40，444467777都不是幸运数。而数字A的下一个幸运数，表示的是大于等于A的最小的幸运数。比如4的下一个幸运数是4，而5的下一个幸运数是7。现在给出一个区间[L, R]，求出区间内每个数的下一个幸运数的和。 一个整数t，表示测试数据的组数(1&lt;=t&lt;=200)。每组测试数据，两个整数L和R，空格隔开(1&lt;=L&lt;=R&lt;=1000000000)。 区间内每个数的下一个幸运数的和 34 43 44 7 4825]]></content>
     </entry>
 
     
@@ -158,7 +182,7 @@
       
       <title><![CDATA[AOJ 837.交换大法好]]></title>
       <url>%2Fpost%2FAOJ%2F837.html</url>
-      <content type="text"><![CDATA[题解|AOJ|二分|BFS|题目 点击显/隐题目 有一天，天上掉馅饼了。不过不是直接掉馅饼，是告诉你你将要得到的馅饼的数量a。聪明的你得到了一种魔法，可以在整数a中交换任意两个相邻的数字。而这种魔法，你最多只能使用k次。你使用魔法操作a，得到的最大的结果就是你最终获得的馅饼数量。 你最多可以获得的馅饼数量是多少呢？ 第一行，一个数字n(1&lt;=n&lt;=60)。代表测试数据数量。接下来n行，每行两个整数a和k（1&lt;=a&lt;=1,000,000,000; 0&lt;=k&lt;=100)。 输出n行，每行一个整数，代表你最多使用魔法k次，可以得到的最大的数字。 21990 11034 2 91903104]]></content>
+      <content type="text"><![CDATA[题解|AOJ|BFS|二分|题目 点击显/隐题目 有一天，天上掉馅饼了。不过不是直接掉馅饼，是告诉你你将要得到的馅饼的数量a。聪明的你得到了一种魔法，可以在整数a中交换任意两个相邻的数字。而这种魔法，你最多只能使用k次。你使用魔法操作a，得到的最大的结果就是你最终获得的馅饼数量。 你最多可以获得的馅饼数量是多少呢？ 第一行，一个数字n(1&lt;=n&lt;=60)。代表测试数据数量。接下来n行，每行两个整数a和k（1&lt;=a&lt;=1,000,000,000; 0&lt;=k&lt;=100)。 输出n行，每行一个整数，代表你最多使用魔法k次，可以得到的最大的数字。 21990 11034 2 91903104]]></content>
     </entry>
 
     
@@ -230,7 +254,7 @@
       
       <title><![CDATA[AOJ 781.素数环]]></title>
       <url>%2Fpost%2FAOJ%2F781.html</url>
-      <content type="text"><![CDATA[题解|AOJ|质数|DFS|打表|暴力|题目 点击显/隐题目 把1-20这20个数摆成一个环，要求相邻的两个数的和是一个素数。编写程序，对给定的第一个数m,打印出满足条件的一种排列顺序。如果有多组解，输出字典序最小的一组。 包括多组测试数据，每组测试数据占一行，并且只有一个整数m，(0&lt;=m&lt;=20),当m=0时，表示输入结束。 对每组测试数据输出一行结果，结果为第一个整数为m的一种排列序列，序列中共有20个整数，各数之间用空格分隔。如果有多组解，输出字典序最小的一组。 150 1 2 3 4 7 6 5 8 9 10 13 16 15 14 17 20 11 12 19 185 2 1 4 3 8 9 10 7 6 11 20 17 12 19 18 13 16 15 14]]></content>
+      <content type="text"><![CDATA[题解|AOJ|DFS|打表|质数|暴力|题目 点击显/隐题目 把1-20这20个数摆成一个环，要求相邻的两个数的和是一个素数。编写程序，对给定的第一个数m,打印出满足条件的一种排列顺序。如果有多组解，输出字典序最小的一组。 包括多组测试数据，每组测试数据占一行，并且只有一个整数m，(0&lt;=m&lt;=20),当m=0时，表示输入结束。 对每组测试数据输出一行结果，结果为第一个整数为m的一种排列序列，序列中共有20个整数，各数之间用空格分隔。如果有多组解，输出字典序最小的一组。 150 1 2 3 4 7 6 5 8 9 10 13 16 15 14 17 20 11 12 19 185 2 1 4 3 8 9 10 7 6 11 20 17 12 19 18 13 16 15 14]]></content>
     </entry>
 
     
@@ -342,7 +366,7 @@
       
       <title><![CDATA[Hexo本地搜索及部分SEO优化]]></title>
       <url>%2Fpost%2FNote%2FLocalSearch.html</url>
-      <content type="text"><![CDATA[undefined|undefined|笔记|SEO|Hexo|解决本地搜索问题,并且修改了 Next 主题的部分SEO内容,写了一个小插件用于生成 urls.txt 用来给百度主动推送]]></content>
+      <content type="text"><![CDATA[undefined|undefined|笔记|Hexo|SEO|解决本地搜索问题,并且修改了 Next 主题的部分SEO内容,写了一个小插件用于生成 urls.txt 用来给百度主动推送]]></content>
     </entry>
 
     
@@ -406,7 +430,7 @@
       
       <title><![CDATA[VS Code 便携环境配置]]></title>
       <url>%2Fpost%2FNote%2Fvscode.html</url>
-      <content type="text"><![CDATA[undefined|undefined|undefined|undefined|undefined|undefined|笔记|Hexo|vscode|MinGW|Python|关键词: U盘写Hexo博客 | U盘编译C/C++ | U盘编译Python支持 node.jsHexoGitPythonMinGW 在 Hexo + C++ 便携套装 里,介绍了将 VS Code portable 化的基础思路经过改进,将该功能改的更加完美 Github]]></content>
+      <content type="text"><![CDATA[undefined|undefined|undefined|undefined|undefined|undefined|笔记|Hexo|vscode|Python|MinGW|关键词: U盘写Hexo博客 | U盘编译C/C++ | U盘编译Python支持 node.jsHexoGitPythonMinGW 在 Hexo + C++ 便携套装 里,介绍了将 VS Code portable 化的基础思路经过改进,将该功能改的更加完美 Github]]></content>
     </entry>
 
     
@@ -446,7 +470,7 @@
       
       <title><![CDATA[HDU 5937.Equation(2016 CCPC 杭州 E)]]></title>
       <url>%2Fpost%2FHDU%2F5937.html</url>
-      <content type="text"><![CDATA[题解|HDU|DFS|暴力|CCPC|搜索|剪枝|题目 Description Little Ruins is a studious boy, recently he learned addition operation! He was rewarded some number bricks of 1 to 9 and infinity bricks of addition mark ‘+’ and equal mark ‘=’. Now little Ruins is puzzled by those bricks because he wants to put those bricks into as many different addition equations form x+y=z as possible. Each brick can be used at most once and x, y, z are one digit integer. As Ruins is a beginer of addition operation, x, y and z will be single digit number. Two addition equations are different if any number of x, y and z is different. Please help little Ruins to calculate the maximum number of different addition equations.]]></content>
+      <content type="text"><![CDATA[题解|DFS|剪枝|HDU|暴力|CCPC|搜索|题目 Description Little Ruins is a studious boy, recently he learned addition operation! He was rewarded some number bricks of 1 to 9 and infinity bricks of addition mark ‘+’ and equal mark ‘=’. Now little Ruins is puzzled by those bricks because he wants to put those bricks into as many different addition equations form x+y=z as possible. Each brick can be used at most once and x, y, z are one digit integer. As Ruins is a beginer of addition operation, x, y and z will be single digit number. Two addition equations are different if any number of x, y and z is different. Please help little Ruins to calculate the maximum number of different addition equations.]]></content>
     </entry>
 
     
@@ -548,14 +572,6 @@
     
     <entry>
       
-      <title><![CDATA[HDU 1532.Drainage Ditches]]></title>
-      <url>%2Fpost%2FHDU%2F1273.html</url>
-      <content type="text"><![CDATA[题解|HDU|网络流|最大流最小割|Dinic|]]></content>
-    </entry>
-
-    
-    <entry>
-      
       <title><![CDATA[POJ 1273.Drainage Ditches]]></title>
       <url>%2Fpost%2FPOJ%2F1273.html</url>
       <content type="text"><![CDATA[题解|网络流|最大流最小割|Dinic|POJ|题目 Description Every time it rains on Farmer John’s fields, a pond forms over Bessie’s favorite clover patch. This means that the clover is covered by water for awhile and takes quite a long time to regrow. Thus, Farmer John has built a set of drainage ditches so that Bessie’s clover patch is never covered in water. Instead, the water is drained to a nearby stream. Being an ace engineer, Farmer John has also installed regulators at the beginning of each ditch, so he can control at what rate water flows into that ditch.Farmer John knows not only how many gallons of water each ditch can transport per minute but also the exact layout of the ditches, which feed out of the pond and into each other and stream in a potentially complex network.Given all this information, determine the maximum rate at which water can be transported out of the pond and into the stream. For any given ditch, water flows in only one direction, but there might be a way that water can flow in a circle.]]></content>
@@ -564,9 +580,17 @@
     
     <entry>
       
+      <title><![CDATA[HDU 1532.Drainage Ditches]]></title>
+      <url>%2Fpost%2FHDU%2F1273.html</url>
+      <content type="text"><![CDATA[题解|HDU|网络流|最大流最小割|Dinic|]]></content>
+    </entry>
+
+    
+    <entry>
+      
       <title><![CDATA[HDU 5889.Barricade(2016 ACM/ICPC Asia Regional Qingdao Online)]]></title>
       <url>%2Fpost%2FHDU%2F5889.html</url>
-      <content type="text"><![CDATA[题解|HDU|网络流|最短路|BFS|DFS|最大流最小割|Dinic|题目 Description The empire is under attack again. The general of empire is planning to defend his castle. The land can be seen as N towns and M roads, and each road has the same length and connects two towns. The town numbered 1 is where general’s castle is located, and the town numbered N is where the enemies are staying. The general supposes that the enemies would choose a shortest path. He knows his army is not ready to fight and he needs more time. Consequently he decides to put some barricades on some roads to slow down his enemies. Now, he asks you to find a way to set these barricades to make sure the enemies would meet at least one of them. Moreover, the barricade on the i-th road requires wi units of wood. Because of lacking resources, you need to use as less wood as possible.]]></content>
+      <content type="text"><![CDATA[题解|DFS|HDU|网络流|BFS|最短路|最大流最小割|Dinic|题目 Description The empire is under attack again. The general of empire is planning to defend his castle. The land can be seen as N towns and M roads, and each road has the same length and connects two towns. The town numbered 1 is where general’s castle is located, and the town numbered N is where the enemies are staying. The general supposes that the enemies would choose a shortest path. He knows his army is not ready to fight and he needs more time. Consequently he decides to put some barricades on some roads to slow down his enemies. Now, he asks you to find a way to set these barricades to make sure the enemies would meet at least one of them. Moreover, the barricade on the i-th road requires wi units of wood. Because of lacking resources, you need to use as less wood as possible.]]></content>
     </entry>
 
     
@@ -630,7 +654,7 @@
       
       <title><![CDATA[POJ 2739.Sum of Consecutive Prime Numbers]]></title>
       <url>%2Fpost%2FPOJ%2F2739.html</url>
-      <content type="text"><![CDATA[题解|质数|打表|模拟|POJ|题目 Description Some positive integers can be represented by a sum of one or more consecutive prime numbers. How many such representations does a given positive integer have For example, the integer 53 has two representations 5 + 7 + 11 + 13 + 17 and 53. The integer 41 has three representations 2+3+5+7+11+13, 11+13+17, and 41. The integer 3 has only one representation, which is 3. The integer 20 has no such representations. Note that summands must be consecutive primenumbers, so neither 7 + 13 nor 3 + 5 + 5 + 7 is a valid representation for the integer 20.Your mission is to write a program that reports the number of representations for the given positive integer.]]></content>
+      <content type="text"><![CDATA[题解|打表|模拟|质数|POJ|题目 Description Some positive integers can be represented by a sum of one or more consecutive prime numbers. How many such representations does a given positive integer have For example, the integer 53 has two representations 5 + 7 + 11 + 13 + 17 and 53. The integer 41 has three representations 2+3+5+7+11+13, 11+13+17, and 41. The integer 3 has only one representation, which is 3. The integer 20 has no such representations. Note that summands must be consecutive primenumbers, so neither 7 + 13 nor 3 + 5 + 5 + 7 is a valid representation for the integer 20.Your mission is to write a program that reports the number of representations for the given positive integer.]]></content>
     </entry>
 
     
@@ -638,7 +662,7 @@
       
       <title><![CDATA[HYSBZ 1303.中位数图]]></title>
       <url>%2Fpost%2FHYSBZ%2F1303.html</url>
-      <content type="text"><![CDATA[题解|HYSBZ|映射(map)|题目 Description 给出1~n的一个排列，统计该排列有多少个长度为奇数的连续子序列的中位数是b。中位数是指把所有元素从小到大排列后，位于中间的数。]]></content>
+      <content type="text"><![CDATA[题解|映射(map)|HYSBZ|题目 Description 给出1~n的一个排列，统计该排列有多少个长度为奇数的连续子序列的中位数是b。中位数是指把所有元素从小到大排列后，位于中间的数。]]></content>
     </entry>
 
     
@@ -846,7 +870,7 @@
       
       <title><![CDATA[Uva 11292.Dragon of Loowater]]></title>
       <url>%2Fpost%2FUva%2F11292.html</url>
-      <content type="text"><![CDATA[题解|二分|贪心算法|Uva|算法竞赛入门经典|题目 Description Once upon a time, in the Kingdom of Loowater, a minor nuisance turned into a major problem.The shores of Rellau Creek in central Loowater had always been a prime breeding ground for geese.Due to the lack of predators, the geese population was out of control.The people of Loowater mostly kept clear of the geese.Occasionally, a goose would attack one of the people, and perhaps bite off a finger or two, but in general, the people tolerated the geese as a minor nuisance.One day, a freak mutation occurred, and one of the geese spawned a multi-headed fire-breathing dragon. When the dragon grew up, he threatened to burn the Kingdom of Loowater to a crisp.Loowater had a major problem. The king was alarmed, and called on his knights to slay the dragon and save the kingdom.The knights explained: “To slay the dragon, we must chop off all its heads.Each knight can chop off one of the dragon’s heads. The heads of the dragon are of different sizes. In order to chop off a head, a knight must be at least as tall as the diameter of the head.The knights’ union demands that for chopping off a head, a knight must be paid a wage equal to one gold coin for each centimetre of the knight’s height.”Would there be enough knights to defeat the dragon The king called on his advisors to help him decide how many and which knights to hire. After having lost a lot of money building Mir Park, theking wanted to minimize the expense of slaying the dragon. As one of the advisors, your job was to help the king. You took it very seriously: if you failed, you and the whole kingdom would be burnt to a crisp!]]></content>
+      <content type="text"><![CDATA[题解|贪心算法|二分|Uva|算法竞赛入门经典|题目 Description Once upon a time, in the Kingdom of Loowater, a minor nuisance turned into a major problem.The shores of Rellau Creek in central Loowater had always been a prime breeding ground for geese.Due to the lack of predators, the geese population was out of control.The people of Loowater mostly kept clear of the geese.Occasionally, a goose would attack one of the people, and perhaps bite off a finger or two, but in general, the people tolerated the geese as a minor nuisance.One day, a freak mutation occurred, and one of the geese spawned a multi-headed fire-breathing dragon. When the dragon grew up, he threatened to burn the Kingdom of Loowater to a crisp.Loowater had a major problem. The king was alarmed, and called on his knights to slay the dragon and save the kingdom.The knights explained: “To slay the dragon, we must chop off all its heads.Each knight can chop off one of the dragon’s heads. The heads of the dragon are of different sizes. In order to chop off a head, a knight must be at least as tall as the diameter of the head.The knights’ union demands that for chopping off a head, a knight must be paid a wage equal to one gold coin for each centimetre of the knight’s height.”Would there be enough knights to defeat the dragon The king called on his advisors to help him decide how many and which knights to hire. After having lost a lot of money building Mir Park, theking wanted to minimize the expense of slaying the dragon. As one of the advisors, your job was to help the king. You took it very seriously: if you failed, you and the whole kingdom would be burnt to a crisp!]]></content>
     </entry>
 
     
@@ -868,17 +892,17 @@
     
     <entry>
       
-      <title><![CDATA[Uva 10125.Sumsets]]></title>
-      <url>%2Fpost%2FUva%2F10125.html</url>
-      <content type="text"><![CDATA[题解|Uva|题目 Describe Given S, a set of integers, find the largest d such that a + b + c = dwhere a, b, c, and d are distinct elements of S.]]></content>
+      <title><![CDATA[POJ 2549.Sumsets]]></title>
+      <url>%2Fpost%2FPOJ%2F2549.html</url>
+      <content type="text"><![CDATA[题解|POJ|]]></content>
     </entry>
 
     
     <entry>
       
-      <title><![CDATA[POJ 2549.Sumsets]]></title>
-      <url>%2Fpost%2FPOJ%2F2549.html</url>
-      <content type="text"><![CDATA[题解|POJ|]]></content>
+      <title><![CDATA[Uva 10125.Sumsets]]></title>
+      <url>%2Fpost%2FUva%2F10125.html</url>
+      <content type="text"><![CDATA[题解|Uva|题目 Describe Given S, a set of integers, find the largest d such that a + b + c = dwhere a, b, c, and d are distinct elements of S.]]></content>
     </entry>
 
     
@@ -934,7 +958,7 @@
       
       <title><![CDATA[HDU 1165.Eddy's research II]]></title>
       <url>%2Fpost%2FHDU%2F1165.html</url>
-      <content type="text"><![CDATA[题解|HDU|数学|DFS|记忆化搜索|题目 Description As is known, Ackermann function plays an important role in the sphere of theoretical computer science. However, in the other hand, the dramatic fast increasing pace of the function caused the value of Ackermann function hard to calcuate. Ackermann function can be defined recursively as follows: Now Eddy Gives you two numbers: m and n, your task is to compute the value of A(m,n) .This is so easy problem,If you slove this problem,you will receive a prize(Eddy will invite you to hdu restaurant to have supper).]]></content>
+      <content type="text"><![CDATA[题解|DFS|HDU|数学|记忆化搜索|题目 Description As is known, Ackermann function plays an important role in the sphere of theoretical computer science. However, in the other hand, the dramatic fast increasing pace of the function caused the value of Ackermann function hard to calcuate. Ackermann function can be defined recursively as follows: Now Eddy Gives you two numbers: m and n, your task is to compute the value of A(m,n) .This is so easy problem,If you slove this problem,you will receive a prize(Eddy will invite you to hdu restaurant to have supper).]]></content>
     </entry>
 
     
@@ -1054,7 +1078,7 @@
       
       <title><![CDATA[线段树]]></title>
       <url>%2Fpost%2FAlgorithm%2FSegment_tree.html</url>
-      <content type="text"><![CDATA[算法|树|线段树|递归与分治|线段树是一种二叉搜索树，与区间树相似，它将一个区间划分成一些单元区间，每个单元区间对应线段树中的一个叶结点。使用线段树可以快速的查找某一个节点在若干条线段中出现的次数，时间复杂度为O(logN）。而未优化的空间复杂度为2N，因此有时需要离散化让空间压缩。 百度百科线段树]]></content>
+      <content type="text"><![CDATA[算法|线段树|递归与分治|树|线段树是一种二叉搜索树，与区间树相似，它将一个区间划分成一些单元区间，每个单元区间对应线段树中的一个叶结点。使用线段树可以快速的查找某一个节点在若干条线段中出现的次数，时间复杂度为O(logN）。而未优化的空间复杂度为2N，因此有时需要离散化让空间压缩。 百度百科线段树]]></content>
     </entry>
 
     
@@ -1062,7 +1086,7 @@
       
       <title><![CDATA[RMQ问题]]></title>
       <url>%2Fpost%2FAlgorithm%2FRMQ.html</url>
-      <content type="text"><![CDATA[算法|二分|RMQ问题|ST算法|线段树|RMQ ( Range Minimum / Maximum Query )问题是指： 对于长度为 n 的数列 A ，回答若干询问 RMQ(A,i,j) ( i,j&lt;=n )，返回数列 A 中下标在 i , j 里的最小(大)值也就是说，RMQ 问题是指求区间最值的问题 百度百科RMQ 问题]]></content>
+      <content type="text"><![CDATA[算法|RMQ问题|ST算法|线段树|二分|RMQ ( Range Minimum / Maximum Query )问题是指： 对于长度为 n 的数列 A ，回答若干询问 RMQ(A,i,j) ( i,j&lt;=n )，返回数列 A 中下标在 i , j 里的最小(大)值也就是说，RMQ 问题是指求区间最值的问题 百度百科RMQ 问题]]></content>
     </entry>
 
     
@@ -1078,7 +1102,7 @@
       
       <title><![CDATA[ST算法]]></title>
       <url>%2Fpost%2FAlgorithm%2FST.html</url>
-      <content type="text"><![CDATA[算法|二分|RMQ问题|ST算法|ST 算法是一种高效求解 &gt;RMQ 问题&lt; 的算法 其预处理时间复杂度为 O(nlogn) 查询时间复杂度为 O(1) 在进行大量数据的查询时,是一种非常好的算法 其思路是类似采用 二分 的思路对各个区间进行预处理在查询时(查询 (a,d) )通过查询 [a,c) 和 [b,d) (a&lt;=b&lt;=c&lt;=d) 来获取结果]]></content>
+      <content type="text"><![CDATA[算法|RMQ问题|ST算法|二分|ST 算法是一种高效求解 &gt;RMQ 问题&lt; 的算法 其预处理时间复杂度为 O(nlogn) 查询时间复杂度为 O(1) 在进行大量数据的查询时,是一种非常好的算法 其思路是类似采用 二分 的思路对各个区间进行预处理在查询时(查询 (a,d) )通过查询 [a,c) 和 [b,d) (a&lt;=b&lt;=c&lt;=d) 来获取结果]]></content>
     </entry>
 
     
@@ -1158,7 +1182,7 @@
       
       <title><![CDATA[HDU 1502.Regular Words]]></title>
       <url>%2Fpost%2FHDU%2F1502.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|高精度算法|打表|题目 Description Consider words of length 3n over alphabet {A, B, C} . Denote the number of occurences of A in a word a as A(a) , analogously let the number of occurences of B be denoted as B(a), and the number of occurenced of C as C(a) . Let us call the word w regular if the following conditions are satisfied: A(w)=B(w)=C(w) ;if c is a prefix of w , then A(c)&gt;= B(c) &gt;= C(c) .For example, if n = 2 there are 5 regular words: AABBCC , AABCBC , ABABCC , ABACBC and ABCABC . Regular words in some sense generalize regular brackets sequences (if we consider two-letter alphabet and put similar conditions on regular words, they represent regular brackets sequences). Given n , find the number of regular words.]]></content>
+      <content type="text"><![CDATA[题解|动态规划|HDU|打表|高精度算法|题目 Description Consider words of length 3n over alphabet {A, B, C} . Denote the number of occurences of A in a word a as A(a) , analogously let the number of occurences of B be denoted as B(a), and the number of occurenced of C as C(a) . Let us call the word w regular if the following conditions are satisfied: A(w)=B(w)=C(w) ;if c is a prefix of w , then A(c)&gt;= B(c) &gt;= C(c) .For example, if n = 2 there are 5 regular words: AABBCC , AABCBC , ABABCC , ABACBC and ABCABC . Regular words in some sense generalize regular brackets sequences (if we consider two-letter alphabet and put similar conditions on regular words, they represent regular brackets sequences). Given n , find the number of regular words.]]></content>
     </entry>
 
     
@@ -1246,7 +1270,7 @@
       
       <title><![CDATA[HDU 1078.FatMouse and Cheese]]></title>
       <url>%2Fpost%2FHDU%2F1078.html</url>
-      <content type="text"><![CDATA[题解|动态规划|HDU|DFS|记忆化搜索|题目 Description FatMouse has stored some cheese in a city. The city can be considered as a square grid of dimension n: each grid location is labelled (p,q) where 0 &lt;= p &lt; n and 0 &lt;= q &lt; n. At each grid location Fatmouse has hid between 0 and 100 blocks of cheese in a hole. Now he’s going to enjoy his favorite food. FatMouse begins by standing at location (0,0). He eats up the cheese where he stands and then runs either horizontally or vertically to another location. The problem is that there is a super Cat named Top Killer sitting near his hole, so each time he can run at most k locations to get into the hole before being caught by Top Killer. What is worse – after eating up the cheese at one location, FatMouse gets fatter. So in order to gain enough energy for his next run, he has to run to a location which have more blocks of cheese than those that were at the current hole. Given n, k, and the number of blocks of cheese at each grid location, compute the maximum amount of cheese FatMouse can eat before being unable to move.]]></content>
+      <content type="text"><![CDATA[题解|动态规划|DFS|HDU|记忆化搜索|题目 Description FatMouse has stored some cheese in a city. The city can be considered as a square grid of dimension n: each grid location is labelled (p,q) where 0 &lt;= p &lt; n and 0 &lt;= q &lt; n. At each grid location Fatmouse has hid between 0 and 100 blocks of cheese in a hole. Now he’s going to enjoy his favorite food. FatMouse begins by standing at location (0,0). He eats up the cheese where he stands and then runs either horizontally or vertically to another location. The problem is that there is a super Cat named Top Killer sitting near his hole, so each time he can run at most k locations to get into the hole before being caught by Top Killer. What is worse – after eating up the cheese at one location, FatMouse gets fatter. So in order to gain enough energy for his next run, he has to run to a location which have more blocks of cheese than those that were at the current hole. Given n, k, and the number of blocks of cheese at each grid location, compute the maximum amount of cheese FatMouse can eat before being unable to move.]]></content>
     </entry>
 
     
@@ -1814,7 +1838,7 @@
       
       <title><![CDATA[AOJ 775.迷宫问题]]></title>
       <url>%2Fpost%2FAOJ%2F775.html</url>
-      <content type="text"><![CDATA[题解|AOJ|最短路|BFS|队列(queue)|题目 Description 由M行N列的方格构成一个迷宫，相邻方格之间可能是相通的，也可能有隔墙，各方格位置由对应坐标确定。在（1,1）处由入口，在（M,N）处有一个出口，在入口和出口之间有路相通，求从入口到出口的最短路径，若无法到达，输出“-1”]]></content>
+      <content type="text"><![CDATA[题解|AOJ|BFS|最短路|队列(queue)|题目 Description 由M行N列的方格构成一个迷宫，相邻方格之间可能是相通的，也可能有隔墙，各方格位置由对应坐标确定。在（1,1）处由入口，在（M,N）处有一个出口，在入口和出口之间有路相通，求从入口到出口的最短路径，若无法到达，输出“-1”]]></content>
     </entry>
 
     
@@ -1966,7 +1990,7 @@
       
       <title><![CDATA[百度站长主动推动工具]]></title>
       <url>%2Fpost%2FNote%2FBaiduPush.html</url>
-      <content type="text"><![CDATA[笔记|SEO|工具|Hexo|易语言|]]></content>
+      <content type="text"><![CDATA[笔记|Hexo|SEO|工具|易语言|]]></content>
     </entry>
 
     
@@ -2020,17 +2044,17 @@
     
     <entry>
       
-      <title><![CDATA[域名跳转]]></title>
-      <url>%2Fpost%2FNote%2FUrlJump.html</url>
-      <content type="text"><![CDATA[笔记|javascript|博客是搭建在Github和Coding上的Github的默认域名是ohyee.github.io,CNAME后会将强制跳转到绑定的域名上而Coding的默认域名是ohyee.coding.me,这个域名和绑定的域名都可以独立访问 也即：网站有两套独立的域名显然,这样会很“别扭”,搜索引擎会对两个域名分别收录一遍网站因此萌生了将ohyee.coding.me强制跳转到www.oyohyee.com的想法 由于在Git Pages和Coding Pages不能设置301重定向,因此使用javascript来实现跳转]]></content>
+      <title><![CDATA[VPS搭建Git服务器及git pages]]></title>
+      <url>%2Fpost%2FNote%2FVPS_hexo.html</url>
+      <content type="text"><![CDATA[undefined|undefined|undefined|undefined|undefined|笔记|Hexo|VPS|Linux|Git|对比了以下腾讯云和阿里云,觉得个人更喜欢腾讯云一点腾讯云每天中午12点能够在官网上抢学生优惠一个月1元钱拿到 VPS 服务器练手专用]]></content>
     </entry>
 
     
     <entry>
       
-      <title><![CDATA[VPS搭建Git服务器及git pages]]></title>
-      <url>%2Fpost%2FNote%2FVPS_hexo.html</url>
-      <content type="text"><![CDATA[undefined|undefined|undefined|undefined|undefined|笔记|Hexo|VPS|Linux|Git|对比了以下腾讯云和阿里云,觉得个人更喜欢腾讯云一点腾讯云每天中午12点能够在官网上抢学生优惠一个月1元钱拿到 VPS 服务器练手专用]]></content>
+      <title><![CDATA[域名跳转]]></title>
+      <url>%2Fpost%2FNote%2FUrlJump.html</url>
+      <content type="text"><![CDATA[笔记|javascript|博客是搭建在Github和Coding上的Github的默认域名是ohyee.github.io,CNAME后会将强制跳转到绑定的域名上而Coding的默认域名是ohyee.coding.me,这个域名和绑定的域名都可以独立访问 也即：网站有两套独立的域名显然,这样会很“别扭”,搜索引擎会对两个域名分别收录一遍网站因此萌生了将ohyee.coding.me强制跳转到www.oyohyee.com的想法 由于在Git Pages和Coding Pages不能设置301重定向,因此使用javascript来实现跳转]]></content>
     </entry>
 
     
@@ -2126,7 +2150,7 @@
       
       <title><![CDATA[AOJ 805.算法期末考试A(全排列问题)]]></title>
       <url>%2Fpost%2FAOJ%2F805.html</url>
-      <content type="text"><![CDATA[题解|AOJ|递归与分治|全排列|题目 Description 设计算法生成n个元素{r1,r2,…,rn}的全排列。n&lt;=10]]></content>
+      <content type="text"><![CDATA[题解|AOJ|全排列|递归与分治|题目 Description 设计算法生成n个元素{r1,r2,…,rn}的全排列。n&lt;=10]]></content>
     </entry>
 
     
@@ -2502,7 +2526,7 @@
       
       <title><![CDATA[HDU 1195.Open the Lock]]></title>
       <url>%2Fpost%2FHDU%2F1195.html</url>
-      <content type="text"><![CDATA[题解|HDU|最短路|图论|BFS|队列(queue)|题目 Description Now an emergent task for you is to open a password lock. The password is consisted of four digits. Each digit is numbered from 1 to 9.Each time, you can add or minus 1 to any digit. When add 1 to ‘9’, the digit will change to be ‘1’ and when minus 1 to ‘1’, the digit will change to be ‘9’. You can also exchange the digit with its neighbor. Each action will take one step. Now your task is to use minimal steps to open the lock. Note: The leftmost digit is not the neighbor of the rightmost digit.]]></content>
+      <content type="text"><![CDATA[题解|HDU|BFS|图论|最短路|队列(queue)|题目 Description Now an emergent task for you is to open a password lock. The password is consisted of four digits. Each digit is numbered from 1 to 9.Each time, you can add or minus 1 to any digit. When add 1 to ‘9’, the digit will change to be ‘1’ and when minus 1 to ‘1’, the digit will change to be ‘9’. You can also exchange the digit with its neighbor. Each action will take one step. Now your task is to use minimal steps to open the lock. Note: The leftmost digit is not the neighbor of the rightmost digit.]]></content>
     </entry>
 
     
@@ -2510,7 +2534,7 @@
       
       <title><![CDATA[HDU 2612.Find a way]]></title>
       <url>%2Fpost%2FHDU%2F2612.html</url>
-      <content type="text"><![CDATA[题解|HDU|最短路|图论|BFS|队列(queue)|题目 Description Pass a year learning in Hangzhou, yifenfei arrival hometown Ningbo at finally. Leave Ningbo one year, yifenfei have many people to meet. Especially a good friend Merceki.Yifenfei’s home is at the countryside, but Merceki’s home is in the center of city. So yifenfei made arrangements with Merceki to meet at a KFC. There are many KFC in Ningbo, they want to choose one that let the total time to it be most smallest.Now give you a Ningbo map, Both yifenfei and Merceki can move up, down ,left, right to the adjacent road by cost 11 minutes.]]></content>
+      <content type="text"><![CDATA[题解|HDU|BFS|图论|最短路|队列(queue)|题目 Description Pass a year learning in Hangzhou, yifenfei arrival hometown Ningbo at finally. Leave Ningbo one year, yifenfei have many people to meet. Especially a good friend Merceki.Yifenfei’s home is at the countryside, but Merceki’s home is in the center of city. So yifenfei made arrangements with Merceki to meet at a KFC. There are many KFC in Ningbo, they want to choose one that let the total time to it be most smallest.Now give you a Ningbo map, Both yifenfei and Merceki can move up, down ,left, right to the adjacent road by cost 11 minutes.]]></content>
     </entry>
 
     
@@ -2518,7 +2542,7 @@
       
       <title><![CDATA[HDU 1240.Asteroids!]]></title>
       <url>%2Fpost%2FHDU%2F1240.html</url>
-      <content type="text"><![CDATA[题解|HDU|最短路|图论|BFS|队列(queue)|题目 Description You’re in space.You want to get home.There are asteroids.You don’t want to hit them.]]></content>
+      <content type="text"><![CDATA[题解|HDU|BFS|图论|最短路|队列(queue)|题目 Description You’re in space.You want to get home.There are asteroids.You don’t want to hit them.]]></content>
     </entry>
 
     
@@ -2526,7 +2550,7 @@
       
       <title><![CDATA[HDU 1429.胜利大逃亡(续)]]></title>
       <url>%2Fpost%2FHDU%2F1429.html</url>
-      <content type="text"><![CDATA[题解|HDU|最短路|图论|BFS|队列(queue)|题目 Description Ignatius再次被魔王抓走了(搞不懂他咋这么讨魔王喜欢)…… 这次魔王汲取了上次的教训，把Ignatius关在一个n*m的地牢里，并在地牢的某些地方安装了带锁的门，钥匙藏在地牢另外的某些地方。刚开始Ignatius被关在(sx,sy)的位置，离开地牢的门在(ex,ey)的位置。Ignatius每分钟只能从一个坐标走到相邻四个坐标中的其中一个。魔王每t分钟回地牢视察一次，若发现Ignatius不在原位置便把他拎回去。经过若干次的尝试,Ignatius已画出整个地牢的地图。现在请你帮他计算能否再次成功逃亡。只要在魔王下次视察之前走到出口就算离开地牢，如果魔王回来的时候刚好走到出口或还未到出口都算逃亡失败。]]></content>
+      <content type="text"><![CDATA[题解|HDU|BFS|图论|最短路|队列(queue)|题目 Description Ignatius再次被魔王抓走了(搞不懂他咋这么讨魔王喜欢)…… 这次魔王汲取了上次的教训，把Ignatius关在一个n*m的地牢里，并在地牢的某些地方安装了带锁的门，钥匙藏在地牢另外的某些地方。刚开始Ignatius被关在(sx,sy)的位置，离开地牢的门在(ex,ey)的位置。Ignatius每分钟只能从一个坐标走到相邻四个坐标中的其中一个。魔王每t分钟回地牢视察一次，若发现Ignatius不在原位置便把他拎回去。经过若干次的尝试,Ignatius已画出整个地牢的地图。现在请你帮他计算能否再次成功逃亡。只要在魔王下次视察之前走到出口就算离开地牢，如果魔王回来的时候刚好走到出口或还未到出口都算逃亡失败。]]></content>
     </entry>
 
     
@@ -2534,7 +2558,7 @@
       
       <title><![CDATA[HDU 1253.胜利大逃亡]]></title>
       <url>%2Fpost%2FHDU%2F1253.html</url>
-      <content type="text"><![CDATA[题解|HDU|最短路|图论|BFS|队列(queue)|题目 Problem Description Ignatius被魔王抓走了,有一天魔王出差去了,这可是Ignatius逃亡的好机会. 魔王住在一个城堡里,城堡是一个ABC的立方体,可以被表示成A个B*C的矩阵,刚开始Ignatius被关在(0,0,0)的位置,离开城堡的门在(A-1,B-1,C-1)的位置,现在知道魔王将在T分钟后回到城堡,Ignatius每分钟能从一个坐标走到相邻的六个坐标中的其中一个.现在给你城堡的地图,请你计算出Ignatius能否在魔王回来前离开城堡(只要走到出口就算离开城堡,如果走到出口的时候魔王刚好回来也算逃亡成功),如果可以请输出需要多少分钟才能离开,如果不能则输出-1.]]></content>
+      <content type="text"><![CDATA[题解|HDU|BFS|图论|最短路|队列(queue)|题目 Problem Description Ignatius被魔王抓走了,有一天魔王出差去了,这可是Ignatius逃亡的好机会. 魔王住在一个城堡里,城堡是一个ABC的立方体,可以被表示成A个B*C的矩阵,刚开始Ignatius被关在(0,0,0)的位置,离开城堡的门在(A-1,B-1,C-1)的位置,现在知道魔王将在T分钟后回到城堡,Ignatius每分钟能从一个坐标走到相邻的六个坐标中的其中一个.现在给你城堡的地图,请你计算出Ignatius能否在魔王回来前离开城堡(只要走到出口就算离开城堡,如果走到出口的时候魔王刚好回来也算逃亡成功),如果可以请输出需要多少分钟才能离开,如果不能则输出-1.]]></content>
     </entry>
 
     
@@ -2542,7 +2566,7 @@
       
       <title><![CDATA[HDU 2102.A计划]]></title>
       <url>%2Fpost%2FHDU%2F2102.html</url>
-      <content type="text"><![CDATA[题解|HDU|最短路|图论|BFS|队列(queue)|题目 Description 可怜的公主在一次次被魔王掳走一次次被骑士们救回来之后，而今，不幸的她再一次面临生命的考验。魔王已经发出消息说将在T时刻吃掉公主，因为他听信谣言说吃公主的肉也能长生不老。年迈的国王正是心急如焚，告招天下勇士来拯救公主。不过公主早已习以为常，她深信智勇的骑士LJ肯定能将她救出。现据密探所报，公主被关在一个两层的迷宫里，迷宫的入口是S（0，0，0），公主的位置用P表示，时空传输机用#表示，墙用*表示，平地用.表示。骑士们一进入时空传输机就会被转到另一层的相对位置，但如果被转到的位置是墙的话，那骑士们就会被撞死。骑士们在一层中只能前后左右移动，每移动一格花1时刻。层间的移动只能通过时空传输机，且不需要任何时间。]]></content>
+      <content type="text"><![CDATA[题解|HDU|BFS|图论|最短路|队列(queue)|题目 Description 可怜的公主在一次次被魔王掳走一次次被骑士们救回来之后，而今，不幸的她再一次面临生命的考验。魔王已经发出消息说将在T时刻吃掉公主，因为他听信谣言说吃公主的肉也能长生不老。年迈的国王正是心急如焚，告招天下勇士来拯救公主。不过公主早已习以为常，她深信智勇的骑士LJ肯定能将她救出。现据密探所报，公主被关在一个两层的迷宫里，迷宫的入口是S（0，0，0），公主的位置用P表示，时空传输机用#表示，墙用*表示，平地用.表示。骑士们一进入时空传输机就会被转到另一层的相对位置，但如果被转到的位置是墙的话，那骑士们就会被撞死。骑士们在一层中只能前后左右移动，每移动一格花1时刻。层间的移动只能通过时空传输机，且不需要任何时间。]]></content>
     </entry>
 
     
@@ -2550,7 +2574,7 @@
       
       <title><![CDATA[HDU 2579.Dating with girls(2)]]></title>
       <url>%2Fpost%2FHDU%2F2579.html</url>
-      <content type="text"><![CDATA[题解|HDU|最短路|图论|BFS|队列(queue)|]]></content>
+      <content type="text"><![CDATA[题解|HDU|BFS|图论|最短路|队列(queue)|]]></content>
     </entry>
 
     
@@ -2558,7 +2582,7 @@
       
       <title><![CDATA[HDU 1782.逃离迷宫]]></title>
       <url>%2Fpost%2FHDU%2F1782.html</url>
-      <content type="text"><![CDATA[题解|HDU|最短路|图论|BFS|队列(queue)|题目 Description 给定一个m × n (m行, n列)的迷宫，迷宫中有两个位置，gloria想从迷宫的一个位置走到另外一个位置，当然迷宫中有些地方是空地，gloria可以穿越，有些地方是障碍，她必须绕行，从迷宫的一个位置，只能走到与它相邻的4个位置中,当然在行走过程中，gloria不能走到迷宫外面去。令人头痛的是，gloria是个没什么方向感的人，因此，她在行走过程中，不能转太多弯了，否则她会晕倒的。我们假定给定的两个位置都是空地，初始时，gloria所面向的方向未定，她可以选择4个方向的任何一个出发，而不算成一次转弯。gloria能从一个位置走到另外一个位置吗？]]></content>
+      <content type="text"><![CDATA[题解|HDU|BFS|图论|最短路|队列(queue)|题目 Description 给定一个m × n (m行, n列)的迷宫，迷宫中有两个位置，gloria想从迷宫的一个位置走到另外一个位置，当然迷宫中有些地方是空地，gloria可以穿越，有些地方是障碍，她必须绕行，从迷宫的一个位置，只能走到与它相邻的4个位置中,当然在行走过程中，gloria不能走到迷宫外面去。令人头痛的是，gloria是个没什么方向感的人，因此，她在行走过程中，不能转太多弯了，否则她会晕倒的。我们假定给定的两个位置都是空地，初始时，gloria所面向的方向未定，她可以选择4个方向的任何一个出发，而不算成一次转弯。gloria能从一个位置走到另外一个位置吗？]]></content>
     </entry>
 
     
@@ -2566,7 +2590,7 @@
       
       <title><![CDATA[HDU 1242.Rescue]]></title>
       <url>%2Fpost%2FHDU%2F1242.html</url>
-      <content type="text"><![CDATA[题解|HDU|最短路|图论|BFS|队列(queue)|题目 Description Angel was caught by the MOLIGPY! He was put in prison by Moligpy. The prison is described as a N * M (N, M &lt;= 200) matrix. There are WALLs, ROADs, and GUARDs in the prison. Angel’s friends want to save Angel. Their task is: approach Angel. We assume that “approach Angel” is to get to the position where Angel stays. When there’s a guard in the grid, we must kill him (or her?) to move into the grid. We assume that we moving up, down, right, left takes us 1 unit time, &gt; and killing a guard takes 1 unit time, too. And we are strong enough to kill all the guards. You have to calculate the minimal time to approach Angel. (We can move only UP, DOWN, LEFT and RIGHT, to the neighbor grid within bound, of course.)]]></content>
+      <content type="text"><![CDATA[题解|HDU|BFS|图论|最短路|队列(queue)|题目 Description Angel was caught by the MOLIGPY! He was put in prison by Moligpy. The prison is described as a N * M (N, M &lt;= 200) matrix. There are WALLs, ROADs, and GUARDs in the prison. Angel’s friends want to save Angel. Their task is: approach Angel. We assume that “approach Angel” is to get to the position where Angel stays. When there’s a guard in the grid, we must kill him (or her?) to move into the grid. We assume that we moving up, down, right, left takes us 1 unit time, &gt; and killing a guard takes 1 unit time, too. And we are strong enough to kill all the guards. You have to calculate the minimal time to approach Angel. (We can move only UP, DOWN, LEFT and RIGHT, to the neighbor grid within bound, of course.)]]></content>
     </entry>
 
     
@@ -2574,7 +2598,7 @@
       
       <title><![CDATA[HDU 1026.Ignatius and the Princess I]]></title>
       <url>%2Fpost%2FHDU%2F1026.html</url>
-      <content type="text"><![CDATA[题解|HDU|Dijkstra|最短路|图论|BFS|队列(queue)|题目 DescriptionThe Princess has been abducted by the BEelzebub feng5166, our hero Ignatius has to rescue our pretty Princess. Now he gets into feng5166’s castle. The castle is a large labyrinth. To make the problem simply, we assume the labyrinth is a N*M two-dimensional array which left-top corner is (0,0) and &gt; &gt; right-bottom corner is (N-1,M-1). Ignatius enters at (0,0), and the door to feng5166’s room is at (N-1,M-1), that is our target. There are some monsters in the castle, if Ignatius meet them, he has to kill them. Here is some rules: 1.Ignatius can only move in four directions(up, down, left, right), one step per second. A step is defined as follow: if current position is (x,y), after a step, Ignatius can only stand on (x-1,y), (x+1,y), (x,y-1) or (x,y+1).2.The array is marked with some characters and numbers. We define them like this:. : The place where Ignatius can walk on.X : The place is a trap, Ignatius should not walk on it.n : Here is a monster with n HP(1&lt;=n&lt;=9), if Ignatius walk on it, it takes him n seconds to kill the monster. Your task is to give out the path which costs minimum seconds for Ignatius to reach target position. You may assume that the start position and the target position will never be a trap, and there will never be a monster at the start position.]]></content>
+      <content type="text"><![CDATA[题解|HDU|BFS|图论|最短路|队列(queue)|Dijkstra|题目 DescriptionThe Princess has been abducted by the BEelzebub feng5166, our hero Ignatius has to rescue our pretty Princess. Now he gets into feng5166’s castle. The castle is a large labyrinth. To make the problem simply, we assume the labyrinth is a N*M two-dimensional array which left-top corner is (0,0) and &gt; &gt; right-bottom corner is (N-1,M-1). Ignatius enters at (0,0), and the door to feng5166’s room is at (N-1,M-1), that is our target. There are some monsters in the castle, if Ignatius meet them, he has to kill them. Here is some rules: 1.Ignatius can only move in four directions(up, down, left, right), one step per second. A step is defined as follow: if current position is (x,y), after a step, Ignatius can only stand on (x-1,y), (x+1,y), (x,y-1) or (x,y+1).2.The array is marked with some characters and numbers. We define them like this:. : The place where Ignatius can walk on.X : The place is a trap, Ignatius should not walk on it.n : Here is a monster with n HP(1&lt;=n&lt;=9), if Ignatius walk on it, it takes him n seconds to kill the monster. Your task is to give out the path which costs minimum seconds for Ignatius to reach target position. You may assume that the start position and the target position will never be a trap, and there will never be a monster at the start position.]]></content>
     </entry>
 
     
@@ -2582,7 +2606,7 @@
       
       <title><![CDATA[HDU 1180.诡异的楼梯]]></title>
       <url>%2Fpost%2FHDU%2F1180.html</url>
-      <content type="text"><![CDATA[题解|HDU|最短路|图论|BFS|队列(queue)|题目 Problem Description Hogwarts正式开学以后,Harry发现在Hogwarts里,某些楼梯并不是静止不动的，相反,他们每隔一分钟就变动一次方向.比如下面的例子里,一开始楼梯在竖直方向,一分钟以后它移动到了水平方向,再过一分钟它又回到了竖直方向.Harry发现对他来说很难找到能使得他最快到达目的地的路线,这时Ron(Harry最好的朋友)告诉Harry正好有一个魔法道具可以帮助他寻找这样的路线,而那个魔法道具上的咒语,正是由你纂写的.]]></content>
+      <content type="text"><![CDATA[题解|HDU|BFS|图论|最短路|队列(queue)|题目 Problem Description Hogwarts正式开学以后,Harry发现在Hogwarts里,某些楼梯并不是静止不动的，相反,他们每隔一分钟就变动一次方向.比如下面的例子里,一开始楼梯在竖直方向,一分钟以后它移动到了水平方向,再过一分钟它又回到了竖直方向.Harry发现对他来说很难找到能使得他最快到达目的地的路线,这时Ron(Harry最好的朋友)告诉Harry正好有一个魔法道具可以帮助他寻找这样的路线,而那个魔法道具上的咒语,正是由你纂写的.]]></content>
     </entry>
 
     
@@ -2590,7 +2614,7 @@
       
       <title><![CDATA[HDU 1175.连连看]]></title>
       <url>%2Fpost%2FHDU%2F1175.html</url>
-      <content type="text"><![CDATA[题解|HDU|最短路|图论|BFS|队列(queue)|题目 Description 有一种新的游戏，游戏规则如下：在棋盘中，存在一些棋子。如果某两个棋子，可以通过一条线连起来（这条线不能经过其它棋子），而且线的转折次数不超过两次，那么这两个棋子就可以在棋盘上消去。注意：连线不能从外面绕过去的。给出当前棋盘的情况，试判断某些棋子能不能消去。现在你的任务就是写这个后台程序。呵呵，这个跟“连连看”很像。]]></content>
+      <content type="text"><![CDATA[题解|HDU|BFS|图论|最短路|队列(queue)|题目 Description 有一种新的游戏，游戏规则如下：在棋盘中，存在一些棋子。如果某两个棋子，可以通过一条线连起来（这条线不能经过其它棋子），而且线的转折次数不超过两次，那么这两个棋子就可以在棋盘上消去。注意：连线不能从外面绕过去的。给出当前棋盘的情况，试判断某些棋子能不能消去。现在你的任务就是写这个后台程序。呵呵，这个跟“连连看”很像。]]></content>
     </entry>
 
     
@@ -2614,7 +2638,7 @@
       
       <title><![CDATA[POJ 1306.Combinations]]></title>
       <url>%2Fpost%2FPOJ%2F1306.html</url>
-      <content type="text"><![CDATA[题解|辗转相除法|高精度算法|POJ|题目 Description Computing the exact number of ways that N things can be taken M at a time can be a great challenge when N and/or M become very large. Challenges are the stuff of contests. Therefore, you are to make just such a computation given the following:GIVEN: 5 &lt;= N &lt;= 100; 5 &lt;= M &lt;= 100; M &lt;= NCompute the EXACT value of: C = N! / (N-M)!M!You may assume that the final value of C will fit in a 32-bit Pascal LongInt or a C long. For the record, the exact value of 100! is:93,326,215,443,944,152,681,699,238,856,266,700,490,715,968,264,381,621, 468,592,963,895,217,599,993,229,915,608,941,463,976,156,518,286,253, 697,920,827,223,758,251,185,210,916,864,000,000,000,000,000,000,000,000]]></content>
+      <content type="text"><![CDATA[题解|高精度算法|辗转相除法|POJ|题目 Description Computing the exact number of ways that N things can be taken M at a time can be a great challenge when N and/or M become very large. Challenges are the stuff of contests. Therefore, you are to make just such a computation given the following:GIVEN: 5 &lt;= N &lt;= 100; 5 &lt;= M &lt;= 100; M &lt;= NCompute the EXACT value of: C = N! / (N-M)!M!You may assume that the final value of C will fit in a 32-bit Pascal LongInt or a C long. For the record, the exact value of 100! is:93,326,215,443,944,152,681,699,238,856,266,700,490,715,968,264,381,621, 468,592,963,895,217,599,993,229,915,608,941,463,976,156,518,286,253, 697,920,827,223,758,251,185,210,916,864,000,000,000,000,000,000,000,000]]></content>
     </entry>
 
     
@@ -2630,7 +2654,7 @@
       
       <title><![CDATA[HDU 1072.Nightmare]]></title>
       <url>%2Fpost%2FHDU%2F1072.html</url>
-      <content type="text"><![CDATA[题解|HDU|最短路|图论|BFS|队列(queue)|题目 Description Ignatius had a nightmare last night. He found himself in a labyrinth with a time bomb on him. The labyrinth has an exit, Ignatius should get out of the labyrinth before the bomb explodes. The initial exploding time of the bomb is set to 6 minutes. To prevent the bomb from exploding by shake, Ignatius had to move slowly, that is to move from one area to the nearest area(that is, if Ignatius stands on (x,y) now, he could only on (x+1,y), (x-1,y), (x,y+1), or (x,y-1) in the next minute) takes him 1 minute. Some area in the labyrinth contains a Bomb-Reset-Equipment. They could reset the &gt; &gt; exploding time to 6 minutes. Given the layout of the labyrinth and Ignatius’ start position, please tell Ignatius whether he could get out of the labyrinth, if he could, output the minimum time that he has to use to find the exit of the labyrinth, else output -1. Here are some rules: We can assume the labyrinth is a 2 array. Each minute, Ignatius could only get to one of the nearest area, and he should not walk out of the border, of course he could not walk on a wall, too. If Ignatius get to the exit when the exploding time turns to 0, he can’t get out of the labyrinth. If Ignatius get to the area which contains Bomb-Rest-Equipment when the exploding time turns to 0, he can’t use the equipment to reset the bomb. A Bomb-Reset-Equipment can be used as many times as you wish, if it is needed, Ignatius can get to any areas in the labyrinth as many times as you wish. The time to reset the exploding time can be ignore, in other words, if Ignatius get to an area which contain Bomb-Rest-Equipment, and the exploding time is larger than 0, the exploding time would be reset to 6.]]></content>
+      <content type="text"><![CDATA[题解|HDU|BFS|图论|最短路|队列(queue)|题目 Description Ignatius had a nightmare last night. He found himself in a labyrinth with a time bomb on him. The labyrinth has an exit, Ignatius should get out of the labyrinth before the bomb explodes. The initial exploding time of the bomb is set to 6 minutes. To prevent the bomb from exploding by shake, Ignatius had to move slowly, that is to move from one area to the nearest area(that is, if Ignatius stands on (x,y) now, he could only on (x+1,y), (x-1,y), (x,y+1), or (x,y-1) in the next minute) takes him 1 minute. Some area in the labyrinth contains a Bomb-Reset-Equipment. They could reset the &gt; &gt; exploding time to 6 minutes. Given the layout of the labyrinth and Ignatius’ start position, please tell Ignatius whether he could get out of the labyrinth, if he could, output the minimum time that he has to use to find the exit of the labyrinth, else output -1. Here are some rules: We can assume the labyrinth is a 2 array. Each minute, Ignatius could only get to one of the nearest area, and he should not walk out of the border, of course he could not walk on a wall, too. If Ignatius get to the exit when the exploding time turns to 0, he can’t get out of the labyrinth. If Ignatius get to the area which contains Bomb-Rest-Equipment when the exploding time turns to 0, he can’t use the equipment to reset the bomb. A Bomb-Reset-Equipment can be used as many times as you wish, if it is needed, Ignatius can get to any areas in the labyrinth as many times as you wish. The time to reset the exploding time can be ignore, in other words, if Ignatius get to an area which contain Bomb-Rest-Equipment, and the exploding time is larger than 0, the exploding time would be reset to 6.]]></content>
     </entry>
 
     
@@ -2638,7 +2662,7 @@
       
       <title><![CDATA[HDU 2717.Catch That Cow]]></title>
       <url>%2Fpost%2FHDU%2F2717.html</url>
-      <content type="text"><![CDATA[题解|HDU|最短路|图论|BFS|队列(queue)|题目 DescriptionFarmer John has been informed of the location of a fugitive cow and wants to catch her immediately. He starts at a point N (0 ≤ N ≤ 100,000) on a number line and the cow is at a point K (0 ≤ K ≤ 100,000) on the same number line. Farmer John has two modes of transportation: walking and &gt; teleporting. Walking: FJ can move from any point X to the points X - 1 or X + 1 in a single minute Teleporting: FJ can move from any point X to the point 2 × X in a single minute. If the cow, unaware of its pursuit, does not move at all, how long does it take for Farmer John to retrieve it?]]></content>
+      <content type="text"><![CDATA[题解|HDU|BFS|图论|最短路|队列(queue)|题目 DescriptionFarmer John has been informed of the location of a fugitive cow and wants to catch her immediately. He starts at a point N (0 ≤ N ≤ 100,000) on a number line and the cow is at a point K (0 ≤ K ≤ 100,000) on the same number line. Farmer John has two modes of transportation: walking and &gt; teleporting. Walking: FJ can move from any point X to the points X - 1 or X + 1 in a single minute Teleporting: FJ can move from any point X to the point 2 × X in a single minute. If the cow, unaware of its pursuit, does not move at all, how long does it take for Farmer John to retrieve it?]]></content>
     </entry>
 
     
@@ -2646,7 +2670,7 @@
       
       <title><![CDATA[HDU 1372.Knight Moves]]></title>
       <url>%2Fpost%2FHDU%2F1372.html</url>
-      <content type="text"><![CDATA[题解|HDU|最短路|图论|BFS|队列(queue)|题目 Description A friend of you is doing research on the Traveling Knight Problem (TKP) where you are to find the shortest closed tour of knight moves that visits each square of a given set of n squares on a chessboard exactly once. He thinks that the most difficult part of the problem is determining the smallest &gt; &gt; number of knight moves between two given squares and that, once you have accomplished this, finding the tour would be easy.Of course you know that it is vice versa. So you offer him to write a program that solves the “difficult” part. Your job is to write a program that takes two squares a and b as input and then determines the number of knight moves on a shortest route from a to b.]]></content>
+      <content type="text"><![CDATA[题解|HDU|BFS|图论|最短路|队列(queue)|题目 Description A friend of you is doing research on the Traveling Knight Problem (TKP) where you are to find the shortest closed tour of knight moves that visits each square of a given set of n squares on a chessboard exactly once. He thinks that the most difficult part of the problem is determining the smallest &gt; &gt; number of knight moves between two given squares and that, once you have accomplished this, finding the tour would be easy.Of course you know that it is vice versa. So you offer him to write a program that solves the “difficult” part. Your job is to write a program that takes two squares a and b as input and then determines the number of knight moves on a shortest route from a to b.]]></content>
     </entry>
 
     
@@ -2654,7 +2678,7 @@
       
       <title><![CDATA[HDU 1548.A strange lift]]></title>
       <url>%2Fpost%2FHDU%2F1548.html</url>
-      <content type="text"><![CDATA[题解|HDU|最短路|图论|BFS|队列(queue)|题目 Description There is a strange lift.The lift can stop can at every floor as you want, and there is a number Ki(0 &lt;= Ki &lt;= N) on every floor.The lift have just two buttons: up and down.When you at floor i,if you press the button “UP” , you will go up Ki floor,i.e,you will go to the i+Ki th floor,as the same, if you press the button “DOWN” , you will go down Ki floor,i.e,you will go to the i-Ki th floor. Of course, the lift can’t go up high than N,and can’t go down lower than 1. For example, there is a buliding with 5 floors, and k1 = 3, k2 = 3,k3 = 1,k4 = 2, k5 = 5.Begining from the 1 st floor,you can &gt; &gt; press the button “UP”, and you’ll go up to the 4 th floor,and if you press the button “DOWN”, the lift can’t do it, because it can’t go down to the -2 th floor,as you know ,the -2 th floor isn’t exist.Here comes the problem: when you are on floor A,and you want to go to floor B,how many times at least he has to press the button “UP” or “DOWN”?]]></content>
+      <content type="text"><![CDATA[题解|HDU|BFS|图论|最短路|队列(queue)|题目 Description There is a strange lift.The lift can stop can at every floor as you want, and there is a number Ki(0 &lt;= Ki &lt;= N) on every floor.The lift have just two buttons: up and down.When you at floor i,if you press the button “UP” , you will go up Ki floor,i.e,you will go to the i+Ki th floor,as the same, if you press the button “DOWN” , you will go down Ki floor,i.e,you will go to the i-Ki th floor. Of course, the lift can’t go up high than N,and can’t go down lower than 1. For example, there is a buliding with 5 floors, and k1 = 3, k2 = 3,k3 = 1,k4 = 2, k5 = 5.Begining from the 1 st floor,you can &gt; &gt; press the button “UP”, and you’ll go up to the 4 th floor,and if you press the button “DOWN”, the lift can’t do it, because it can’t go down to the -2 th floor,as you know ,the -2 th floor isn’t exist.Here comes the problem: when you are on floor A,and you want to go to floor B,how many times at least he has to press the button “UP” or “DOWN”?]]></content>
     </entry>
 
     
@@ -2718,7 +2742,7 @@
       
       <title><![CDATA[初窥Dijkstra算法、Bellman-Ford、SPFA算法、Floyd算法、迭代加深搜索、A*、IDA*]]></title>
       <url>%2Fpost%2FAlgorithm%2FShortest_Path.html</url>
-      <content type="text"><![CDATA[算法|Dijkstra|最短路|图论|BFS|DFS|A*|IDA*|Bellman-Ford|SPFA|Floyd|迭代加深|]]></content>
+      <content type="text"><![CDATA[算法|DFS|BFS|图论|最短路|Floyd|Dijkstra|A*|IDA*|Bellman-Ford|SPFA|迭代加深|]]></content>
     </entry>
 
     
@@ -2782,7 +2806,7 @@
       
       <title><![CDATA[AOJ 606.LOL系列之德玛短路]]></title>
       <url>%2Fpost%2FAOJ%2F606.html</url>
-      <content type="text"><![CDATA[题解|AOJ|质数|打表|题目 Time Limit: 1000 msCase Time Limit: 1000 msMemory Limit: 64 MBTotal Submission: 215Submission Accepted: 79 Description 德玛的经典台词：人在塔在。由于最近LOL增加了草丛数量（草丛伦怎能不开心？！）由于太过于兴奋，盖伦突然变成白痴了- -，连最经典的台词都变为：人在塔亡（变身剑圣？）德玛现在的症状是：如果该单词在句子中的序号为素数的话，他就会把这个单词反过来说（abcd -&gt; dcba），为了治疗盖伦，你得和盖伦交流，寻求找到治疗他的方法。德玛说话完全变反了现在你的任务是将盖伦的话翻译回他本来的意思，比如德玛说:i evil dna tower tsixe其实他的本意是i live and tower exist（因为2,3,5是素数，所以这些位置上的单词反过来了）注意：1不是素数，而且可能会有许多多余的空格！]]></content>
+      <content type="text"><![CDATA[题解|AOJ|打表|质数|题目 Time Limit: 1000 msCase Time Limit: 1000 msMemory Limit: 64 MBTotal Submission: 215Submission Accepted: 79 Description 德玛的经典台词：人在塔在。由于最近LOL增加了草丛数量（草丛伦怎能不开心？！）由于太过于兴奋，盖伦突然变成白痴了- -，连最经典的台词都变为：人在塔亡（变身剑圣？）德玛现在的症状是：如果该单词在句子中的序号为素数的话，他就会把这个单词反过来说（abcd -&gt; dcba），为了治疗盖伦，你得和盖伦交流，寻求找到治疗他的方法。德玛说话完全变反了现在你的任务是将盖伦的话翻译回他本来的意思，比如德玛说:i evil dna tower tsixe其实他的本意是i live and tower exist（因为2,3,5是素数，所以这些位置上的单词反过来了）注意：1不是素数，而且可能会有许多多余的空格！]]></content>
     </entry>
 
     
@@ -2830,7 +2854,7 @@
       
       <title><![CDATA[AOJ 579.期末考试之传纸条]]></title>
       <url>%2Fpost%2FAOJ%2F579.html</url>
-      <content type="text"><![CDATA[题解|AOJ|最短路|图论|BFS|题目 Time Limit: 1000 msCase Time Limit: 1000 msMemory Limit: 32 MBTotal Submission: 12Submission Accepted: 8 Description 平时不努力，考试得着急呐。传说中的BT监考老师竟然搬来了信号屏蔽工具，手机不管用啦有木有。不过这难不到大家，cxlove见证了同学们使用传统的作弊方式—-传纸条，纸条得从A同学传到B同学处，在一个N*M的教室里，零散着坐着一些同学，监考老师游荡在教室某些位置，能否成功将纸条传到B同学处，且不被老师发现。每一次传纸条不能斜传，只能传给前后左右四个同学，监考老师的监视范围为相邻的八个位置，当纸条传到老师监视范围内就会被逮住了，纸条传到空位置处时传送失败。帮cxlove计算下最少需要多少时间才能完成传纸条。]]></content>
+      <content type="text"><![CDATA[题解|AOJ|BFS|图论|最短路|题目 Time Limit: 1000 msCase Time Limit: 1000 msMemory Limit: 32 MBTotal Submission: 12Submission Accepted: 8 Description 平时不努力，考试得着急呐。传说中的BT监考老师竟然搬来了信号屏蔽工具，手机不管用啦有木有。不过这难不到大家，cxlove见证了同学们使用传统的作弊方式—-传纸条，纸条得从A同学传到B同学处，在一个N*M的教室里，零散着坐着一些同学，监考老师游荡在教室某些位置，能否成功将纸条传到B同学处，且不被老师发现。每一次传纸条不能斜传，只能传给前后左右四个同学，监考老师的监视范围为相邻的八个位置，当纸条传到老师监视范围内就会被逮住了，纸条传到空位置处时传送失败。帮cxlove计算下最少需要多少时间才能完成传纸条。]]></content>
     </entry>
 
     
@@ -2900,17 +2924,17 @@
     
     <entry>
       
-      <title><![CDATA[AOJ 6.Hero In Maze]]></title>
-      <url>%2Fpost%2FAOJ%2F6.html</url>
-      <content type="text"><![CDATA[题解|AOJ|最短路|图论|BFS|DFS|简单的最短路 BFS DFS都可以实现（BFS应该会更快一点吧） 其中输入的N、M、T中，N是列，M是行，而不是和大多数题目一样，N是行，M是列 另外，类中不要乱放常量，类中不要直接为类变量赋初值（不是所有编译器都承认貌似~）]]></content>
+      <title><![CDATA[AOJ 667.抢占白房子]]></title>
+      <url>%2Fpost%2FAOJ%2F667.html</url>
+      <content type="text"><![CDATA[题解|AOJ|数学|题目 Time Limit: 1000 msCase Time Limit: 1000 msMemory Limit: 64 MBTotal Submission: 79Submission Accepted: 25 Description 在一个8×8的宫格图中，每个格子要么是白色，要么是黑色，且相邻的两个格子的颜色一定不同；已知左上角（1，1）的格子的颜色为白色。现给出用字符描述的该图G，如果有G（i，j）=’F’，则说明从上向下数的第i行（从1开始数），从左向右数的第j行（从1开始数）交叉的格子被占领，否则这个格子是空的，未被占领。求出被占领的白格子数量。]]></content>
     </entry>
 
     
     <entry>
       
-      <title><![CDATA[AOJ 667.抢占白房子]]></title>
-      <url>%2Fpost%2FAOJ%2F667.html</url>
-      <content type="text"><![CDATA[题解|AOJ|数学|题目 Time Limit: 1000 msCase Time Limit: 1000 msMemory Limit: 64 MBTotal Submission: 79Submission Accepted: 25 Description 在一个8×8的宫格图中，每个格子要么是白色，要么是黑色，且相邻的两个格子的颜色一定不同；已知左上角（1，1）的格子的颜色为白色。现给出用字符描述的该图G，如果有G（i，j）=’F’，则说明从上向下数的第i行（从1开始数），从左向右数的第j行（从1开始数）交叉的格子被占领，否则这个格子是空的，未被占领。求出被占领的白格子数量。]]></content>
+      <title><![CDATA[AOJ 6.Hero In Maze]]></title>
+      <url>%2Fpost%2FAOJ%2F6.html</url>
+      <content type="text"><![CDATA[题解|AOJ|DFS|BFS|图论|最短路|简单的最短路 BFS DFS都可以实现（BFS应该会更快一点吧） 其中输入的N、M、T中，N是列，M是行，而不是和大多数题目一样，N是行，M是列 另外，类中不要乱放常量，类中不要直接为类变量赋初值（不是所有编译器都承认貌似~）]]></content>
     </entry>
 
     
@@ -3006,7 +3030,7 @@
       
       <title><![CDATA[Uva 1587.Box]]></title>
       <url>%2Fpost%2FUva%2F1587.html</url>
-      <content type="text"><![CDATA[题解|排序|模拟|Uva|思路比较清晰吧 如果可以拼成长方体，要满足： 保证6个长方形能够成对相同（相同）有3组不同的数据（长、宽、高），且每组有4个使用排序进行排序。 相邻两个排序，确保每一个长方形都是以（宽，长）的顺序记录（sort排序时，开始位置是第一个位置，结束为止是最后一个数据的下一个位置） 然后整体排序，每4个一组，进行比较]]></content>
+      <content type="text"><![CDATA[题解|模拟|排序|Uva|思路比较清晰吧 如果可以拼成长方体，要满足： 保证6个长方形能够成对相同（相同）有3组不同的数据（长、宽、高），且每组有4个使用排序进行排序。 相邻两个排序，确保每一个长方形都是以（宽，长）的顺序记录（sort排序时，开始位置是第一个位置，结束为止是最后一个数据的下一个位置） 然后整体排序，每4个一组，进行比较]]></content>
     </entry>
 
     
@@ -3102,7 +3126,7 @@
       
       <title><![CDATA[快速幂取模]]></title>
       <url>%2Fpost%2FAlgorithm%2FRaising_Modulo_Numbers.html</url>
-      <content type="text"><![CDATA[算法|二分|快速幂取模|递归与分治|取余数有%，即 10%3 可以得到1 但是当数比较大时(比如2999999)，计算机可能就无法计算 然而，根据数论的结论，我们可以简化一下。]]></content>
+      <content type="text"><![CDATA[算法|快速幂取模|递归与分治|二分|取余数有%，即 10%3 可以得到1 但是当数比较大时(比如2999999)，计算机可能就无法计算 然而，根据数论的结论，我们可以简化一下。]]></content>
     </entry>
 
     
@@ -3142,7 +3166,7 @@
       
       <title><![CDATA[Dijkstra算法]]></title>
       <url>%2Fpost%2FAlgorithm%2FDijkstra.html</url>
-      <content type="text"><![CDATA[算法|Dijkstra|最短路|图论|吐槽一句，这个东西好难拼 迪杰斯特拉算法是由荷兰计算机科学家狄克斯特拉于1959年提出的，因此又叫狄克斯特拉算法。是从一个顶点到其余各顶点的最短路径算法，解决的是有向图中最短路径问题。迪杰斯特拉算法主要特点是以起始点为中心向外层层扩展，直到扩展到终点为止。——百度百科 Dijkstra算法就是用来算在一个有向带权图中，一个点到其他各点的最短距离 其思路是： 给起始点权值标成0，其他点标成无限大。从出发点开始 向该点向能通向的点走，算出到各点的总距离，并标记在相应点上。 给该点标记上访问标志，以后不再访问该点，然后从所有点中选出权值最小的点，重复步骤2 当所有点均被标记后，各点权值即为到该点最短距离]]></content>
+      <content type="text"><![CDATA[算法|图论|最短路|Dijkstra|吐槽一句，这个东西好难拼 迪杰斯特拉算法是由荷兰计算机科学家狄克斯特拉于1959年提出的，因此又叫狄克斯特拉算法。是从一个顶点到其余各顶点的最短路径算法，解决的是有向图中最短路径问题。迪杰斯特拉算法主要特点是以起始点为中心向外层层扩展，直到扩展到终点为止。——百度百科 Dijkstra算法就是用来算在一个有向带权图中，一个点到其他各点的最短距离 其思路是： 给起始点权值标成0，其他点标成无限大。从出发点开始 向该点向能通向的点走，算出到各点的总距离，并标记在相应点上。 给该点标记上访问标志，以后不再访问该点，然后从所有点中选出权值最小的点，重复步骤2 当所有点均被标记后，各点权值即为到该点最短距离]]></content>
     </entry>
 
     
