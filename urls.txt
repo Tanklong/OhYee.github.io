@@ -1,3 +1,8 @@
+http://www.oyohyee.com/post/Zhihu/Hexo_how.html
+http://www.oyohyee.com/post/AOJ/859.html
+http://www.oyohyee.com/post/AOJ/866.html
+http://www.oyohyee.com/post/AOJ/865.html
+http://www.oyohyee.com/post/Note/Ubuntu_on_UDisk.html
 http://www.oyohyee.com/post/Writing/Pokemon_ball_DIY.html
 http://www.oyohyee.com/post/AOJ/863.html
 http://www.oyohyee.com/post/AOJ/862.html
@@ -69,8 +74,8 @@ http://www.oyohyee.com/post/Note/First_qt.html
 http://www.oyohyee.com/post/Project/ACM2016-10-22.html
 http://www.oyohyee.com/post/hihocoder/1385.html
 http://www.oyohyee.com/post/hihocoder/1383.html
-http://www.oyohyee.com/post/POJ/1273.html
 http://www.oyohyee.com/post/HDU/1273.html
+http://www.oyohyee.com/post/POJ/1273.html
 http://www.oyohyee.com/post/HDU/5889.html
 http://www.oyohyee.com/post/HDU/5882.html
 http://www.oyohyee.com/post/HDU/5879.html
@@ -253,8 +258,8 @@ http://www.oyohyee.com/post/Note/Resistance_exercise.html
 http://www.oyohyee.com/post/Note/El.html
 http://www.oyohyee.com/post/HDU/1846.html
 http://www.oyohyee.com/post/Algorithm/Game.html
-http://www.oyohyee.com/post/Note/VPS_hexo.html
 http://www.oyohyee.com/post/Note/UrlJump.html
+http://www.oyohyee.com/post/Note/VPS_hexo.html
 http://www.oyohyee.com/post/Codeforces/681B.html
 http://www.oyohyee.com/post/Codeforces/681A.html
 http://www.oyohyee.com/post/HDU/2955.html
