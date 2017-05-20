@@ -327,6 +327,316 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://www.oyohyee.com/post/Note/cin.html">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="OhYee">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/logo.svg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="OhYee's Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="OhYee's Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/post/Note/cin.html" itemprop="url">
+                  关于cin
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2015-10-15T12:05:00+08:00">
+                2015-10-15 12:05:00
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Note/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          若要判断文件尾，有很多种方法。
+作为对比，有
+1234567891011while(cin&gt;&gt;s)&#123;            ...&#125;while(!cin.eof())&#123;            ...&#125;while(scanf("%s",&amp;s)!=EOF)&#123;            ...&#125;
+但是cin.eof()并不像其看着的样子那样，能够直接判断，他还需要我们再读一下字符才能正确判断是否达到文件尾
+
+ABCDEFG(EOF)
+
+也即，我们若使用scanf的话，在G(处就可判断到是否到达结尾
+而cin.eof()则需要我们到达)处
+
+          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/post/Note/cin.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://www.oyohyee.com/post/Note/CodeBetter.html">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="OhYee">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/logo.svg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="OhYee's Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="OhYee's Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/post/Note/CodeBetter.html" itemprop="url">
+                  代码优化方案
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2015-08-22T18:57:00+08:00">
+                2015-08-22 18:57:00
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Note/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          
+转载自：http://www.uml.org.cn/c++/200811103.asp#_Toc110958704
+1、选择合适的算法和数据结构
+选择一种合适的数据结构很重要，如果在一堆随机存放的数中使用了大量的插入和删除指令，那使用链表要快得多。数组与指针语句具有十分密切的关系，一般来说，指针比较灵活简洁，而数组则比较直观，容易理解。对于大部分的编译器，使用指针比使用数组生成的代码更短，执行效率更高。在许多种情况下，可以用指针运算代替数组索引，这样做常常能产生又快又短的代码。与数组索引相比，指针一般能使代码速度更快，占用空间更少。使用多维数组时差异更明显。下面的代码作用是相同的，但是效率不一样�数组索引指针运算&nbsp;For(;;){&nbsp;&nbsp;&nbsp; A=array[t++];&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;。。。。。。。。。&nbsp;&nbsp;&nbsp; }&nbsp;p=array&nbsp; for(;;){&nbsp; &nbsp; a=(p++);&nbsp;&nbsp; &nbsp;。。。。。。。。。&nbsp
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/post/Note/CodeBetter.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://www.oyohyee.com/post/Writing/Music_Player.html">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1544,319 +1854,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://www.oyohyee.com/post/Note/STLNote.html">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="OhYee">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/logo.svg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="OhYee's Blog">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="OhYee's Blog" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/post/Note/STLNote.html" itemprop="url">
-                  STL笔记
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2015-07-27T17:22:00+08:00">
-                2015-07-27 17:22:00
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Note/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="STL方面的笔记"><a href="#STL方面的笔记" class="headerlink" title="STL方面的笔记"></a>STL方面的笔记</h2><p>以下为vector queue map set stack的基本用法<br>可编译结合注释查看</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/post/Note/STLNote.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://www.oyohyee.com/post/Note/ACM.html">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="OhYee">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/logo.svg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="OhYee's Blog">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="OhYee's Blog" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/post/Note/ACM.html" itemprop="url">
-                  ACM进阶计划
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2015-07-27T17:19:00+08:00">
-                2015-07-27 17:19:00
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          转载自：http://cojs.tk/cogs/page/page.php?aid=38
-ACM进阶计划ACM队不是为了一场比赛而存在的，为的是队员的整体提高。
-大学期间，ACM队队员必须要学好的课程有：
-l C/C++两种语言
-l 高等数学
-l 线性代数
-l 数据结构
-l 离散数学
-l 数据库原理
-l 操作系统原理
-l 计算机组成原理
-l 人工智能
-l 编译原理
-l 算法设计与分析
-除此之外，我希望你们能掌握一些其它的知识，因为知识都是相互联系，触类旁通的。
-以下学习计划每学期中的内容不分先后顺序，虽说是为立志于学习ACM的同学列的知识清单，但内容不限于ACM的知识。英语之类与专业相距较远的课程请自行分配时间，这里不再列举。
-大一上学期：
-必学：
-
-C语言基础语法必须全部学会
-
-a) 推荐“语言入门”分类20道题以上
-b) 提前完成C语言课程设计
-
-简单数学题（推荐“数学”分类20道以上）
-
-需要掌握以下基本算法：
-a) 欧几里德算法求最大公约数
-b) 筛法求素数
-c) 康托展开
-d) 逆康托展开
-e) 同余定理
-f) 次方求模
-
-计算几何初步
-
-a) 三角形面积
-b) 三点顺序
-
-
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/post/Note/ACM.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1904,7 +1901,7 @@ b) 三点顺序
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">401</span>
+                <span class="site-state-item-count">403</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
